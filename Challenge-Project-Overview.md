@@ -84,7 +84,7 @@ The team will build an AI-powered **Compliance Copilot** that reads software req
 
 ## 📊 Dataset
 
-**Name and Source:** NASA Software Engineering Requirements (NPR 7150.2) + Synthetic Software Requirements Specification Dataset  
+**Name and Source:** NASA Software Engineering Requirements NPR 7150.2D (https://nodis3.gsfc.nasa.gov/npg_img/N_PR_7150_002D_/N_PR_7150_002D_.pdf) + Synthetic Software Requirements Specification Dataset  
 **Format:** Plain Text, JSON, CSV  
 **Size:** < 1 GB (100% Google Colab Free Tier Compliant)  
 **Location:** Public NASA NODIS Library & Student-Generated Evaluation Repository  
