@@ -56,7 +56,7 @@ The team will build an AI-powered **Compliance Copilot** that reads software req
 ### Project Milestones
 | Month | Milestone | Key Activities |
 |-------|-----------|----------------|
-| **September** | Week 1: Access Data | Access and explore corpus (NASA NPR 7150.2 Standards and Handbook) |
+| **September** | Week 1: Access Data | • Understand the purpose of the project; what problem does it solve? <br> • Access and explore corpus (NASA NPR 7150.2 Standards and Handbook) |
 | | Week 2: Data Triage | • Load PDF and extract relevant structured clause chunks (Regex?, Python, or...) <br> • Create a dataframe, check extracted clauses, and produce data annotations |
 | | Week 3: Benchmark | • Create a list of criteria based on the extracted clauses <br> • CA will create a labeled ground-truth benchmark with accompanying Data Card |
 | | Week 4: Baseline model | • Build first model starting with rules, keywords, TF-IDF, etc. (no LLM yet) <br> • Document model's output, performance, findings, insights, etc.|
