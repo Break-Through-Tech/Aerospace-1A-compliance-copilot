@@ -65,18 +65,36 @@ The team will build an AI-powered **Compliance Copilot** that reads software req
 | **December** | Evaluation, Error Analysis & Stretch Horizons | Conduct quantitative benchmark evaluation comparing Baseline vs. Agent performance. Perform qualitative error analysis. Execute stretch goals (LangGraph multi-agent refactoring or cross-standard generalization). |
 ---
 
-+-----+-----------+
-|     | L2 and L3 |
-| L1  +-----+-----+
-|     | L2  | L3  |
-+=====+=====+=====+
-|     | BBB | CCC |
-| AAA +-----+-----+
-|     |   DDDDD   |
-+-----+-----+-----+
-|           | FFF |
-|   EEEEE   +-----+
-|           | GGG |
+## Project Milestones
+
+<table>
+  <thead>
+    <tr>
+      <th>Month</th>
+      <th>Milestone</th>
+      <th>Key Activities</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td rowspan="4"><strong>September</strong></td>
+      <td>Week 1: Access Data</td>
+      <td>Access and explore corpus (NASA NPR 7150.2 Standards and Handbook)</td>
+    </tr>
+    <tr>
+      <td>Week 2: Data Triage</td>
+      <td>Load PDF and create function (Regex?, Python, or...) for extracting the relevant structured clause chunks; create dataframe, check quality of extracted clauses, and produce data annotations</td>
+    </tr>
+    <tr>
+      <td>Week 3: Benchmark</td>
+      <td>CA will create a labeled ground-truth benchmark (30–50 requirement/clause pairs) with seeded compliance gaps and draft an accompanying Data Card</td>
+    </tr>
+    <tr>
+      <td>Week 4: Baseline model</td>
+      <td>Starting with rules, keywords, TF-IDF, etc. (no LLM yet)</td>
+    </tr>
+  </tbody>
+</table>
 
 ## 📊 Dataset
 
