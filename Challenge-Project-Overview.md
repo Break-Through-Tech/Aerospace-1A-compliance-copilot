@@ -58,8 +58,8 @@ The team will build an AI-powered **Compliance Copilot** that reads software req
 |-------|-----------|----------------|
 | **September** | Week 1: Access Data | Access and explore corpus (NASA NPR 7150.2 Standards and Handbook) |
 | | Week 2: Data Triage | • Load PDF and extract relevant structured clause chunks (Regex?, Python, or...) <br> • Create a dataframe, check extracted clauses, and produce data annotations |
-| | Week 3: Benchmark | • Create a list of criteria based on the extracted clauses <br> • CA will create a labeled ground-truth benchmark (30–50 requirement/clause pairs) with seeded compliance gaps and draft an accompanying Data Card |
-| | Week 4: Baseline model | Build first model starting with rules, keywords, TF-IDF, etc. (no LLM yet) |
+| | Week 3: Benchmark | • Create a list of criteria based on the extracted clauses <br> • CA will create a labeled ground-truth benchmark with accompanying Data Card |
+| | Week 4: Baseline model | • Build first model starting with rules, keywords, TF-IDF, etc. (no LLM yet) <br> • Document model's output, performance, findings, insights, etc.|
 | **October** | Non-Agentic RAG Baseline & Schema Enforcement | Build an in-memory vector index (FAISS/Chroma). Implement a deterministic RAG retrieval pipeline using Pydantic JSON schemas to force structured citations and verdicts. Evaluate initial precision and recall. |
 | **November** | Tool-Calling Agent & Automated Reporting | Wrap the pipeline into an LLM agent with dedicated tools (`retrieve_clause`, `check_requirement`, `log_gap`). Add API rate-limit caching and batching. Generate full JSON and Markdown gap reports. |
 | **December** | Evaluation, Error Analysis & Stretch Horizons | Conduct quantitative benchmark evaluation comparing Baseline vs. Agent performance. Perform qualitative error analysis. Execute stretch goals (LangGraph multi-agent refactoring or cross-standard generalization). |
