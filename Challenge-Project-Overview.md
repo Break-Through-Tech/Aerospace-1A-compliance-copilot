@@ -57,7 +57,7 @@ The team will build an AI-powered **Compliance Copilot** that reads software req
 | Month | Milestone | Key Activities |
 |-------|-----------|----------------|
 | **September** | Week 1: Access Data | Access and explore corpus (NASA NPR 7150.2 Standards and Handbook) |
-| | Week 2: Data Triage | Load PDF and create function (Regex?, Python, or...) for extracting the relevant structured clause chunks; create dataframe, check quality of extracted clauses, and produce data annotations |
+| | Week 2: Data Triage | Load PDF and extract relevant structured clause chunks (Regex?, Python, or...), - create a dataframe, check extracted clauses, and produce data annotations |
 | | Week 3: Benchmark | CA will create a labeled ground-truth benchmark (30–50 requirement/clause pairs) with seeded compliance gaps and draft an accompanying Data Card |
 | | Week 4: Baseline model | Starting with rules, keywords, TF-IDF, etc. (no LLM yet) |
 | **October** | Non-Agentic RAG Baseline & Schema Enforcement | Build an in-memory vector index (FAISS/Chroma). Implement a deterministic RAG retrieval pipeline using Pydantic JSON schemas to force structured citations and verdicts. Evaluate initial precision and recall. |
