@@ -65,6 +65,19 @@ The team will build an AI-powered **Compliance Copilot** that reads software req
 | **December** | Evaluation, Error Analysis & Stretch Horizons | Conduct quantitative benchmark evaluation comparing Baseline vs. Agent performance. Perform qualitative error analysis. Execute stretch goals (LangGraph multi-agent refactoring or cross-standard generalization). |
 ---
 
++-----+-----------+
+|     | L2 and L3 |
+| L1  +-----+-----+
+|     | L2  | L3  |
++=====+=====+=====+
+|     | BBB | CCC |
+| AAA +-----+-----+
+|     |   DDDDD   |
++-----+-----+-----+
+|           | FFF |
+|   EEEEE   +-----+
+|           | GGG |
+
 ## 📊 Dataset
 
 **Name and Source:** NASA Software Engineering Requirements NPR 7150.2D (https://nodis3.gsfc.nasa.gov/npg_img/N_PR_7150_002D_/N_PR_7150_002D_.pdf) + NASA Systems Engineering Handbook (https://www.nasa.gov/wp-content/uploads/2018/09/nasa_systems_engineering_handbook_0.pdf) + Synthetic Software Requirements Specification Dataset  
