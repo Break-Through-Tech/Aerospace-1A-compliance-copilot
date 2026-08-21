@@ -1,35 +1,10 @@
-
-### 🔍 SME Feedback from the Break Through Tech Evaluation Team
-
-*Challenge Advisor: Please address the following feedback by editing this page. Your AI Studio Coach can help make project adjustments as needed, too. In addition to the grey section above, this section should be removed before sharing the repo with your student team.*## 📋 BTT Internal Evaluation Notes
-*(This section is for BTT staff and CAs only — remove before sharing with students)*
-
-### Technical Vetting
-| Check | Status | Notes |
-| :--- | :--- | :--- |
-| Python Compatibility | 🟢 | 100% Python-native stack (`pandas`, `pydantic`, `langchain`, `faiss-cpu` / `chromadb`, `langgraph`). Runs standard open-source workflows. |
-| Data Readiness | 🟢 | Standard NPR 7150.2 is structured, numbered, and publicly available. Requirements benchmark set is generated/curated directly in Python. |
-| Resource Check | 🟢 | Fully compliant with Google Colab free tier. Lightweight text corpora (< 1 GB) avoid memory crashes; rate limits managed via caching and batching. |
-
-### Internal Scores
-- **Student Fit Score:** 9/10 (Difficulty rating 6/10 — ideal "sweet spot" for undergraduate fellows post-ML Foundations).
-- **Technical Depth Score:** 9/10 (Spans full end-to-end ML lifecycle: baseline RAG, structured JSON outputs, tool-calling agents, precision/recall benchmarking, and error analysis).
-- **Overall Recommendation:** APPROVE AS IS
-
-### Advisor Feedback Draft
-This project is exceptionally well-scoped for Break Through Tech fellows. It offers an ideal pedagogical progression starting from a deterministic Non-Agentic RAG baseline up to a tool-calling LLM agent, while anchoring all work on a day-one ground-truth benchmark set. 
-
-**Key Advisor Guardrails:**
-1. Ensure students enforce strict Pydantic JSON schemas so every compliance verdict explicitly cites standard clause numbers.
-2. Implement request caching and batching to avoid hitting API rate limits during iteration.
-3. Keep multi-agent orchestration (LangGraph) strictly as a December stretch goal after the single-agent pipeline is validated.
-
----
-
 # Compliance Copilot: Auditing Software Requirements Against Engineering Standards
 
 **Company / Org:** Break Through Tech AI Studio (Industry Application: Aerospace, MedTech, FinTech GRC)  
-**Challenge Advisor:** BTT AI Studio Technical Lead  
+**Challenge Advisor:** BTT AI Studio Technical Lead 
+
+**AI Studio Coach:** Sai Duddu 
+
 **Program:** Break Through Tech AI Studio - Fall 2026  
 
 ---
