@@ -24,7 +24,7 @@ The team will build an AI-powered **Compliance Copilot** that reads software req
 2. **Tool-Calling LLM Agent:** A dynamic agent equipped with tools (`retrieve_clause`, `check_requirement`, `log_gap`) that orchestrates the audit workflow and compiles final JSON and Markdown gap reports.
 
 ### Success Criteria
-- **Day-One Ground-Truth Benchmark:** A human-labeled benchmark of requirement/clause pairs with explicit verdicts (`Meets`, `Partial`, `Gap`).
+- **Ground-Truth Benchmark:** A human-labeled benchmark of requirement/clause pairs with explicit verdicts (`Meets`, `Partial`, `Gap`).
 - **Grounded Verification:** Zero ungrounded or hallucinated verdicts; 100% of generated verdicts must cite the specific standard clause ID.
 - **Quantitative Performance:** High Precision and Recall in identifying seeded non-compliance gaps compared against the ground-truth benchmark.
 
@@ -40,7 +40,7 @@ The team will build an AI-powered **Compliance Copilot** that reads software req
 
 ## 📊 Dataset
 
-**Name and Source:** NASA Software Engineering Requirements NPR 7150.2D (https://nodis3.gsfc.nasa.gov/npg_img/N_PR_7150_002D_/N_PR_7150_002D_.pdf) + NASA Systems Engineering Handbook (https://www.nasa.gov/wp-content/uploads/2018/09/nasa_systems_engineering_handbook_0.pdf) + Synthetic Software Requirements Specification Dataset  
+**Name and Source:** NASA Software Engineering Requirements NPR 7150.2D (https://nodis3.gsfc.nasa.gov/npg_img/N_PR_7150_002D_/N_PR_7150_002D_.pdf) + online version section 4.1 (https://nodis3.gsfc.nasa.gov/displayDir.cfm?Internal_ID=N_PR_7150_002D_&page_name=Chapter4) + NASA-HDBK-2203 Software Engineering and Assurance Handbook,section 5.09 (https://swehb.nasa.gov/spaces/SWEHBVD/pages/102695669/5.09+-+SRS+-+Software+Requirements+Specification) + Synthetic Software Requirements Specification Dataset  
 **Format:** Plain Text, JSON, CSV  
 **Size:** < 1 GB (100% Google Colab Free Tier Compliant)  
 **Location:** Public NASA NODIS Library & Student-Generated Evaluation Repository  
