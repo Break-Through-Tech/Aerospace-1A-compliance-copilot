@@ -584,7 +584,14 @@ def parse_swehb(html: str) -> list[dict]:
         ("Complete", "characteristic", None, None),
         ("Measurable", "characteristic", None, None),
         ("Prioritized", "characteristic", None, None),
-        ("Decomposed vs Derived Requirements", "characteristic", None, "Decomposed Requirements Decomposed requirements are"),
+        # NOTE (root-cause fix, sanity-checker review): the live anchor
+        # "Decomposed Requirements Decomposed requirements are" only lands
+        # inside SWEHB's dedicated Decomposed-requirements sub-section, so
+        # the captured text never reaches the separate Derived-requirements
+        # sub-section a few hundred characters later. The topic label
+        # promises both halves, so use the curated fallback text (which
+        # already covers Decomposed AND Derived) instead of the live parse.
+        ("Decomposed vs Derived Requirements", "characteristic", None, None),
         ("State vs Mode Requirements", "characteristic", None, "A state represents a specific situation"),
         ("Safety Requirements Guidance", "safety", None, "Software Safety Requirements define the conditions"),
         ("Performance Metric Guidance", "performance", None, None),
