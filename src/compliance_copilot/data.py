@@ -8,6 +8,15 @@ from pathlib import Path
 import pandas as pd
 
 
+def file_hash(path):
+    """Hash text with consistent line endings so exports work across platforms."""
+    path = Path(path)
+    content = path.read_bytes()
+    if path.suffix.lower() != ".pdf":
+        content = content.replace(b"\r\n", b"\n")
+    return hashlib.sha256(content).hexdigest()
+
+
 REQUIREMENT_PATTERN = re.compile(
     r"^\*\*(SFMC-REQ-\d{3})\s*[—–-]\s*(.*?)\*\*\s*\n" r"(.*?)(?=^\*\*SFMC-REQ-|^#|\Z)",
     flags=re.MULTILINE | re.DOTALL,
@@ -59,24 +68,31 @@ def load_inputs(project_root):
     root = Path(project_root)
     manifest_path = root / "data/processed/manifest.json"
     if not manifest_path.exists():
-        raise FileNotFoundError("Run python scripts/prepare_data.py first.")
+        raise FileNotFoundError(
+            "Import the team's clause CSV with scripts/import_clauses.py first."
+        )
     manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
     for relative in [
         "notebooks/N_PR_7150_002D_.pdf",
         "data/Starhawk Mission Computer SRS.md",
-        "data/srs_scope.json",
     ]:
-        actual = hashlib.sha256((root / relative).read_bytes()).hexdigest()
+        actual = file_hash(root / relative)
         if actual != manifest["source_hashes"].get(relative):
-            raise ValueError("Source changed: {}. Re-run scripts/prepare_data.py.".format(relative))
+            raise ValueError(
+                "Source changed: {}. Refresh the team's clause export and import it.".format(
+                    relative
+                )
+            )
     srs_text = (root / "data/Starhawk Mission Computer SRS.md").read_text(encoding="utf-8-sig")
     path = root / "data/processed/srs_addressable_clauses.csv"
     if not path.exists():
-        raise FileNotFoundError("Run python scripts/prepare_data.py first: {}".format(path))
+        raise FileNotFoundError(
+            "Import the team's SRS-addressable clause CSV first: {}".format(path)
+        )
     clauses = validate_clauses(pd.read_csv(path, dtype={"swe_id": str, "clause_id": str}))
     expected = manifest.get("artifact_hashes", {}).get(path.name)
-    if expected != hashlib.sha256(path.read_bytes()).hexdigest():
-        raise ValueError("Prepared clause data changed. Re-run scripts/prepare_data.py.")
+    if expected != file_hash(path):
+        raise ValueError("Prepared clause data changed. Re-import the team's clause CSV.")
     return parse_requirements(srs_text), clauses, srs_text
 
 

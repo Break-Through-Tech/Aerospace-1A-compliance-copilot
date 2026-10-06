@@ -1,34 +1,15 @@
 {
+  "origin": "Team's existing Aerospace_1A.ipynb SRS-addressable clause export",
   "source_hashes": {
     "notebooks/N_PR_7150_002D_.pdf": "1a5b7f9b0b0141e88374adf7a21a4d6ced0b29c221ca89a0a514f495d6532802",
-    "data/Starhawk Mission Computer SRS.md": "1cb0da75ee12aa75dae69e70b17431f2e5b1bb1ed7e70597c5cd87faa5477444",
-    "data/srs_scope.json": "81efcd9dc62320aec1593b7ff4e61e5c3fe4c33832a8d66ecc96b23729a88e01"
+    "data/Starhawk Mission Computer SRS.md": "ba3f036ad240ea4285af5142adf8cd69c7ce9982d1ffa817aceaf8a8b42f7960"
   },
   "artifact_hashes": {
-    "nasa_clauses.json": "92a692f024d6812336188bdca14de70551a79cae4f1185e3daa9157a1fac5f67",
-    "annotated_nasa_clauses.csv": "e07c08c4d6ca757fcb9edfda25e81cc4acef81a9ea95f96df22a9c4757fa9dc4",
-    "srs_addressable_clauses.csv": "c08f228903a0bb3fd889e5d59ebb1795e008315cdf0ea1a2f52587c8b786b3e8",
-    "srs_requirements.csv": "e9446ef11dd674554d5e5b2c89b4c1d29370ed95b586eca39f4523b75368c90d"
+    "srs_addressable_clauses.csv": "f9bef7b871339bbe2f444e6c1f97b4a6c3a75be6f60e360d26b8601094bee702"
   },
   "counts": {
-    "clauses": 100,
     "srs_addressable": 14,
     "requirements": 54
   },
-  "extraction_qa": {
-    "clauses_with_multiple_swe_ids": {},
-    "in_matrix_not_in_body": [],
-    "in_body_not_in_matrix": [],
-    "duplicate_swe_ids": [],
-    "duplicate_clause_ids": [],
-    "missing_sections": [],
-    "clauses_with_trailing_junk": [],
-    "clause_id_vs_matrix_section": {}
-  },
-  "versions": {
-    "pandas": "2.0.3",
-    "pdfplumber": "0.11.5",
-    "scikit-learn": "1.3.2"
-  },
-  "scope_status": "Team-curated SRS applicability; not benchmark labels or verdicts."
+  "scope_status": "Team-curated applicability, not compliance labels."
 }

@@ -11,6 +11,7 @@ import pandas as pd
 from .data import validate_clauses, validate_table
 
 
+# Reuse the team notebook's existing phrase rules unchanged.
 AMBIGUITY_RULES = {
     "quickly": "Specify a measurable response-time limit.",
     "immediately": "Clarify the maximum allowed response time.",
@@ -27,10 +28,13 @@ AMBIGUITY_RULES = {
     "safe and efficient": "Define safety and efficiency criteria.",
     "safest destination": "Define destination selection criteria.",
     "safe location": "Define what qualifies as a safe location.",
-    "friendly spacecraft": "Define friendly, hostile, and unknown classification criteria.",
-    "greatest danger": "Define threat-priority factors and ranking method.",
-    "nonessential spacecraft functions": "Identify functions that may be delayed or disabled.",
+    "friendly spacecraft": "Define the criteria for identifying friendly, "
+    "hostile, or unknown spacecraft.",
+    "greatest danger": "Define the threat-priority factors and ranking method.",
+    "nonessential spacecraft functions": "Identify the functions that may be "
+    "delayed or disabled in Emergency mode.",
 }
+
 ASSESSMENT_COLUMNS = [
     "requirement_id",
     "swe_id",

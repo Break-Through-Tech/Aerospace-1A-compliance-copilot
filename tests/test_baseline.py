@@ -17,6 +17,7 @@ def test_original_srs_parser_and_keyword_flags_are_preserved(project_root):
     assert list(new.requirement_id) == list(old.requirement_id)
     assert list(new.text) == list(old.text)
     assert list(new.status) == list(old.status)
+    assert list(new.findings.map(" | ".join)) == list(old.findings.fillna(""))
 
 
 def test_duplicate_requirement_ids_are_rejected():

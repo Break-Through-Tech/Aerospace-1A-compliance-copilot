@@ -35,25 +35,26 @@ From the repository root in a Python environment:
 
 ```sh
 python -m pip install -r requirements-dev.txt
-python scripts/prepare_data.py
 python scripts/run_baseline.py
 python -m pytest -q
 ```
 
-Prepared inputs are committed, so preparation is needed only to reproduce them
-or after source changes. It reads the bundled PDF offline, adapts the team's
-extraction/repair code, validates body/Appendix C agreement, and exports:
+The team's extraction, cleaning and applicability work remains in
+`Aerospace_1A.ipynb`. This baseline consumes its existing export of 14 SRS-addressable
+clauses. The `direct`/`partial` applicability labels are reused, not verdicts.
+The existing SRS parsing pattern and 18 keyword rules are reused with the same
+results on the supplied requirements.
 
-- `data/processed/nasa_clauses.json`: 100 clauses with nested metadata.
-- `data/processed/annotated_nasa_clauses.csv`: the full annotated corpus.
-- `data/processed/srs_addressable_clauses.csv`: 14 candidate clauses.
-- `data/processed/srs_requirements.csv`: 54 parsed requirements.
-- `data/processed/manifest.json`: source hashes, counts, extraction QA and versions.
+A baseline copy is included in `data/processed/srs_addressable_clauses.csv`, along
+with a small provenance manifest. Text hashes normalize line endings across
+platforms. The SRS is loaded from its existing canonical file under `data/`.
 
-`data/srs_scope.json` contains the team's applicability mapping migrated from the
-notebook. Its `direct`/`partial` values describe what an SRS can address, not
-compliance verdicts. Extraction page ranges target the bundled NPR 7150.2D edition;
-this is not a general parser for other standards.
+After teammates update their data, import the CSV exported by their existing
+notebook:
+
+```sh
+python scripts/import_clauses.py --clauses path/to/srs_addressable_clauses.csv
+```
 
 Install Jupyter separately if needed to open `notebooks/Baseline_Model.ipynb`.
 In Colab, clone this branch, install `requirements.txt`, and run from inside the
