@@ -3,7 +3,7 @@
 The baseline retrieves NPR 7150.2D clauses using TF-IDF and applies explicit rules
 to selected SRS evidence provisions. It uses no LLM or API key. The original
 notebook retains the team's September preparation work; the short
-`notebooks/Baseline_Model.ipynb` calls reusable code in `src/compliance_copilot/`.
+`notebooks/TF_IDF_Baseline_Model.ipynb` calls reusable code in `src/compliance_copilot/`.
 
 ## TF-IDF workflow
 
@@ -56,7 +56,7 @@ notebook:
 python scripts/import_clauses.py --clauses path/to/srs_addressable_clauses.csv
 ```
 
-Install Jupyter separately if needed to open `notebooks/Baseline_Model.ipynb`.
+Install Jupyter separately if needed to open `notebooks/TF_IDF_Baseline_Model.ipynb`.
 In Colab, clone this branch, install `requirements.txt`, and run from inside the
 cloned repository. The notebook finds the root in the current directory or parents.
 
