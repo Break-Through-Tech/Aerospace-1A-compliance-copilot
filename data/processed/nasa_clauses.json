@@ -1,0 +1,2466 @@
+[
+  {
+    "swe_id": "SWE-033",
+    "section": "3.1",
+    "clause_id": "3.1.2",
+    "text": "The project manager shall assess options for software acquisition versus development.\n[SWE-033]",
+    "notes": [
+      "Note: The assessment can include risk, cost, and benefits criteria for each of the options\nlisted below:\na. Acquire an off-the-shelf software product that satisfies the requirement.\nb. Develop a software product or obtain the software service internally.\nc. Develop the software product or obtain the software service through contract.\nd. Enhance an existing software product or service.\ne. Reuse an existing software product or service.\nf. Source code available external to NASA.\nSee the NASA Software Engineering Handbook for additional detail."
+    ],
+    "sources": [
+      "body",
+      "matrix"
+    ],
+    "matrix_section": "3.1.2",
+    "matrix_requirement_text": "The project manager shall assess options for software acquisition versus development.",
+    "matrix_authority": "Center",
+    "matrix_class_marks": 5,
+    "matrix_f_authority": "X",
+    "matrix_f_mark": "",
+    "functional_category": "Software Life Cycle Planning",
+    "action_verbs": [
+      "develop",
+      "assess"
+    ],
+    "srs_scope": "out",
+    "srs_evidence": "",
+    "source_url": "https://nodis3.gsfc.nasa.gov/npg_img/N_PR_7150_002D_/N_PR_7150_002D_.pdf"
+  },
+  {
+    "swe_id": "SWE-013",
+    "section": "3.1",
+    "clause_id": "3.1.3",
+    "text": "The project manager shall develop, maintain, and execute software plans, including security\nplans, that cover the entire software life cycle and, as a minimum, address the requirements of this\ndirective with approved tailoring. [SWE-013]",
+    "notes": [
+      "Note: The recommended practices and guidelines for the content of different types of\nsoftware planning activities (whether stand-alone or condensed into one or more project\nlevel or software documents or electronic files) are defined in NASA-HDBK-2203. The\nproject should include, or reference in the software development plans, procedures for\ncoordinating the software development and design, and the system or project development\nlife cycle."
+    ],
+    "sources": [
+      "body",
+      "matrix"
+    ],
+    "matrix_section": "3.1.3",
+    "matrix_requirement_text": "The project manager shall develop, maintain, and execute software plans, including security plans, that cover the entire software life cycle and, as a minimum, address the requirements of this directive with approved tailoring.",
+    "matrix_authority": "Center",
+    "matrix_class_marks": 5,
+    "matrix_f_authority": "X",
+    "matrix_f_mark": "",
+    "functional_category": "Software Life Cycle Planning",
+    "action_verbs": [
+      "develop",
+      "maintain"
+    ],
+    "srs_scope": "out",
+    "srs_evidence": "",
+    "source_url": "https://nodis3.gsfc.nasa.gov/npg_img/N_PR_7150_002D_/N_PR_7150_002D_.pdf"
+  },
+  {
+    "swe_id": "SWE-024",
+    "section": "3.1",
+    "clause_id": "3.1.4",
+    "text": "The project manager shall track the actual results and performance of software activities\nagainst the software plans. [SWE-024]\na. Corrective actions are taken, recorded, and managed to closure.\nb. Changes to commitments (e.g., software plans) that have been agreed to by the affected groups\nand individuals are taken, recorded, and managed.",
+    "notes": [],
+    "sources": [
+      "body",
+      "matrix"
+    ],
+    "matrix_section": "3.1.4",
+    "matrix_requirement_text": "The project manager shall track the actual results and performance of software activities against the software plans. a. Corrective actions are taken, recorded, and managed to closure. b. Changes to commitments (e.g., software plans) that have been agreed to by the affected groups and individuals are taken, recorded, and managed.",
+    "matrix_authority": "Center",
+    "matrix_class_marks": 4,
+    "matrix_f_authority": "X",
+    "matrix_f_mark": "",
+    "functional_category": "Software Life Cycle Planning",
+    "action_verbs": [
+      "track"
+    ],
+    "srs_scope": "out",
+    "srs_evidence": "",
+    "source_url": "https://nodis3.gsfc.nasa.gov/npg_img/N_PR_7150_002D_/N_PR_7150_002D_.pdf"
+  },
+  {
+    "swe_id": "SWE-034",
+    "section": "3.1",
+    "clause_id": "3.1.5",
+    "text": "The project manager shall define and document the acceptance criteria for the software.\n[SWE-034]",
+    "notes": [],
+    "sources": [
+      "body",
+      "matrix"
+    ],
+    "matrix_section": "3.1.5",
+    "matrix_requirement_text": "The project manager shall define and document the acceptance criteria for the software.",
+    "matrix_authority": "Center",
+    "matrix_class_marks": 4,
+    "matrix_f_authority": "X",
+    "matrix_f_mark": "",
+    "functional_category": "Software Life Cycle Planning",
+    "action_verbs": [
+      "document"
+    ],
+    "srs_scope": "partial",
+    "srs_evidence": "Verification method and pass criteria per requirement.",
+    "source_url": "https://nodis3.gsfc.nasa.gov/npg_img/N_PR_7150_002D_/N_PR_7150_002D_.pdf"
+  },
+  {
+    "swe_id": "SWE-036",
+    "section": "3.1",
+    "clause_id": "3.1.6",
+    "text": "The project manager shall establish and maintain the software processes, software\ndocumentation plans, list of developed electronic products, deliverables, and list of tasks for the\nsoftware development that are required for the project’s software developers, as well as the action\nrequired (e.g., approval, review) of the Government upon receipt of each of the deliverables.\n[SWE-036]",
+    "notes": [
+      "Note: A list of typical software engineering products or electronic data products used on a\nsoftware project is contained in Chapter 6 of this directive. The software activities should\ninclude plans for software product verification and validation activities, software\nassurance, methods, environments, and criteria for the project."
+    ],
+    "sources": [
+      "body",
+      "matrix"
+    ],
+    "matrix_section": "3.1.6",
+    "matrix_requirement_text": "The project manager shall establish and maintain the software processes, software documentation plans, list of developed electronic products, deliverables, and list of tasks",
+    "matrix_authority": "Center",
+    "matrix_class_marks": 4,
+    "matrix_f_authority": "X",
+    "matrix_f_mark": "",
+    "functional_category": "Software Life Cycle Planning",
+    "action_verbs": [
+      "develop",
+      "document",
+      "maintain",
+      "review"
+    ],
+    "srs_scope": "out",
+    "srs_evidence": "",
+    "source_url": "https://nodis3.gsfc.nasa.gov/npg_img/N_PR_7150_002D_/N_PR_7150_002D_.pdf"
+  },
+  {
+    "swe_id": "SWE-037",
+    "section": "3.1",
+    "clause_id": "3.1.7",
+    "text": "The project manager shall define and document the milestones at which the software\ndeveloper(s) progress will be reviewed and audited. [SWE-037]",
+    "notes": [],
+    "sources": [
+      "body",
+      "matrix"
+    ],
+    "matrix_section": "3.1.7",
+    "matrix_requirement_text": "The project manager shall define and document the milestones at which the software developer(s) progress will be reviewed and audited.",
+    "matrix_authority": "Center",
+    "matrix_class_marks": 4,
+    "matrix_f_authority": "X",
+    "matrix_f_mark": "",
+    "functional_category": "Software Life Cycle Planning",
+    "action_verbs": [
+      "develop",
+      "document",
+      "review"
+    ],
+    "srs_scope": "out",
+    "srs_evidence": "",
+    "source_url": "https://nodis3.gsfc.nasa.gov/npg_img/N_PR_7150_002D_/N_PR_7150_002D_.pdf"
+  },
+  {
+    "swe_id": "SWE-039",
+    "section": "3.1",
+    "clause_id": "3.1.8",
+    "text": "The project manager shall require the software developer(s) to periodically report status and\nprovide insight into software development and test activities; at a minimum, the software\ndeveloper(s) will be required to allow the project manager and software assurance personnel to:\n[SWE-039]\na. Monitor product integration.\nb. Review the verification activities to ensure adequacy.\nc. Review trade studies and source data.\nd. Audit the software development processes and practices.\ne. Participate in software reviews and technical interchange meetings.",
+    "notes": [],
+    "sources": [
+      "body",
+      "matrix"
+    ],
+    "matrix_section": "3.1.8",
+    "matrix_requirement_text": "The project manager shall require the software developer(s) to periodically report status and provide insight into software development and test activities; at a minimum, the software developer(s) will be required to allow the project manager and software assurance personnel to: a. Monitor product integration. b. Review the verification activities to ensure adequacy. c. Review trades studies and source data. d. Audit the software development processes and practices.e. Participate in software reviews and technical interchange meetings.",
+    "matrix_authority": "Center",
+    "matrix_class_marks": 4,
+    "matrix_f_authority": "X",
+    "matrix_f_mark": "",
+    "functional_category": "Software Life Cycle Planning",
+    "action_verbs": [
+      "develop",
+      "test",
+      "review"
+    ],
+    "srs_scope": "out",
+    "srs_evidence": "",
+    "source_url": "https://nodis3.gsfc.nasa.gov/npg_img/N_PR_7150_002D_/N_PR_7150_002D_.pdf"
+  },
+  {
+    "swe_id": "SWE-040",
+    "section": "3.1",
+    "clause_id": "3.1.9",
+    "text": "The project manager shall require the software developer(s) to provide NASA with software\nproducts, traceability, software change tracking information, and nonconformances in electronic\nformat, including software development and management metrics. [SWE-040]",
+    "notes": [],
+    "sources": [
+      "body",
+      "matrix"
+    ],
+    "matrix_section": "3.1.9",
+    "matrix_requirement_text": "The project manager shall require the software developer(s) to provide NASA with software products, traceability, software change tracking information and nonconformances in electronic format, including software development and management metrics.",
+    "matrix_authority": "Center",
+    "matrix_class_marks": 4,
+    "matrix_f_authority": "X",
+    "matrix_f_mark": "",
+    "functional_category": "Software Life Cycle Planning",
+    "action_verbs": [
+      "develop",
+      "track"
+    ],
+    "srs_scope": "out",
+    "srs_evidence": "",
+    "source_url": "https://nodis3.gsfc.nasa.gov/npg_img/N_PR_7150_002D_/N_PR_7150_002D_.pdf"
+  },
+  {
+    "swe_id": "SWE-042",
+    "section": "3.1",
+    "clause_id": "3.1.10",
+    "text": "The project manager shall require the software developer(s) to provide NASA with electronic\naccess to the source code developed for the project in a modifiable format. [SWE-042]",
+    "notes": [
+      "Note: The electronic access requirements for the source code, software products, and\nsoftware process tracking information implies that NASA gets electronic copies of the items\nfor use by NASA at NASA facilities. This requirement should include MOTS software,\nground test software, simulations, ground analysis software, ground control software,\n\n\n\n\n\nscience data processing software, hardware manufacturing software, and Class E and\nClass F software."
+    ],
+    "sources": [
+      "body",
+      "matrix"
+    ],
+    "matrix_section": "3.1.10",
+    "matrix_requirement_text": "The project manager shall require the software developer(s) to provide NASA with electronic access to the source code developed for the project in a modifiable format.",
+    "matrix_authority": "Center",
+    "matrix_class_marks": 5,
+    "matrix_f_authority": "X",
+    "matrix_f_mark": "",
+    "functional_category": "Software Life Cycle Planning",
+    "action_verbs": [
+      "develop"
+    ],
+    "srs_scope": "out",
+    "srs_evidence": "",
+    "source_url": "https://nodis3.gsfc.nasa.gov/npg_img/N_PR_7150_002D_/N_PR_7150_002D_.pdf"
+  },
+  {
+    "swe_id": "SWE-139",
+    "section": "3.1",
+    "clause_id": "3.1.11",
+    "text": "The project manager shall comply with the requirements in this NPR that are marked with an\n“X” in Appendix C consistent with their software classification. [SWE-139]",
+    "notes": [],
+    "sources": [
+      "body",
+      "matrix"
+    ],
+    "matrix_section": "3.1.11",
+    "matrix_requirement_text": "The project manager shall comply with the requirements in this NPR that are marked with an “X” in Appendix C consistent with their software classification.",
+    "matrix_authority": "Center",
+    "matrix_class_marks": 5,
+    "matrix_f_authority": "X",
+    "matrix_f_mark": "",
+    "functional_category": "Software Life Cycle Planning",
+    "action_verbs": [],
+    "srs_scope": "out",
+    "srs_evidence": "",
+    "source_url": "https://nodis3.gsfc.nasa.gov/npg_img/N_PR_7150_002D_/N_PR_7150_002D_.pdf"
+  },
+  {
+    "swe_id": "SWE-121",
+    "section": "3.1",
+    "clause_id": "3.1.12",
+    "text": "Where approved, the project manager shall document and reflect the tailored requirement in\nthe plans or procedures controlling the development, acquisition, and deployment of the affected\nsoftware. [SWE-121]",
+    "notes": [],
+    "sources": [
+      "body",
+      "matrix"
+    ],
+    "matrix_section": "3.1.12",
+    "matrix_requirement_text": "Where approved, the project manager shall document and reflect the tailored requirement in the plans or procedures controlling the development, acquisition, and deployment of the affected software.",
+    "matrix_authority": "Center",
+    "matrix_class_marks": 5,
+    "matrix_f_authority": "X",
+    "matrix_f_mark": "",
+    "functional_category": "Software Life Cycle Planning",
+    "action_verbs": [
+      "develop",
+      "document"
+    ],
+    "srs_scope": "out",
+    "srs_evidence": "",
+    "source_url": "https://nodis3.gsfc.nasa.gov/npg_img/N_PR_7150_002D_/N_PR_7150_002D_.pdf"
+  },
+  {
+    "swe_id": "SWE-125",
+    "section": "3.1",
+    "clause_id": "3.1.13",
+    "text": "Each project manager with software components shall maintain a requirements mapping\nmatrix or multiple requirements mapping matrices against requirements in this NPR, including those\ndelegated to other parties or accomplished by contract vehicles or Space Act Agreements.\n[SWE-125]",
+    "notes": [
+      "Note: A project may have multiple software engineering requirements mapping matrices if\nneeded for multiple software components on a given project.",
+      "Note: Project relief from an applicable “X” requirement can be granted only by the\ndesignated TAs, Engineering, and SMA, or, for security issues, the NASA CIO. The record\nof their approval of the tailored requirements in a Requirements Mapping Matrix will be\nindicated by the Authority signature or signatures in the Requirements Mapping Matrix.\nThe projects will document their related mitigations and risk acceptance in the approved\nRequirements Mapping Matrix. When the requirement and software class are marked with\nan “X,” the projects record the risk and rationale for any requirements that are entirely or\npartially relieved in the Requirements Mapping Matrix. The CIO has institutional authority\non all Class F software projects."
+    ],
+    "sources": [
+      "body",
+      "matrix"
+    ],
+    "matrix_section": "3.1.13",
+    "matrix_requirement_text": "Each project manager with software components shall maintain a requirements mapping matrix or multiple requirements mapping matrices against requirements in this NPR, including those delegated to other parties or accomplished by contract vehicles or Space Act Agreements.",
+    "matrix_authority": "Center",
+    "matrix_class_marks": 5,
+    "matrix_f_authority": "X",
+    "matrix_f_mark": "",
+    "functional_category": "Software Life Cycle Planning",
+    "action_verbs": [
+      "maintain"
+    ],
+    "srs_scope": "out",
+    "srs_evidence": "",
+    "source_url": "https://nodis3.gsfc.nasa.gov/npg_img/N_PR_7150_002D_/N_PR_7150_002D_.pdf"
+  },
+  {
+    "swe_id": "SWE-027",
+    "section": "3.1",
+    "clause_id": "3.1.14",
+    "text": "The project manager shall satisfy the following conditions when a COTS, GOTS, MOTS,\nOSS, or reused software component is acquired or used: [SWE-027]\na. The requirements to be met by the software component are identified.\nb. The software component includes documentation to fulfill its intended purpose (e.g., usage\ninstructions).\nc. Proprietary rights, usage rights, ownership, warranty, licensing rights, transfer rights, and\nconditions of use (e.g., required copyright, author, and applicable license notices within the software\ncode, or a requirement to redistribute the licensed software only under the same license (e.g., GNU\nGPL, ver. 3, license)) have been addressed and coordinated with Center Intellectual Property\nCounsel.\nd. Future support for the software product is planned and adequate for project needs.\ne. The software component is verified and validated to the same level required to accept a similar\ndeveloped software component for its intended use.\nf. The project has a plan to perform periodic assessments of vendor reported defects to ensure the\ndefects do not impact the selected software components.",
+    "notes": [
+      "Note: The project responsible for procuring off-the-shelf software is responsible for\ndocumenting, prior to procurement, a plan for verifying and validating the software to the\nsame level that would be required for a developed software component. The project ensures\nthat the COTS, GOTS, MOTS, reused, and auto-generated code software components and\ndata meet the applicable requirements in this directive assigned to its software\nclassification as shown in Appendix C."
+    ],
+    "sources": [
+      "body",
+      "matrix"
+    ],
+    "matrix_section": "3.1.14",
+    "matrix_requirement_text": "The project manager shall satisfy the following conditions when a COTS, GOTS, MOTS, OSS, or reused software component is acquired or used: a. The requirements to be met by the software component are identified. b. The software component includes documentation to fulfill its intended purpose (e.g., usage instructions). c. Proprietary rights, usage",
+    "matrix_authority": "Center",
+    "matrix_class_marks": 4,
+    "matrix_f_authority": "X",
+    "matrix_f_mark": "",
+    "functional_category": "Software Life Cycle Planning",
+    "action_verbs": [
+      "develop",
+      "document",
+      "assess"
+    ],
+    "srs_scope": "partial",
+    "srs_evidence": "Item a only: requirements the COTS/GOTS/MOTS/OSS/reused component must meet.",
+    "source_url": "https://nodis3.gsfc.nasa.gov/npg_img/N_PR_7150_002D_/N_PR_7150_002D_.pdf"
+  },
+  {
+    "swe_id": "SWE-015",
+    "section": "3.2",
+    "clause_id": "3.2.1",
+    "text": "To better estimate the cost of development, the project manager shall establish, document, and\nmaintain: [SWE-015]\na. Two cost estimate models and associated cost parameters for all Class A and B software projects\nthat have an estimated project cost of $2 million or more.\nb. One software cost estimate model and associated cost parameter(s) for all Class A and Class B\nsoftware projects that have an estimated project cost of less than $2 million.\nc. One software cost estimate model and associated cost parameter(s) for all Class C and Class D\nsoftware projects.\nd. One software cost estimate model and associated cost parameter(s) for all Class F software\nprojects.",
+    "notes": [],
+    "sources": [
+      "body",
+      "matrix"
+    ],
+    "matrix_section": "3.2.1",
+    "matrix_requirement_text": "To better estimate the cost of development, the project manager shall establish, document, and maintain: a. Two cost estimate models and associated cost parameters for all Class A and B software projects that have an estimated project cost of $2 million or more. b. One software cost estimate model and associated cost parameter(s) for all Class A and Class B software projects that have an estimated project cost of less than $2 million.",
+    "matrix_authority": "Center",
+    "matrix_class_marks": 4,
+    "matrix_f_authority": "X",
+    "matrix_f_mark": "",
+    "functional_category": "Software Cost Estimation",
+    "action_verbs": [
+      "develop",
+      "document",
+      "maintain"
+    ],
+    "srs_scope": "out",
+    "srs_evidence": "",
+    "source_url": "https://nodis3.gsfc.nasa.gov/npg_img/N_PR_7150_002D_/N_PR_7150_002D_.pdf"
+  },
+  {
+    "swe_id": "SWE-151",
+    "section": "3.2",
+    "clause_id": "3.2.2",
+    "text": "The project manager’s software cost estimate(s) shall satisfy the following conditions:\n[SWE-151]\na. Covers the entire software life cycle.\nb. Is based on selected project attributes (e.g., programmatic assumptions/constraints, assessment of\nthe size, functionality, complexity, criticality, reuse code, modified code, and risk of the software\nprocesses and products).\nc. Is based on the cost implications of the technology to be used and the required maturation of that\ntechnology.\nd. Incorporates risk and uncertainty, including end state risk and threat assessments for\ncybersecurity.\ne. Includes the cost of the required software assurance support.\nf. Includes other direct costs.",
+    "notes": [
+      "Note: In the event of a decision to outsource, it is a best practice that both the acquirer\n(NASA) and the provider (contractor/subcontractor) be responsible for developing software\ncost estimates. For any class of software that has significant risk exposure, consider\nperforming at least two cost estimates."
+    ],
+    "sources": [
+      "body",
+      "matrix"
+    ],
+    "matrix_section": "3.2.2",
+    "matrix_requirement_text": "The project manager’s software cost estimate(s) shall satisfy the following conditions: a. Covers the entire software life cycle. b. Is based on selected project attributes (e.g., programmatic assumptions/constraints, assessment of the size, functionality, complexity, criticality, reuse code, modified code, and risk of the software processes and products). c. Is based on the cost implications of the technology to be used and the required maturation of that technology. d. Incorporates risk and uncertainty, including end state risk and threat assessments for cybersecurity. e. Includes the cost of the required software assurance support. f. Includes other direct costs.",
+    "matrix_authority": "Center",
+    "matrix_class_marks": 4,
+    "matrix_f_authority": "X",
+    "matrix_f_mark": "",
+    "functional_category": "Software Cost Estimation",
+    "action_verbs": [
+      "assess"
+    ],
+    "srs_scope": "out",
+    "srs_evidence": "",
+    "source_url": "https://nodis3.gsfc.nasa.gov/npg_img/N_PR_7150_002D_/N_PR_7150_002D_.pdf"
+  },
+  {
+    "swe_id": "SWE-174",
+    "section": "3.2",
+    "clause_id": "3.2.3",
+    "text": "The project manager shall submit software planning parameters, including size and effort\nestimates, milestones, and characteristics, to the Center measurement repository at the conclusion of\nmajor milestones. [SWE-174]",
+    "notes": [],
+    "sources": [
+      "body",
+      "matrix"
+    ],
+    "matrix_section": "3.2.3",
+    "matrix_requirement_text": "The project manager shall submit software planning parameters, including size and effort estimates, milestones, and characteristics, to the Center measurement repository at the conclusion of major milestones.",
+    "matrix_authority": "Center",
+    "matrix_class_marks": 4,
+    "matrix_f_authority": "",
+    "matrix_f_mark": "",
+    "functional_category": "Software Cost Estimation",
+    "action_verbs": [],
+    "srs_scope": "out",
+    "srs_evidence": "",
+    "source_url": "https://nodis3.gsfc.nasa.gov/npg_img/N_PR_7150_002D_/N_PR_7150_002D_.pdf"
+  },
+  {
+    "swe_id": "SWE-016",
+    "section": "3.3",
+    "clause_id": "3.3.1",
+    "text": "The project manager shall document and maintain a software schedule that satisfies the\nfollowing conditions: [SWE-016]\na. Coordinates with the overall project schedule.\nb. Documents the interactions of milestones and deliverables between software, hardware,\noperations, and the rest of the system.\nc. Reflects the critical dependencies for software development activities.\nd. Identifies and accounts for dependencies with other projects and cross-program dependencies.",
+    "notes": [],
+    "sources": [
+      "body",
+      "matrix"
+    ],
+    "matrix_section": "3.3.1",
+    "matrix_requirement_text": "The project manager shall document and maintain a software schedule that satisfies the following conditions: a. Coordinates with the overall project schedule. b. Documents the interactions of milestones and deliverables between software, hardware, operations, and the rest of the system. c. Reflects the critical dependencies for software development activities. d. Identifies and accounts for dependencies with other projects and cross-program dependencies.",
+    "matrix_authority": "Center",
+    "matrix_class_marks": 4,
+    "matrix_f_authority": "X",
+    "matrix_f_mark": "",
+    "functional_category": "Software Schedules",
+    "action_verbs": [
+      "develop",
+      "document",
+      "maintain"
+    ],
+    "srs_scope": "out",
+    "srs_evidence": "",
+    "source_url": "https://nodis3.gsfc.nasa.gov/npg_img/N_PR_7150_002D_/N_PR_7150_002D_.pdf"
+  },
+  {
+    "swe_id": "SWE-018",
+    "section": "3.3",
+    "clause_id": "3.3.2",
+    "text": "The project manager shall regularly hold reviews of software schedule activities, status,\nperformance metrics, and assessment/analysis results with the project stakeholders and track issues\nto resolution. [SWE-018]",
+    "notes": [],
+    "sources": [
+      "body",
+      "matrix"
+    ],
+    "matrix_section": "3.3.2",
+    "matrix_requirement_text": "The project manager shall regularly hold reviews of software schedule activities, status, performance metrics, and assessment/analysis results with the project stakeholders and track issues to resolution.",
+    "matrix_authority": "Center",
+    "matrix_class_marks": 3,
+    "matrix_f_authority": "X",
+    "matrix_f_mark": "",
+    "functional_category": "Software Schedules",
+    "action_verbs": [
+      "track",
+      "assess",
+      "review"
+    ],
+    "srs_scope": "out",
+    "srs_evidence": "",
+    "source_url": "https://nodis3.gsfc.nasa.gov/npg_img/N_PR_7150_002D_/N_PR_7150_002D_.pdf"
+  },
+  {
+    "swe_id": "SWE-046",
+    "section": "3.3",
+    "clause_id": "3.3.3",
+    "text": "The project manager shall require the software developer(s) to provide a software schedule for\nthe project’s review, and schedule updates as requested. [SWE-046]",
+    "notes": [],
+    "sources": [
+      "body",
+      "matrix"
+    ],
+    "matrix_section": "3.3.3",
+    "matrix_requirement_text": "The project manager shall require the software developer(s) to provide a software schedule for the project’s review and schedule updates as requested.",
+    "matrix_authority": "Center",
+    "matrix_class_marks": 4,
+    "matrix_f_authority": "X",
+    "matrix_f_mark": "",
+    "functional_category": "Software Schedules",
+    "action_verbs": [
+      "develop",
+      "review"
+    ],
+    "srs_scope": "out",
+    "srs_evidence": "",
+    "source_url": "https://nodis3.gsfc.nasa.gov/npg_img/N_PR_7150_002D_/N_PR_7150_002D_.pdf"
+  },
+  {
+    "swe_id": "SWE-017",
+    "section": "3.4",
+    "clause_id": "3.4.1",
+    "text": "The project manager shall plan, track, and ensure project specific software training for project\npersonnel. [SWE-017]",
+    "notes": [
+      "Note: This includes any software assurance personnel assigned to the project.\n\ns"
+    ],
+    "sources": [
+      "body",
+      "matrix"
+    ],
+    "matrix_section": "3.4.1",
+    "matrix_requirement_text": "The project manager shall plan, track, and ensure project specific software training for project personnel.",
+    "matrix_authority": "Center",
+    "matrix_class_marks": 3,
+    "matrix_f_authority": "X",
+    "matrix_f_mark": "",
+    "functional_category": "Software Training",
+    "action_verbs": [
+      "track"
+    ],
+    "srs_scope": "out",
+    "srs_evidence": "",
+    "source_url": "https://nodis3.gsfc.nasa.gov/npg_img/N_PR_7150_002D_/N_PR_7150_002D_.pdf"
+  },
+  {
+    "swe_id": "SWE-020",
+    "section": "3.5",
+    "clause_id": "3.5.1",
+    "text": "The project manager shall classify each system and subsystem containing software in\naccordance with the highest applicable software classification definitions for Classes A, B, C, D, E,\nand F software in Appendix D. [SWE-020]",
+    "notes": [
+      "Note: The expected applicability of requirements in this directive to specific systems and\nsubsystems containing software is determined through the use of the NASA-wide definitions\nfor software classes in Appendix D in conjunction with the Requirements Mapping Matrix\nin Appendix C. These definitions are based on (1) usage of the software with or within a\nNASA system, (2) criticality of the system to NASA’s major programs and projects, (3)\nextent to which humans depend upon the system, (4) developmental and operational\ncomplexity, and (5) extent of the Agency’s investment.\n\n\n\n\n\nSoftware assurance may perform an independent software classification, or concur with\nengineering’s software classification decision. Software engineering and software assurance\ntechnical authorities need to agree on the classification of each system and subsystem containing\nsoftware. If there is a disagreement between the technical authorities, then the dissenting opinion\nprocess for your center should be followed."
+    ],
+    "sources": [
+      "body",
+      "matrix"
+    ],
+    "matrix_section": "3.5.1",
+    "matrix_requirement_text": "The project manager shall classify each system and subsystem containing software in accordance with the highest applicable software classification definitions for Classes A, B, C, D, E, and F software in Appendix D.",
+    "matrix_authority": "Center",
+    "matrix_class_marks": 5,
+    "matrix_f_authority": "X",
+    "matrix_f_mark": "",
+    "functional_category": "Software Classification Assessments",
+    "action_verbs": [],
+    "srs_scope": "out",
+    "srs_evidence": "",
+    "source_url": "https://nodis3.gsfc.nasa.gov/npg_img/N_PR_7150_002D_/N_PR_7150_002D_.pdf"
+  },
+  {
+    "swe_id": "SWE-176",
+    "section": "3.5",
+    "clause_id": "3.5.2",
+    "text": "The project manager shall maintain records of each software classification determination, each\nsoftware Requirements Mapping Matrix, and the results of each software independent classification\nassessments for the life of the project. [SWE-176]",
+    "notes": [],
+    "sources": [
+      "body",
+      "matrix"
+    ],
+    "matrix_section": "3.5.2",
+    "matrix_requirement_text": "The project manager shall maintain records of each software classification determination, each software Requirements Mapping Matrix, and the results of each software independent classification assessments for the life of the project.",
+    "matrix_authority": "Center",
+    "matrix_class_marks": 5,
+    "matrix_f_authority": "X",
+    "matrix_f_mark": "",
+    "functional_category": "Software Classification Assessments",
+    "action_verbs": [
+      "maintain",
+      "assess"
+    ],
+    "srs_scope": "out",
+    "srs_evidence": "",
+    "source_url": "https://nodis3.gsfc.nasa.gov/npg_img/N_PR_7150_002D_/N_PR_7150_002D_.pdf"
+  },
+  {
+    "swe_id": "SWE-022",
+    "section": "3.6",
+    "clause_id": "3.6.1",
+    "text": "The project manager shall plan and implement software assurance, software safety, and IV&V\n(if required) per NASA-STD-8739.8, Software Assurance and Software Safety Standard.\n[SWE-022]",
+    "notes": [
+      "Note: Software assurance activities occur throughout the life of the project. Some of the\nactual analyses and activities may be performed by engineering or the project. Software\nAssurance directions, requirements, and guidance can be found in the NASA-STD-8739.8."
+    ],
+    "sources": [
+      "body",
+      "matrix"
+    ],
+    "matrix_section": "3.6.1",
+    "matrix_requirement_text": "The project manager shall plan and implement software assurance, software safety, and IV&V (if required) per NASA-STD-8739.8, Software Assurance and Software Safety Standard.",
+    "matrix_authority": "Center",
+    "matrix_class_marks": 5,
+    "matrix_f_authority": "",
+    "matrix_f_mark": "",
+    "functional_category": "Software Assurance and Software IV&V",
+    "action_verbs": [],
+    "srs_scope": "out",
+    "srs_evidence": "",
+    "source_url": "https://nodis3.gsfc.nasa.gov/npg_img/N_PR_7150_002D_/N_PR_7150_002D_.pdf"
+  },
+  {
+    "swe_id": "SWE-141",
+    "section": "3.6",
+    "clause_id": "3.6.2",
+    "text": "For projects reaching Key Decision Point A, the program manager shall ensure that software\nIV&V is performed on the following categories of projects: [SWE-141]\na. Category 1 projects as defined in NPR 7120.5.\nb. Category 2 projects as defined in NPR 7120.5, that have Class A or Class B payload risk\nclassification per NPR 8705.4, Risk Classification for NASA Payloads.\nc. Projects selected explicitly by the Mission Directorate Associate Administrator (MDAA) to have\nsoftware IV&V.",
+    "notes": [],
+    "sources": [
+      "body",
+      "matrix"
+    ],
+    "matrix_section": "3.6.2",
+    "matrix_requirement_text": "For projects reaching Key Decision Point A, the program manager shall ensure that software IV&V is performed on the following categories of projects: a. Category 1 projects as defined in NPR 7120.5. b. Category 2 projects as defined in NPR 7120.5 that have Class A or Class B payload risk classification per NPR 8705.4. c. Projects selected explicitly by the NASA Chief, Safety and Mission Assurance to have",
+    "matrix_authority": "HQ\nOSMA",
+    "matrix_class_marks": 2,
+    "matrix_f_authority": "",
+    "matrix_f_mark": "",
+    "functional_category": "Software Assurance and Software IV&V",
+    "action_verbs": [],
+    "srs_scope": "out",
+    "srs_evidence": "",
+    "source_url": "https://nodis3.gsfc.nasa.gov/npg_img/N_PR_7150_002D_/N_PR_7150_002D_.pdf"
+  },
+  {
+    "swe_id": "SWE-131",
+    "section": "3.6",
+    "clause_id": "3.6.3",
+    "text": "If software IV&V is required for a project, the project manager, in consultation with NASA\nIV&V, shall ensure an IPEP is developed, approved, maintained, and executed in accordance with\nIV&V requirements in NASA-STD-8739.8. [SWE-131]",
+    "notes": [
+      "Note: The IV&V Advisory Board will review the scope of NASA IV&V activities on an\nannual basis as part of the budget planning process."
+    ],
+    "sources": [
+      "body",
+      "matrix"
+    ],
+    "matrix_section": "3.6.3",
+    "matrix_requirement_text": "If software IV&V is performed on a project, the project manager shall ensure an IPEP is developed, approved, maintained, and executed in accordance with the IV&V criteria defined in NASA-STD-8739.8.",
+    "matrix_authority": "Center",
+    "matrix_class_marks": 2,
+    "matrix_f_authority": "",
+    "matrix_f_mark": "",
+    "functional_category": "Software Assurance and Software IV&V",
+    "action_verbs": [
+      "develop",
+      "maintain"
+    ],
+    "srs_scope": "out",
+    "srs_evidence": "",
+    "source_url": "https://nodis3.gsfc.nasa.gov/npg_img/N_PR_7150_002D_/N_PR_7150_002D_.pdf"
+  },
+  {
+    "swe_id": "SWE-178",
+    "section": "3.6",
+    "clause_id": "3.6.4",
+    "text": "If software IV&V is performed on a project, the project manager shall ensure that IV&V is\nprovided access to development artifacts, products, source code, and data required to perform the\nIV&V analysis efficiently and effectively. [SWE-178]",
+    "notes": [
+      "Note: The artifacts and products should be provided electronically in original format (i.e.,\nnon-pdf) and, where possible, direct read-only electronic access to project document\n\n\n\n\n\nnon-pdf) and, where possible, direct read-only electronic access to project document\nrepositories and data stores should be provided. Appropriate security products should be\ncompleted and transferred as part of the overall package."
+    ],
+    "sources": [
+      "body",
+      "matrix"
+    ],
+    "matrix_section": "3.6.4",
+    "matrix_requirement_text": "If software IV&V is performed on a project, the project manager shall ensure that IV&V is provided access to development artifacts, products, source code, and data required to perform the IV&V analysis efficiently and effectively.",
+    "matrix_authority": "Center",
+    "matrix_class_marks": 2,
+    "matrix_f_authority": "",
+    "matrix_f_mark": "",
+    "functional_category": "Software Assurance and Software IV&V",
+    "action_verbs": [
+      "develop"
+    ],
+    "srs_scope": "out",
+    "srs_evidence": "",
+    "source_url": "https://nodis3.gsfc.nasa.gov/npg_img/N_PR_7150_002D_/N_PR_7150_002D_.pdf"
+  },
+  {
+    "swe_id": "SWE-179",
+    "section": "3.6",
+    "clause_id": "3.6.5",
+    "text": "If software IV&V is performed on a project, the project manager shall provide responses to\nIV&V submitted issues and risks and track these issues and risks to closure. [SWE-179]",
+    "notes": [],
+    "sources": [
+      "body",
+      "matrix"
+    ],
+    "matrix_section": "3.6.5",
+    "matrix_requirement_text": "If software IV&V is performed on a project, the project manager shall provide responses to IV&V submitted issues and risks, and track these issues and risks to closure.",
+    "matrix_authority": "Center",
+    "matrix_class_marks": 2,
+    "matrix_f_authority": "",
+    "matrix_f_mark": "",
+    "functional_category": "Software Assurance and Software IV&V",
+    "action_verbs": [
+      "track"
+    ],
+    "srs_scope": "out",
+    "srs_evidence": "",
+    "source_url": "https://nodis3.gsfc.nasa.gov/npg_img/N_PR_7150_002D_/N_PR_7150_002D_.pdf"
+  },
+  {
+    "swe_id": "SWE-205",
+    "section": "3.7",
+    "clause_id": "3.7.1",
+    "text": "The project manager, in conjunction with the SMA organization, shall determine if each\nsoftware component is considered to be safety-critical per the criteria defined in\nNASA-STD-8739.8. [SWE-205]",
+    "notes": [],
+    "sources": [
+      "body",
+      "matrix"
+    ],
+    "matrix_section": "3.7.1",
+    "matrix_requirement_text": "The project manager, in conjunction with the SMA organization, shall determine if each software component is considered to be safety-critical per the criteria defined in NASA-STD-8739.8.",
+    "matrix_authority": "Center",
+    "matrix_class_marks": 5,
+    "matrix_f_authority": "",
+    "matrix_f_mark": "",
+    "functional_category": "Safety-Critical Software",
+    "action_verbs": [],
+    "srs_scope": "partial",
+    "srs_evidence": "Safety-critical requirements or components are flagged.",
+    "source_url": "https://nodis3.gsfc.nasa.gov/npg_img/N_PR_7150_002D_/N_PR_7150_002D_.pdf"
+  },
+  {
+    "swe_id": "SWE-023",
+    "section": "3.7",
+    "clause_id": "3.7.2",
+    "text": "If a project has safety-critical software, the project manager shall implement the safety-critical\nsoftware requirements contained in NASA-STD-8739.8. [SWE-023]",
+    "notes": [],
+    "sources": [
+      "body",
+      "matrix"
+    ],
+    "matrix_section": "3.7.2",
+    "matrix_requirement_text": "If a project has safety-critical software, the project manager shall implement the safety-critical software requirements contained in NASA-STD-8739.8.",
+    "matrix_authority": "Center",
+    "matrix_class_marks": 4,
+    "matrix_f_authority": "",
+    "matrix_f_mark": "",
+    "functional_category": "Safety-Critical Software",
+    "action_verbs": [],
+    "srs_scope": "partial",
+    "srs_evidence": "NASA-STD-8739.8 safety-critical requirements expressed as software requirements.",
+    "source_url": "https://nodis3.gsfc.nasa.gov/npg_img/N_PR_7150_002D_/N_PR_7150_002D_.pdf"
+  },
+  {
+    "swe_id": "SWE-134",
+    "section": "3.7",
+    "clause_id": "3.7.3",
+    "text": "If a project has safety-critical software or mission-critical software, the project manager shall\nimplement the following items in the software: [SWE-134]\na. The software is initialized, at first start and restarts, to a known safe state.\nb. The software safely transitions between all predefined known states.\nc. Termination performed by software functions is performed to a known safe state.\nd. Operator overrides of software functions require at least two independent actions by an operator.\ne. Software rejects commands received out of sequence when execution of those commands out of\nsequence can cause a hazard.\nf. The software detects inadvertent memory modification and recovers to a known safe state.\ng. The software performs integrity checks on inputs and outputs to/from the software system.\nh. The software performs prerequisite checks prior to the execution of safety-critical software\ncommands.\ni. No single software event or action is allowed to initiate an identified hazard.\nj. The software responds to an off-nominal condition within the time needed to prevent a hazardous\nevent.\nk. The software provides error handling.\nl. The software can place the system into a safe state.",
+    "notes": [
+      "Note: These requirements apply to components that reside in a mission-critical or\nsafety-critical system, and the components control, mitigate, or contribute to a hazard as\nwell as software used to command hazardous operations/activities."
+    ],
+    "sources": [
+      "body",
+      "matrix"
+    ],
+    "matrix_section": "3.7.3",
+    "matrix_requirement_text": "If a project has safety-critical software or mission-critical software, the project manager shall implement the following items in the software: a. The software is initialized, at first start and restarts, to a known safe state. b. The software safely transitions between all predefined known states. c. Termination performed by software functions is performed to a known safe state. d. Operator overrides of software functions require at least two independent actions by an operator. e. Software rejects commands received out of sequence when execution of those commands out of sequence can cause a hazard. f. The software detects inadvertent memory modification and recovers to a known safe state. g. The software performs integrity checks on inputs and outputs to/from the software system. h. The software performs prerequisite checks prior to the execution of safety-critical software commands. i. No single software event or action is allowed to initiate an identified hazard. j. The software responds to an off-nominal condition within the time needed to prevent a hazardous event. k. The software provides error handling.",
+    "matrix_authority": "Center",
+    "matrix_class_marks": 4,
+    "matrix_f_authority": "",
+    "matrix_f_mark": "",
+    "functional_category": "Safety-Critical Software",
+    "action_verbs": [],
+    "srs_scope": "partial",
+    "srs_evidence": "Requirements covering items a-l: safe init, safe transitions, command checks, error handling, safe state.",
+    "source_url": "https://nodis3.gsfc.nasa.gov/npg_img/N_PR_7150_002D_/N_PR_7150_002D_.pdf"
+  },
+  {
+    "swe_id": "SWE-219",
+    "section": "3.7",
+    "clause_id": "3.7.4",
+    "text": "If a project has safety-critical software, the project manager shall ensure that there is 100\n\n\n\n\n\npercent code test coverage using the Modified Condition/Decision Coverage (MC/DC) criterion for\nall identified safety-critical software components. [SWE-219]",
+    "notes": [
+      "Note: In MC/DC coverage, every condition in a decision is tested independently to reach\nfull coverage. Each condition will be executed twice, once with the results true and once\nwith the results of false, but with no difference in the truth values of all other conditions in\nthe decision. In addition, it will be shown that each condition independently affects the\ndecision. Any deviations from 100 percent should be reviewed and waived with rationale\nby the TAs approval. It is recommended that someone independent of the developer of the\ncode under test design and perform this testing to ensure requirement interpretation or\nincorrect assumptions do not escape this testing."
+    ],
+    "sources": [
+      "body",
+      "matrix"
+    ],
+    "matrix_section": "3.7.4",
+    "matrix_requirement_text": "If a project has safety-critical software, the project manager shall ensure that there is 100 percent code test coverage using the Modified Condition/Decision Coverage (MC/DC) criterion for all identified safety-critical software components.",
+    "matrix_authority": "Center",
+    "matrix_class_marks": 4,
+    "matrix_f_authority": "",
+    "matrix_f_mark": "",
+    "functional_category": "Safety-Critical Software",
+    "action_verbs": [
+      "test"
+    ],
+    "srs_scope": "out",
+    "srs_evidence": "",
+    "source_url": "https://nodis3.gsfc.nasa.gov/npg_img/N_PR_7150_002D_/N_PR_7150_002D_.pdf"
+  },
+  {
+    "swe_id": "SWE-220",
+    "section": "3.7",
+    "clause_id": "3.7.5",
+    "text": "If a project has safety-critical software, the project manager shall ensure all identified\nsafety-critical software components have a cyclomatic complexity value of 15 or lower. Any\nexceedance shall be reviewed and waived with rationale by the project manager or technical\napproval authority. [SWE-220]",
+    "notes": [
+      "Note: Cyclomatic complexity is a metric used to measure the complexity of a software\nprogram. This metric measures independent paths through the source code. The point of the\nrequirement is to minimize risk, minimize testing, and increase reliability associated with\nsafety-critical software code components, thus reducing the chance of software failure\nduring a hazardous event. The software developer should assess all software safety-critical\ncomponents with a cyclomatic complexity score over 15 for testability, maintainability, and\ncode quality. For more guidance on this requirement, see NASA-HDBK-2203."
+    ],
+    "sources": [
+      "body",
+      "matrix"
+    ],
+    "matrix_section": "3.7.5",
+    "matrix_requirement_text": "If a project has safety-critical software, the project manager shall ensure all identified safety-critical software components have a cyclomatic complexity value of 15 or lower. Any exceedance shall be reviewed and waived with rationale by the project manager or technical approval authority.",
+    "matrix_authority": "Center",
+    "matrix_class_marks": 4,
+    "matrix_f_authority": "",
+    "matrix_f_mark": "",
+    "functional_category": "Safety-Critical Software",
+    "action_verbs": [
+      "review"
+    ],
+    "srs_scope": "out",
+    "srs_evidence": "",
+    "source_url": "https://nodis3.gsfc.nasa.gov/npg_img/N_PR_7150_002D_/N_PR_7150_002D_.pdf"
+  },
+  {
+    "swe_id": "SWE-146",
+    "section": "3.8",
+    "clause_id": "3.8.1",
+    "text": "The project manager shall define the approach to the automatic generation of software source\ncode including: [SWE-146]\na. Validation and verification of auto-generation tools.\nb. Configuration management of the auto-generation tools and associated data.\nc. Description of the limits and the allowable scope for the use of the auto-generated software.\nd. Verification and validation of auto-generated source code using the same software standards and\nprocesses as hand-generated code.\ne. Monitoring the actual use of auto-generated source code compared to the planned use.\nf. Policies and procedures for making manual changes to auto-generated source code.\ng. Configuration management of the input to the auto-generation tool, the output of the\nauto-generation tool, and modifications made to the output of the auto-generation tools.",
+    "notes": [],
+    "sources": [
+      "body",
+      "matrix"
+    ],
+    "matrix_section": "3.8.1",
+    "matrix_requirement_text": "The project manager shall define the approach to the automatic generation of software source code including: a. Validation and verification of auto-generation tools. b. Configuration management of the auto-generation tools and associated data. c. Description of the limits and the allowable scope for the use of the auto-generated software. d. Verification and validation of auto-generated source code using the same software standards and processes as hand-generated code. e. Monitoring the actual use of auto-generated source code compared to the planned use.",
+    "matrix_authority": "Center",
+    "matrix_class_marks": 3,
+    "matrix_f_authority": "X",
+    "matrix_f_mark": "",
+    "functional_category": "Automatic Generation of Software Source Code",
+    "action_verbs": [],
+    "srs_scope": "out",
+    "srs_evidence": "",
+    "source_url": "https://nodis3.gsfc.nasa.gov/npg_img/N_PR_7150_002D_/N_PR_7150_002D_.pdf"
+  },
+  {
+    "swe_id": "SWE-206",
+    "section": "3.8",
+    "clause_id": "3.8.2",
+    "text": "The project manager shall require the software developers and custom software suppliers to\nprovide NASA with electronic access to the models, simulations, and associated data used as inputs\n\n\n\n\n\nfor auto-generation of software. [SWE-206]",
+    "notes": [
+      "Note: The term electronic access includes access to the data from NASA facilities."
+    ],
+    "sources": [
+      "body",
+      "matrix"
+    ],
+    "matrix_section": "3.8.2",
+    "matrix_requirement_text": "The project manager shall require the software developers and custom software suppliers to provide NASA with electronic access to the models, simulations, and associated data used as inputs for auto-generation of software.",
+    "matrix_authority": "Center",
+    "matrix_class_marks": 4,
+    "matrix_f_authority": "X",
+    "matrix_f_mark": "",
+    "functional_category": "Automatic Generation of Software Source Code",
+    "action_verbs": [
+      "develop"
+    ],
+    "srs_scope": "out",
+    "srs_evidence": "",
+    "source_url": "https://nodis3.gsfc.nasa.gov/npg_img/N_PR_7150_002D_/N_PR_7150_002D_.pdf"
+  },
+  {
+    "swe_id": "SWE-032",
+    "section": "3.9",
+    "clause_id": "3.9.2",
+    "text": "The project manager shall acquire, develop, and maintain software from an organization with a\nnon-expired CMMI®-DEV rating as measured by a CMMI® Institute Certified Lead Appraiser as\nfollows: [SWE-032]\na. For Class A software: CMMI®-DEV Maturity Level 3 Rating or higher for software.\nb. For Class B software (except Class B software on NASA Class D payloads, as defined in NPR\n8705.4): CMMI®-DEV Maturity Level 2 Rating or higher for software.",
+    "notes": [
+      "Note: Organizations need to complete an official CMMI® Institute defined appraisal\nagainst either the CMMI®-DEV model V1.3 or V2.0. Organizations are to maintain their\nrating and have their results posted on the CMMI® Institute Website, or provide an\nAppraisal Disclosure Statement so that NASA can assess the current maturity/capability\nrating. Software development organizations need to maintain their appraisal rating during\nthe period they are responsible for the development and maintenance of the software.\nCMMI® ratings can cover a team, a group, a project, a division, or an entire organization.\nFor Class B software, an exception can be exercised for those cases in which NASA wishes to\npurchase a product from the \"best in class provider,\" but the best in class provider does not have the\nrequired CMMI® rating. For Class B software, instead of a CMMI® rating by a development\norganization, the project will conduct an evaluation, performed by a qualified evaluator selected by\nthe Center ETA, against the CMMI®-DEV Maturity Level 2 practices, and mitigate any risk, if\ndeficiencies are identified in the evaluation. If this approach is used, the development organization\n\n\n\n\n\nand project are responsible for correcting the deficiencies identified in the evaluation. When this\nexception is exercised, the OCE and Center ETA are notified of the proposition and provided the\nresults of the evaluation. The project manager should seek guidance from the Office of Procurement\n(OP) for help in exercising the exception."
+    ],
+    "sources": [
+      "body",
+      "matrix"
+    ],
+    "matrix_section": "3.9.2",
+    "matrix_requirement_text": "The project manager shall acquire, develop, and maintain software from an organization with a non-expired CMMI®-DEV rating as measured by a CMMI® Institute Certified Lead Appraiser as follows: a. For Class A software: CMMI®-DEV Maturity Level 3 Rating or higher for software. b. For Class B software (except Class B software on NASA Class D payloads, as defined in NPR 8705.4): CMMI®-DEV Maturity Level 2 Rating or higher for software.",
+    "matrix_authority": "HQ OCE\nand HQ\nOSMA",
+    "matrix_class_marks": 2,
+    "matrix_f_authority": "",
+    "matrix_f_mark": "",
+    "functional_category": "Software Development Processes and Practices",
+    "action_verbs": [
+      "develop",
+      "maintain"
+    ],
+    "srs_scope": "out",
+    "srs_evidence": "",
+    "source_url": "https://nodis3.gsfc.nasa.gov/npg_img/N_PR_7150_002D_/N_PR_7150_002D_.pdf"
+  },
+  {
+    "swe_id": "SWE-147",
+    "section": "3.10",
+    "clause_id": "3.10.1",
+    "text": "The project manager shall specify reusability requirements that apply to its software\ndevelopment activities to enable future reuse of the software, including the models, simulations, and\nassociated data used as inputs for auto-generation of software, for U.S. Government purposes.\n[SWE-147]",
+    "notes": [],
+    "sources": [
+      "body",
+      "matrix"
+    ],
+    "matrix_section": "3.10.1",
+    "matrix_requirement_text": "The project manager shall specify reusability requirements that apply to its software development activities to enable future reuse",
+    "matrix_authority": "Center",
+    "matrix_class_marks": 4,
+    "matrix_f_authority": "X",
+    "matrix_f_mark": "",
+    "functional_category": "Software Reuse",
+    "action_verbs": [
+      "develop"
+    ],
+    "srs_scope": "partial",
+    "srs_evidence": "Reusability requirements are specified.",
+    "source_url": "https://nodis3.gsfc.nasa.gov/npg_img/N_PR_7150_002D_/N_PR_7150_002D_.pdf"
+  },
+  {
+    "swe_id": "SWE-148",
+    "section": "3.10",
+    "clause_id": "3.10.2",
+    "text": "The project manager shall evaluate software for potential reuse by other projects across\nNASA and contribute reuse candidates to the appropriate NASA internal sharing and reuse software\nsystem. However, if the project manager is not a civil servant, then a civil servant will pre-approve\nall such software contributions; all software contributions should include, at a minimum, the\nfollowing information: [SWE-148]\na. Software Title.\nb. Software Description.\nc. The Civil Servant Software Technical POC for the software product.\nd. The language or languages used to develop the software.\ne. Any third-party code contained therein, and the record of the requisite license or permission\nreceived from the third party permitting the Government’s use and any required markings (e.g.,\nrequired copyright, author, applicable license notices within the software code, and the source of\neach third-party software component (e.g., software URL & license URL)), if applicable.",
+    "notes": [
+      "Note: Currently, there are more than one Agency-wide software inventories and\nrepositories, several options can be found in NASA-HDBK-2203. In order to obtain and\nreuse the internal software reuse candidates from these repositories, NASA civil servants\nmay request a copy by requesting and completing a simple Acknowledgment of Receipt of\nthe software form that identifies any restrictions on NASA’s right to use the software,\nincluding limiting its use to governmental purposes only. The Civil Servant Software\nTechnical POC for the software product will keep a list of all contributors to the software.\nAny software shared will contain appropriate disclaimer and indemnification provisions\n(e.g., in a “README” file) stating that the software may be subject to U.S. export control\nrestrictions, and it is provided “as is” without any warranty, express, or implied and that\nthe recipient waives any claims against, and indemnifies and holds harmless, NASA and its\ncontractors and subcontractors (see paragraph 2.1.5.17).\nf. Release notes."
+    ],
+    "sources": [
+      "body",
+      "matrix"
+    ],
+    "matrix_section": "3.10.2",
+    "matrix_requirement_text": "The project manager shall evaluate software for potential reuse by other projects across NASA and contribute reuse candidates to the appropriate NASA internal sharing and reuse software system. However, if the project manager is not a civil servant, then a civil servant will pre-approve all such software contributions; all software contributions should include, at a minimum, the following information: a. Software Title. b. Software Description. c. The Civil Servant Software Technical POC for the software product. d. The language or languages used to develop the software. e. Any third party code contained therein and the record of the requisite license or permission received from the third party permitting the Government’s use and any required markings (e.g., required copyright, author, applicable license notices within the software code, and the source of each third-party software component (e.g., software URL & license URL)), if applicable. f. Release notes.",
+    "matrix_authority": "Center",
+    "matrix_class_marks": 5,
+    "matrix_f_authority": "X",
+    "matrix_f_mark": "",
+    "functional_category": "Software Reuse",
+    "action_verbs": [
+      "develop"
+    ],
+    "srs_scope": "out",
+    "srs_evidence": "",
+    "source_url": "https://nodis3.gsfc.nasa.gov/npg_img/N_PR_7150_002D_/N_PR_7150_002D_.pdf"
+  },
+  {
+    "swe_id": "SWE-156",
+    "section": "3.11",
+    "clause_id": "3.11.2",
+    "text": "The project manager shall perform a software cybersecurity assessment on the software\ncomponents per the Agency security policies and the project requirements, including risks posed by\nthe use of COTS, GOTS, MOTS, OSS, or reused software components. [SWE-156]",
+    "notes": [],
+    "sources": [
+      "body",
+      "matrix"
+    ],
+    "matrix_section": "3.11.2",
+    "matrix_requirement_text": "The project manager shall perform a software cybersecurity assessment on the software components per the Agency security policies and the project requirements, including risks posed by the use of COTS, GOTS, MOTS, OSS, or reused software components.",
+    "matrix_authority": "Center\nand\nCenter\nCIO",
+    "matrix_class_marks": 5,
+    "matrix_f_authority": "X",
+    "matrix_f_mark": "",
+    "functional_category": "Software Cybersecurity",
+    "action_verbs": [
+      "assess"
+    ],
+    "srs_scope": "out",
+    "srs_evidence": "",
+    "source_url": "https://nodis3.gsfc.nasa.gov/npg_img/N_PR_7150_002D_/N_PR_7150_002D_.pdf"
+  },
+  {
+    "swe_id": "SWE-154",
+    "section": "3.11",
+    "clause_id": "3.11.3",
+    "text": "The project manager shall identify cybersecurity risks, along with their mitigations, in flight\nand ground software systems and plan the mitigations for these systems. [SWE-154]",
+    "notes": [
+      "Note: Project Protection Plans describe the program’s approach for planning and\nimplementing the requirements for information, physical, personnel, industrial, and\ncounterintelligence/counterterrorism security, and for security awareness/education\nrequirements in accordance with NPR 1600.1, NASA Security Program Procedural\nRequirements, NPD 1600.2, the NASA Security Policy, NPD 2810.1, and NPR 2810.1.\nInclude provisions in the plan to protect personnel, facilities, mission-essential\ninfrastructure, and critical program information from potential threats and vulnerabilities\nthat may be identified during the threat and vulnerability assessment process."
+    ],
+    "sources": [
+      "body",
+      "matrix"
+    ],
+    "matrix_section": "3.11.3",
+    "matrix_requirement_text": "The project manager shall identify cybersecurity risks, along with their mitigations, in flight and ground software systems and plan the mitigations for these systems.",
+    "matrix_authority": "Center\nand\nCenter\nCIO",
+    "matrix_class_marks": 4,
+    "matrix_f_authority": "",
+    "matrix_f_mark": "",
+    "functional_category": "Software Cybersecurity",
+    "action_verbs": [],
+    "srs_scope": "partial",
+    "srs_evidence": "Cybersecurity mitigations stated as security requirements.",
+    "source_url": "https://nodis3.gsfc.nasa.gov/npg_img/N_PR_7150_002D_/N_PR_7150_002D_.pdf"
+  },
+  {
+    "swe_id": "SWE-157",
+    "section": "3.11",
+    "clause_id": "3.11.4",
+    "text": "The project manager shall implement protections for software systems with communications\ncapabilities against unauthorized access per the requirements contained in the NASA-STD-1006,\nSpace System Protection Standard. [SWE-157]",
+    "notes": [],
+    "sources": [
+      "body",
+      "matrix"
+    ],
+    "matrix_section": "3.11.4",
+    "matrix_requirement_text": "The project manager shall implement protections for software systems with communications capabilities against unauthorized access per the requirements contained in the Space System Protection Standard, NASA-STD-1006.",
+    "matrix_authority": "Center\nand\nCenter\nCIO",
+    "matrix_class_marks": 4,
+    "matrix_f_authority": "",
+    "matrix_f_mark": "",
+    "functional_category": "Software Cybersecurity",
+    "action_verbs": [],
+    "srs_scope": "partial",
+    "srs_evidence": "Access control and authentication requirements for software with communications capability.",
+    "source_url": "https://nodis3.gsfc.nasa.gov/npg_img/N_PR_7150_002D_/N_PR_7150_002D_.pdf"
+  },
+  {
+    "swe_id": "SWE-159",
+    "section": "3.11",
+    "clause_id": "3.11.5",
+    "text": "The project manager shall test the software and record test results for the required software\ncybersecurity mitigation implementations identified from the security vulnerabilities and security\nweaknesses analysis. [SWE-159]",
+    "notes": [
+      "Note: Include assessments for security vulnerabilities during Peer Review/Inspections of\nsoftware requirements and design. Utilize automated security static analysis as well as\ncoding standard static analyses of software code to find potential security vulnerabilities."
+    ],
+    "sources": [
+      "body",
+      "matrix"
+    ],
+    "matrix_section": "3.11.5",
+    "matrix_requirement_text": "The project manager shall test the software and record test results for the required software cybersecurity mitigation implementations identified from the security vulnerabilities and security weaknesses analysis.",
+    "matrix_authority": "Center\nand\nCenter\nCIO",
+    "matrix_class_marks": 4,
+    "matrix_f_authority": "X",
+    "matrix_f_mark": "",
+    "functional_category": "Software Cybersecurity",
+    "action_verbs": [
+      "test"
+    ],
+    "srs_scope": "out",
+    "srs_evidence": "",
+    "source_url": "https://nodis3.gsfc.nasa.gov/npg_img/N_PR_7150_002D_/N_PR_7150_002D_.pdf"
+  },
+  {
+    "swe_id": "SWE-207",
+    "section": "3.11",
+    "clause_id": "3.11.6",
+    "text": "The project manager shall identify, record, and implement secure coding practices.\n[SWE-207]",
+    "notes": [],
+    "sources": [
+      "body",
+      "matrix"
+    ],
+    "matrix_section": "3.11.6",
+    "matrix_requirement_text": "The project manager shall identify, record, and implement secure coding practices.",
+    "matrix_authority": "Center\nand\nCenter\nCIO",
+    "matrix_class_marks": 4,
+    "matrix_f_authority": "",
+    "matrix_f_mark": "",
+    "functional_category": "Software Cybersecurity",
+    "action_verbs": [],
+    "srs_scope": "out",
+    "srs_evidence": "",
+    "source_url": "https://nodis3.gsfc.nasa.gov/npg_img/N_PR_7150_002D_/N_PR_7150_002D_.pdf"
+  },
+  {
+    "swe_id": "SWE-185",
+    "section": "3.11",
+    "clause_id": "3.11.7",
+    "text": "The project manager shall verify that the software code meets the project’s secure coding\nstandard by using the results from static analysis tool(s). [SWE-185]",
+    "notes": [
+      "Note: If a static analysis tool will not work with the selected coding standard, other\nmethods are acceptable, including manual inspection."
+    ],
+    "sources": [
+      "body",
+      "matrix"
+    ],
+    "matrix_section": "3.11.7",
+    "matrix_requirement_text": "The project manager shall verify that the software code meets the project’s secure coding standard by using the results from static analysis tool(s).",
+    "matrix_authority": "Center\nand\nCenter\nCIO",
+    "matrix_class_marks": 4,
+    "matrix_f_authority": "X",
+    "matrix_f_mark": "",
+    "functional_category": "Software Cybersecurity",
+    "action_verbs": [
+      "verify"
+    ],
+    "srs_scope": "out",
+    "srs_evidence": "",
+    "source_url": "https://nodis3.gsfc.nasa.gov/npg_img/N_PR_7150_002D_/N_PR_7150_002D_.pdf"
+  },
+  {
+    "swe_id": "SWE-210",
+    "section": "3.11",
+    "clause_id": "3.11.8",
+    "text": "The project manager shall identify software requirements for the collection, reporting, and\nstorage of data relating to the detection of adversarial actions. [SWE-210]",
+    "notes": [
+      "Note: Monitoring of key software observables (e.g., number of failed login attempts,\nperformance changes, internal communication changes) is needed to detect adversarial\nactions that threaten mission success. When an adversarial action occurs, it should be\nreported. Raw event data should be further analyzed to determine whether an anomalous\nevent represents an attack, and if so, the nature of the attack."
+    ],
+    "sources": [
+      "body",
+      "matrix"
+    ],
+    "matrix_section": "3.11.8",
+    "matrix_requirement_text": "The project manager shall identify software requirements for the collection, reporting, and storage of data relating to the detection of adversarial actions.",
+    "matrix_authority": "Center",
+    "matrix_class_marks": 3,
+    "matrix_f_authority": "X",
+    "matrix_f_mark": "",
+    "functional_category": "Software Cybersecurity",
+    "action_verbs": [],
+    "srs_scope": "direct",
+    "srs_evidence": "Requirements for collecting, reporting, and storing data on detected adversarial actions.",
+    "source_url": "https://nodis3.gsfc.nasa.gov/npg_img/N_PR_7150_002D_/N_PR_7150_002D_.pdf"
+  },
+  {
+    "swe_id": "SWE-052",
+    "section": "3.12",
+    "clause_id": "3.12.1",
+    "text": "The project manager shall perform, record, and maintain bi-directional traceability between\nthe following software elements: [SWE-052]\nTable 1. Bi-directional traceability by software classification\nClass A, B,\nBi-directional Traceability Class D Class F\nand C\nHigher-level requirements to the software requirements X X\nSoftware requirements to the system hazards X X\nSoftware requirements to the software design components X\nSoftware design components to the software code X\nSoftware requirements to the software verification(s) X X X\nSoftware requirements to the software non-conformances X X X",
+    "notes": [
+      "Note: The project manager will maintain bi-directional traceability between the software\nrequirements and software-related system hazards, including hazardous controls,\nhazardous mitigations, hazardous conditions, and hazardous events."
+    ],
+    "sources": [
+      "body",
+      "matrix"
+    ],
+    "matrix_section": "3.12.1",
+    "matrix_requirement_text": "The project manager shall perform, record, and maintain bi-directional traceability between the following software elements: (See Table in 3.12.1)",
+    "matrix_authority": "Center",
+    "matrix_class_marks": 4,
+    "matrix_f_authority": "X",
+    "matrix_f_mark": "",
+    "functional_category": "Software Bi-Directional Traceability",
+    "action_verbs": [
+      "maintain"
+    ],
+    "srs_scope": "partial",
+    "srs_evidence": "Upward traceability to parent requirements and traceability to hazards. Design/code/test links live elsewhere.",
+    "source_url": "https://nodis3.gsfc.nasa.gov/npg_img/N_PR_7150_002D_/N_PR_7150_002D_.pdf"
+  },
+  {
+    "swe_id": "SWE-050",
+    "section": "4.1",
+    "clause_id": "4.1.2",
+    "text": "The project manager shall establish, capture, record, approve, and maintain software\nrequirements, including requirements for COTS, GOTS, MOTS, OSS, or reused software\ncomponents, as part of the technical specification. [SWE-050]",
+    "notes": [
+      "Note: The software technical requirements definition process is used to transform the\nbaselined stakeholder expectations into unique, quantitative, and measurable technical\nsoftware requirements that can be used for defining a design solution for the software end\nproducts and related enabling products. This process also includes validation of the\nrequirements to ensure that the requirements are well-formed (clear and unambiguous),\ncomplete (agrees with customer and stakeholder needs and expectations), consistent\n(conflict free), and individually verifiable and traceable to a higher level requirement.\nRecommended content for a software specification can be found in NASA-HDBK-2203."
+    ],
+    "sources": [
+      "body",
+      "matrix"
+    ],
+    "matrix_section": "4.1.2",
+    "matrix_requirement_text": "The project manager shall establish, capture, record, approve, and maintain software requirements, including requirements for COTS, GOTS, MOTS, OSS, or reused software components, as part of the technical specification.",
+    "matrix_authority": "Center",
+    "matrix_class_marks": 4,
+    "matrix_f_authority": "X",
+    "matrix_f_mark": "",
+    "functional_category": "Software Requirements",
+    "action_verbs": [
+      "maintain"
+    ],
+    "srs_scope": "direct",
+    "srs_evidence": "Requirements are uniquely identified and approved, including requirements for COTS/GOTS/MOTS/OSS or reused components.",
+    "source_url": "https://nodis3.gsfc.nasa.gov/npg_img/N_PR_7150_002D_/N_PR_7150_002D_.pdf"
+  },
+  {
+    "swe_id": "SWE-051",
+    "section": "4.1",
+    "clause_id": "4.1.3",
+    "text": "The project manager shall perform software requirements analysis based on flowed-down and\nderived requirements from the top-level systems engineering requirements, safety and reliability\nanalyses, and the hardware specifications and design. [SWE-051]",
+    "notes": [],
+    "sources": [
+      "body",
+      "matrix"
+    ],
+    "matrix_section": "4.1.3",
+    "matrix_requirement_text": "The project manager shall perform software requirements analysis based on flowed-down and derived requirements from the top-level systems engineering requirements, safety and reliability analyses, and the hardware specifications and design.",
+    "matrix_authority": "Center",
+    "matrix_class_marks": 3,
+    "matrix_f_authority": "",
+    "matrix_f_mark": "",
+    "functional_category": "Software Requirements",
+    "action_verbs": [],
+    "srs_scope": "partial",
+    "srs_evidence": "Parent references on flowed-down requirements; derived requirements flagged with rationale.",
+    "source_url": "https://nodis3.gsfc.nasa.gov/npg_img/N_PR_7150_002D_/N_PR_7150_002D_.pdf"
+  },
+  {
+    "swe_id": "SWE-184",
+    "section": "4.1",
+    "clause_id": "4.1.4",
+    "text": "The project manager shall include software related safety constraints, controls, mitigations, and\nassumptions between the hardware, operator, and software in the software requirements\ndocumentation. [SWE-184]",
+    "notes": [],
+    "sources": [
+      "body",
+      "matrix"
+    ],
+    "matrix_section": "4.1.4",
+    "matrix_requirement_text": "The project manager shall include software related safety constraints, controls, mitigations and assumptions between the hardware, operator, and software in the software requirements documentation.",
+    "matrix_authority": "Center",
+    "matrix_class_marks": 3,
+    "matrix_f_authority": "",
+    "matrix_f_mark": "",
+    "functional_category": "Software Requirements",
+    "action_verbs": [
+      "document"
+    ],
+    "srs_scope": "direct",
+    "srs_evidence": "Safety constraints, controls, mitigations, and assumptions between hardware, operator, and software are stated.",
+    "source_url": "https://nodis3.gsfc.nasa.gov/npg_img/N_PR_7150_002D_/N_PR_7150_002D_.pdf"
+  },
+  {
+    "swe_id": "SWE-053",
+    "section": "4.1",
+    "clause_id": "4.1.5",
+    "text": "The project manager shall track and manage changes to the software requirements. [SWE-053]",
+    "notes": [],
+    "sources": [
+      "body",
+      "matrix"
+    ],
+    "matrix_section": "4.1.5",
+    "matrix_requirement_text": "The project manager shall track and manage changes to the software requirements.",
+    "matrix_authority": "Center",
+    "matrix_class_marks": 4,
+    "matrix_f_authority": "X",
+    "matrix_f_mark": "",
+    "functional_category": "Software Requirements",
+    "action_verbs": [
+      "track"
+    ],
+    "srs_scope": "partial",
+    "srs_evidence": "Revision history, stable requirement IDs, and change markings.",
+    "source_url": "https://nodis3.gsfc.nasa.gov/npg_img/N_PR_7150_002D_/N_PR_7150_002D_.pdf"
+  },
+  {
+    "swe_id": "SWE-054",
+    "section": "4.1",
+    "clause_id": "4.1.6",
+    "text": "The project manager shall identify, initiate corrective actions, and track until closure\ninconsistencies among requirements, project plans, and software products. [SWE-054]",
+    "notes": [],
+    "sources": [
+      "body",
+      "matrix"
+    ],
+    "matrix_section": "4.1.6",
+    "matrix_requirement_text": "The project manager shall identify, initiate corrective actions, and track until closure inconsistencies among requirements, project plans, and software products.",
+    "matrix_authority": "Center",
+    "matrix_class_marks": 4,
+    "matrix_f_authority": "X",
+    "matrix_f_mark": "",
+    "functional_category": "Software Requirements",
+    "action_verbs": [
+      "track"
+    ],
+    "srs_scope": "out",
+    "srs_evidence": "",
+    "source_url": "https://nodis3.gsfc.nasa.gov/npg_img/N_PR_7150_002D_/N_PR_7150_002D_.pdf"
+  },
+  {
+    "swe_id": "SWE-055",
+    "section": "4.1",
+    "clause_id": "4.1.7",
+    "text": "The project manager shall perform requirements validation to ensure that the software will\nperform as intended in the customer environment. [SWE-055]",
+    "notes": [],
+    "sources": [
+      "body",
+      "matrix"
+    ],
+    "matrix_section": "4.1.7",
+    "matrix_requirement_text": "The project manager shall perform requirements validation to ensure that the software will perform as intended in the customer environment.",
+    "matrix_authority": "Center",
+    "matrix_class_marks": 4,
+    "matrix_f_authority": "X",
+    "matrix_f_mark": "",
+    "functional_category": "Software Requirements",
+    "action_verbs": [],
+    "srs_scope": "out",
+    "srs_evidence": "",
+    "source_url": "https://nodis3.gsfc.nasa.gov/npg_img/N_PR_7150_002D_/N_PR_7150_002D_.pdf"
+  },
+  {
+    "swe_id": "SWE-057",
+    "section": "4.2",
+    "clause_id": "4.2.3",
+    "text": "The project manager shall transform the requirements for the software into a recorded software\narchitecture. [SWE-057]",
+    "notes": [
+      "Note: A documented software architecture that describes: the software’s structure;\nidentifies the software qualities (i.e., performance, modifiability, and security); identifies\nthe known interfaces between the software components and the components external to the\nsoftware (both software and hardware); identifies the interfaces between the software\ncomponents and identifies the software components. Reference NASA’s Software\nArchitecture Review Board (SARB) paper NTRS ID 20160005787, “Quality Attributes for\nMission Flight Software: A Reference for Architects.”"
+    ],
+    "sources": [
+      "body",
+      "matrix"
+    ],
+    "matrix_section": "4.2.3",
+    "matrix_requirement_text": "The project manager shall transform the requirements for the software into a recorded software architecture.",
+    "matrix_authority": "Center",
+    "matrix_class_marks": 3,
+    "matrix_f_authority": "",
+    "matrix_f_mark": "",
+    "functional_category": "Software Architecture",
+    "action_verbs": [],
+    "srs_scope": "out",
+    "srs_evidence": "",
+    "source_url": "https://nodis3.gsfc.nasa.gov/npg_img/N_PR_7150_002D_/N_PR_7150_002D_.pdf"
+  },
+  {
+    "swe_id": "SWE-143",
+    "section": "4.2",
+    "clause_id": "4.2.4",
+    "text": "The project manager shall perform a software architecture review on the following categories\nof projects: [SWE-143]\na. Category 1 Projects as defined in NPR 7120.5.\nb. Category 2 Projects as defined in NPR 7120.5, that have Class A or Class B payload risk\nclassification per NPR 8705.4.",
+    "notes": [],
+    "sources": [
+      "body",
+      "matrix"
+    ],
+    "matrix_section": "4.2.4",
+    "matrix_requirement_text": "The project manager shall perform a software architecture review on the following categories of projects: a. Category 1 Projects as defined in NPR 7120.5. b. Category 2 Projects as defined in NPR 7120.5 that have Class A or Class B payload risk classification per NPR 8705.4.",
+    "matrix_authority": "Center",
+    "matrix_class_marks": 3,
+    "matrix_f_authority": "",
+    "matrix_f_mark": "",
+    "functional_category": "Software Architecture",
+    "action_verbs": [
+      "review"
+    ],
+    "srs_scope": "out",
+    "srs_evidence": "",
+    "source_url": "https://nodis3.gsfc.nasa.gov/npg_img/N_PR_7150_002D_/N_PR_7150_002D_.pdf"
+  },
+  {
+    "swe_id": "SWE-058",
+    "section": "4.3",
+    "clause_id": "4.3.2",
+    "text": "The project manager shall develop, record, and maintain a software design based on the\nsoftware architectural design that describes the lower-level units so that they can be coded,\ncompiled, and tested. [SWE-058]",
+    "notes": [],
+    "sources": [
+      "body",
+      "matrix"
+    ],
+    "matrix_section": "4.3.2",
+    "matrix_requirement_text": "The project manager shall develop, record, and maintain a software design based on the software architectural design that describes the lower-level units so that they can be coded, compiled, and tested.",
+    "matrix_authority": "Center",
+    "matrix_class_marks": 3,
+    "matrix_f_authority": "",
+    "matrix_f_mark": "",
+    "functional_category": "Software Design",
+    "action_verbs": [
+      "develop",
+      "test",
+      "maintain"
+    ],
+    "srs_scope": "out",
+    "srs_evidence": "",
+    "source_url": "https://nodis3.gsfc.nasa.gov/npg_img/N_PR_7150_002D_/N_PR_7150_002D_.pdf"
+  },
+  {
+    "swe_id": "SWE-060",
+    "section": "4.4",
+    "clause_id": "4.4.2",
+    "text": "The project manager shall implement the software design into software code. [SWE-060]",
+    "notes": [],
+    "sources": [
+      "body",
+      "matrix"
+    ],
+    "matrix_section": "4.4.2",
+    "matrix_requirement_text": "The project manager shall implement the software design into software code.",
+    "matrix_authority": "Center",
+    "matrix_class_marks": 3,
+    "matrix_f_authority": "X",
+    "matrix_f_mark": "",
+    "functional_category": "Software Implementation",
+    "action_verbs": [],
+    "srs_scope": "out",
+    "srs_evidence": "",
+    "source_url": "https://nodis3.gsfc.nasa.gov/npg_img/N_PR_7150_002D_/N_PR_7150_002D_.pdf"
+  },
+  {
+    "swe_id": "SWE-061",
+    "section": "4.4",
+    "clause_id": "4.4.3",
+    "text": "The project manager shall select, define, and adhere to software coding methods, standards,\nand criteria. [SWE-061]",
+    "notes": [],
+    "sources": [
+      "body",
+      "matrix"
+    ],
+    "matrix_section": "4.4.3",
+    "matrix_requirement_text": "The project manager shall select, define, and adhere to software coding methods, standards, and criteria.",
+    "matrix_authority": "Center",
+    "matrix_class_marks": 4,
+    "matrix_f_authority": "X",
+    "matrix_f_mark": "",
+    "functional_category": "Software Implementation",
+    "action_verbs": [],
+    "srs_scope": "out",
+    "srs_evidence": "",
+    "source_url": "https://nodis3.gsfc.nasa.gov/npg_img/N_PR_7150_002D_/N_PR_7150_002D_.pdf"
+  },
+  {
+    "swe_id": "SWE-135",
+    "section": "4.4",
+    "clause_id": "4.4.4",
+    "text": "The project manager shall use static analysis tools to analyze the code during the development\nand testing phases to, at a minimum, detect defects, software security, code coverage, and software\ncomplexity. [SWE-135]",
+    "notes": [
+      "Note: Although no maximum cyclomatic complexity score is required for non-safety critical\nsoftware, all software projects should regularly collect and maintain complexity metrics\nand use them to manage risk, either when high-complexity code must be modified, or\nproactively to improve the overall quality and maintenance of the code base. For safety\ncritical software, the analysis should take into account the requirements for cyclomatic\ncomplexity and code coverage as defined in 3.7.5 and 3.7.4 respectively."
+    ],
+    "sources": [
+      "body",
+      "matrix"
+    ],
+    "matrix_section": "4.4.4",
+    "matrix_requirement_text": "The project manager shall use static analysis tools to analyze the code during the development and testing phases to, at a minimum, detect defects, software security, code coverage, and software complexity.",
+    "matrix_authority": "Center",
+    "matrix_class_marks": 4,
+    "matrix_f_authority": "X",
+    "matrix_f_mark": "",
+    "functional_category": "Software Implementation",
+    "action_verbs": [
+      "develop",
+      "test"
+    ],
+    "srs_scope": "out",
+    "srs_evidence": "",
+    "source_url": "https://nodis3.gsfc.nasa.gov/npg_img/N_PR_7150_002D_/N_PR_7150_002D_.pdf"
+  },
+  {
+    "swe_id": "SWE-062",
+    "section": "4.4",
+    "clause_id": "4.4.5",
+    "text": "The project manager shall unit test the software code. [SWE-062]",
+    "notes": [
+      "Note: For safety critical software, the unit testing should follow the requirement",
+      "Note: For safety critical software, the unit testing should follow the requirement\nestablished in 3.7.4 of this document."
+    ],
+    "sources": [
+      "body",
+      "matrix"
+    ],
+    "matrix_section": "4.4.5",
+    "matrix_requirement_text": "The project manager shall unit test the software code.",
+    "matrix_authority": "Center",
+    "matrix_class_marks": 4,
+    "matrix_f_authority": "X",
+    "matrix_f_mark": "",
+    "functional_category": "Software Implementation",
+    "action_verbs": [
+      "test"
+    ],
+    "srs_scope": "out",
+    "srs_evidence": "",
+    "source_url": "https://nodis3.gsfc.nasa.gov/npg_img/N_PR_7150_002D_/N_PR_7150_002D_.pdf"
+  },
+  {
+    "swe_id": "SWE-186",
+    "section": "4.4",
+    "clause_id": "4.4.6",
+    "text": "The project manager shall assure that the unit test results are repeatable. [SWE-186]",
+    "notes": [],
+    "sources": [
+      "body",
+      "matrix"
+    ],
+    "matrix_section": "4.4.6",
+    "matrix_requirement_text": "The project manager shall assure that the unit test results are repeatable.",
+    "matrix_authority": "Center",
+    "matrix_class_marks": 4,
+    "matrix_f_authority": "X",
+    "matrix_f_mark": "",
+    "functional_category": "Software Implementation",
+    "action_verbs": [
+      "test"
+    ],
+    "srs_scope": "out",
+    "srs_evidence": "",
+    "source_url": "https://nodis3.gsfc.nasa.gov/npg_img/N_PR_7150_002D_/N_PR_7150_002D_.pdf"
+  },
+  {
+    "swe_id": "SWE-063",
+    "section": "4.4",
+    "clause_id": "4.4.7",
+    "text": "The project manager shall provide a software version description for each software release.\n[SWE-063]",
+    "notes": [],
+    "sources": [
+      "body",
+      "matrix"
+    ],
+    "matrix_section": "4.4.7",
+    "matrix_requirement_text": "The project manager shall provide a software version description for each software release.",
+    "matrix_authority": "Center",
+    "matrix_class_marks": 4,
+    "matrix_f_authority": "X",
+    "matrix_f_mark": "",
+    "functional_category": "Software Implementation",
+    "action_verbs": [],
+    "srs_scope": "out",
+    "srs_evidence": "",
+    "source_url": "https://nodis3.gsfc.nasa.gov/npg_img/N_PR_7150_002D_/N_PR_7150_002D_.pdf"
+  },
+  {
+    "swe_id": "SWE-136",
+    "section": "4.4",
+    "clause_id": "4.4.8",
+    "text": "The project manager shall validate and accredit the software tool(s) required to develop or\nmaintain software. [SWE-136]",
+    "notes": [
+      "Note: All software development tools contain some number of software defects. Validation\nand accreditation of the critical software development and maintenance tools ensure that\nthe tools being used during the software development life cycle do not generate or insert\nerrors in the software executable components. Software tool accreditation is the\ncertification that a software tool is acceptable for use for a specific purpose. Accreditation\nis conferred by the organization best positioned to make the judgment that the software tool\nin question is acceptable. The likelihood that work products will function properly is\nenhanced, and the risk of error is reduced if the tools used in the development and\nmaintenance processes have been validated and accredited themselves."
+    ],
+    "sources": [
+      "body",
+      "matrix"
+    ],
+    "matrix_section": "4.4.8",
+    "matrix_requirement_text": "The project manager shall validate and accredit the software tool(s) required to develop or maintain software.",
+    "matrix_authority": "Center",
+    "matrix_class_marks": 3,
+    "matrix_f_authority": "",
+    "matrix_f_mark": "",
+    "functional_category": "Software Implementation",
+    "action_verbs": [
+      "develop",
+      "maintain"
+    ],
+    "srs_scope": "out",
+    "srs_evidence": "",
+    "source_url": "https://nodis3.gsfc.nasa.gov/npg_img/N_PR_7150_002D_/N_PR_7150_002D_.pdf"
+  },
+  {
+    "swe_id": "SWE-065",
+    "section": "4.5",
+    "clause_id": "4.5.2",
+    "text": "The project manager shall establish and maintain: [SWE-065]\na. Software test plan(s).\nb. Software test procedure(s).\nc. Software test(s), including any code specifically written to perform test procedures.\nd. Software test report(s).",
+    "notes": [],
+    "sources": [
+      "body",
+      "matrix"
+    ],
+    "matrix_section": "4.5.2",
+    "matrix_requirement_text": "The project manager shall establish and maintain: a. Software test plan(s). b. Software test procedure(s). c. Software test(s), including any code specifically written to perform test procedures. d. Software test report(s).",
+    "matrix_authority": "Center",
+    "matrix_class_marks": 4,
+    "matrix_f_authority": "X",
+    "matrix_f_mark": "",
+    "functional_category": "Software Testing",
+    "action_verbs": [
+      "test",
+      "maintain"
+    ],
+    "srs_scope": "out",
+    "srs_evidence": "",
+    "source_url": "https://nodis3.gsfc.nasa.gov/npg_img/N_PR_7150_002D_/N_PR_7150_002D_.pdf"
+  },
+  {
+    "swe_id": "SWE-066",
+    "section": "4.5",
+    "clause_id": "4.5.3",
+    "text": "The project manager shall test the software against its requirements. [SWE-066]",
+    "notes": [
+      "Note: A best practice for Class A, B, and C software projects is to have formal software\ntesting planned, conducted, witnessed, and approved by an independent organization\noutside of the development team."
+    ],
+    "sources": [
+      "body",
+      "matrix"
+    ],
+    "matrix_section": "4.5.3",
+    "matrix_requirement_text": "The project manager shall test the software against its requirements.",
+    "matrix_authority": "Center",
+    "matrix_class_marks": 4,
+    "matrix_f_authority": "X",
+    "matrix_f_mark": "",
+    "functional_category": "Software Testing",
+    "action_verbs": [
+      "test"
+    ],
+    "srs_scope": "out",
+    "srs_evidence": "",
+    "source_url": "https://nodis3.gsfc.nasa.gov/npg_img/N_PR_7150_002D_/N_PR_7150_002D_.pdf"
+  },
+  {
+    "swe_id": "SWE-187",
+    "section": "4.5",
+    "clause_id": "4.5.4",
+    "text": "The project manager shall place software items under configuration management prior to\ntesting. [SWE-187]",
+    "notes": [
+      "Note: This includes the software components being tested and the software components\nbeing used to test the software, including components such as support software, models,\nsimulations, ground support software, COTS, GOTS, MOTS, OSS, or reused software\ncomponents."
+    ],
+    "sources": [
+      "body",
+      "matrix"
+    ],
+    "matrix_section": "4.5.4",
+    "matrix_requirement_text": "The project manager shall place software items under configuration management prior to testing.",
+    "matrix_authority": "Center",
+    "matrix_class_marks": 3,
+    "matrix_f_authority": "X",
+    "matrix_f_mark": "",
+    "functional_category": "Software Testing",
+    "action_verbs": [
+      "test"
+    ],
+    "srs_scope": "out",
+    "srs_evidence": "",
+    "source_url": "https://nodis3.gsfc.nasa.gov/npg_img/N_PR_7150_002D_/N_PR_7150_002D_.pdf"
+  },
+  {
+    "swe_id": "SWE-068",
+    "section": "4.5",
+    "clause_id": "4.5.5",
+    "text": "The project manager shall evaluate test results and record the evaluation. [SWE-068]",
+    "notes": [],
+    "sources": [
+      "body",
+      "matrix"
+    ],
+    "matrix_section": "4.5.5",
+    "matrix_requirement_text": "The project manager shall evaluate test results and record the evaluation.",
+    "matrix_authority": "Center",
+    "matrix_class_marks": 4,
+    "matrix_f_authority": "X",
+    "matrix_f_mark": "",
+    "functional_category": "Software Testing",
+    "action_verbs": [
+      "test"
+    ],
+    "srs_scope": "out",
+    "srs_evidence": "",
+    "source_url": "https://nodis3.gsfc.nasa.gov/npg_img/N_PR_7150_002D_/N_PR_7150_002D_.pdf"
+  },
+  {
+    "swe_id": "SWE-070",
+    "section": "4.5",
+    "clause_id": "4.5.6",
+    "text": "The project manager shall use validated and accredited software models, simulations, and\nanalysis tools required to perform qualification of flight software or flight equipment. [SWE-070]",
+    "notes": [
+      "Note: Information regarding specific V&V techniques and the analysis of models and\nsimulations can be found in NASA-STD-7009, Standard for Models and Simulations,\nNASA-HDBK-7009, Handbook for Models and Simulations, or discipline-specific\nrecommended practice guides."
+    ],
+    "sources": [
+      "body",
+      "matrix"
+    ],
+    "matrix_section": "4.5.6",
+    "matrix_requirement_text": "The project manager shall use validated and accredited software models, simulations, and analysis tools required to perform qualification of flight software or flight equipment.",
+    "matrix_authority": "Center",
+    "matrix_class_marks": 3,
+    "matrix_f_authority": "",
+    "matrix_f_mark": "",
+    "functional_category": "Software Testing",
+    "action_verbs": [],
+    "srs_scope": "out",
+    "srs_evidence": "",
+    "source_url": "https://nodis3.gsfc.nasa.gov/npg_img/N_PR_7150_002D_/N_PR_7150_002D_.pdf"
+  },
+  {
+    "swe_id": "SWE-071",
+    "section": "4.5",
+    "clause_id": "4.5.7",
+    "text": "The project manager shall update the software test and verification plan(s) and procedure(s) to\nbe consistent with software requirements. [SWE-071]",
+    "notes": [],
+    "sources": [
+      "body",
+      "matrix"
+    ],
+    "matrix_section": "4.5.7",
+    "matrix_requirement_text": "The project manager shall update the software test and verification plan(s) and procedure(s) to be consistent with software requirements.",
+    "matrix_authority": "Center",
+    "matrix_class_marks": 4,
+    "matrix_f_authority": "X",
+    "matrix_f_mark": "",
+    "functional_category": "Software Testing",
+    "action_verbs": [
+      "test"
+    ],
+    "srs_scope": "out",
+    "srs_evidence": "",
+    "source_url": "https://nodis3.gsfc.nasa.gov/npg_img/N_PR_7150_002D_/N_PR_7150_002D_.pdf"
+  },
+  {
+    "swe_id": "SWE-073",
+    "section": "4.5",
+    "clause_id": "4.5.8",
+    "text": "The project manager shall validate the software system on the targeted platform or high-fidelity\nsimulation. [SWE-073]",
+    "notes": [
+      "Note: Typically, a high-fidelity simulation has the exact processor, processor performance,\ntiming, memory size, and interfaces as the target system."
+    ],
+    "sources": [
+      "body",
+      "matrix"
+    ],
+    "matrix_section": "4.5.8",
+    "matrix_requirement_text": "The project manager shall validate the software system on the targeted platform or high-fidelity simulation.",
+    "matrix_authority": "Center",
+    "matrix_class_marks": 3,
+    "matrix_f_authority": "",
+    "matrix_f_mark": "",
+    "functional_category": "Software Testing",
+    "action_verbs": [],
+    "srs_scope": "out",
+    "srs_evidence": "",
+    "source_url": "https://nodis3.gsfc.nasa.gov/npg_img/N_PR_7150_002D_/N_PR_7150_002D_.pdf"
+  },
+  {
+    "swe_id": "SWE-189",
+    "section": "4.5",
+    "clause_id": "4.5.9",
+    "text": "The project manager shall ensure that the code coverage measurements for the software are\nselected, implemented, tracked, recorded, and reported. [SWE-189]",
+    "notes": [
+      "Note: This requirement can be met by running unit, integration, and validation tests;\nmeasuring the code coverage; and achieving the code coverage by additional (requirement\nbased) tests, inspection, or analysis.\nIf the project does not get 100 percent structural coverage, it means one of four things and each\nrequires action on the project manager’s part:\n• Requirement missing - the code that hasn’t been covered is performing an essential activity, but no\nrequirement indicates that this should be done;\n• Test missing - the code that hasn’t been covered relates to an existing requirement, but no test was\nimplemented for it;\n• Extraneous/dead code – the code that hasn’t been covered is not traceable to any requirement and\nisn’t needed by the software;\n• Deactivated code - the code that hasn’t been covered isn’t traceable to any requirements for the\ncurrent system, but is intended to be executed in specific configurations.\n\n\n\n\n\ncurrent system, but is intended to be executed in specific configurations.\nThe code coverage data and any rationale for uncovered code should be presented and reviewed at\nmajor project milestones."
+    ],
+    "sources": [
+      "body",
+      "matrix"
+    ],
+    "matrix_section": "4.5.9",
+    "matrix_requirement_text": "The project manager shall ensure that the code coverage measurements for the software are selected, implemented, tracked, recorded, and reported.",
+    "matrix_authority": "Center",
+    "matrix_class_marks": 4,
+    "matrix_f_authority": "",
+    "matrix_f_mark": "",
+    "functional_category": "Software Testing",
+    "action_verbs": [
+      "track"
+    ],
+    "srs_scope": "out",
+    "srs_evidence": "",
+    "source_url": "https://nodis3.gsfc.nasa.gov/npg_img/N_PR_7150_002D_/N_PR_7150_002D_.pdf"
+  },
+  {
+    "swe_id": "SWE-190",
+    "section": "4.5",
+    "clause_id": "4.5.10",
+    "text": "The project manager shall verify code coverage is measured by analysis of the results of the\nexecution of tests. [SWE-190]",
+    "notes": [
+      "Note: If it can be justified that the required percentage cannot be achieved by test\nexecution, the analysis, inspection, or review of design can be applied to the non-covered\ncode. The goal of the complementary analysis is to assess that the non-covered code\nbehavior is as expected."
+    ],
+    "sources": [
+      "body",
+      "matrix"
+    ],
+    "matrix_section": "4.5.10",
+    "matrix_requirement_text": "The project manager shall verify code coverage is measured by analysis of the results of the execution of tests.",
+    "matrix_authority": "Center",
+    "matrix_class_marks": 3,
+    "matrix_f_authority": "",
+    "matrix_f_mark": "",
+    "functional_category": "Software Testing",
+    "action_verbs": [
+      "test",
+      "verify"
+    ],
+    "srs_scope": "out",
+    "srs_evidence": "",
+    "source_url": "https://nodis3.gsfc.nasa.gov/npg_img/N_PR_7150_002D_/N_PR_7150_002D_.pdf"
+  },
+  {
+    "swe_id": "SWE-191",
+    "section": "4.5",
+    "clause_id": "4.5.11",
+    "text": "The project manager shall plan and conduct software regression testing to demonstrate that\ndefects have not been introduced into previously integrated or tested software and have not\nproduced a security vulnerability. [SWE-191]",
+    "notes": [],
+    "sources": [
+      "body",
+      "matrix"
+    ],
+    "matrix_section": "4.5.11",
+    "matrix_requirement_text": "The project manager shall plan and conduct software regression testing to demonstrate that defects have not been introduced into previously integrated or tested software and have not produced a security vulnerability.",
+    "matrix_authority": "Center",
+    "matrix_class_marks": 3,
+    "matrix_f_authority": "X",
+    "matrix_f_mark": "",
+    "functional_category": "Software Testing",
+    "action_verbs": [
+      "test"
+    ],
+    "srs_scope": "out",
+    "srs_evidence": "",
+    "source_url": "https://nodis3.gsfc.nasa.gov/npg_img/N_PR_7150_002D_/N_PR_7150_002D_.pdf"
+  },
+  {
+    "swe_id": "SWE-192",
+    "section": "4.5",
+    "clause_id": "4.5.12",
+    "text": "The project manager shall verify through test the software requirements that trace to a\nhazardous event, cause, or mitigation technique. [SWE-192]",
+    "notes": [],
+    "sources": [
+      "body",
+      "matrix"
+    ],
+    "matrix_section": "4.5.12",
+    "matrix_requirement_text": "The project manager shall verify through test the software requirements that trace to a hazardous event, cause, or mitigation technique.",
+    "matrix_authority": "Center",
+    "matrix_class_marks": 4,
+    "matrix_f_authority": "",
+    "matrix_f_mark": "",
+    "functional_category": "Software Testing",
+    "action_verbs": [
+      "test",
+      "verify"
+    ],
+    "srs_scope": "out",
+    "srs_evidence": "",
+    "source_url": "https://nodis3.gsfc.nasa.gov/npg_img/N_PR_7150_002D_/N_PR_7150_002D_.pdf"
+  },
+  {
+    "swe_id": "SWE-193",
+    "section": "4.5",
+    "clause_id": "4.5.13",
+    "text": "The project manager shall develop acceptance tests for loaded or uplinked data, rules, and\ncode that affects software and software system behavior. [SWE-193]",
+    "notes": [
+      "Note: These acceptance tests should validate and verify the data, rules, and code for\nnominal and off-nominal scenarios."
+    ],
+    "sources": [
+      "body",
+      "matrix"
+    ],
+    "matrix_section": "4.5.13",
+    "matrix_requirement_text": "The project manager shall develop acceptance tests for loaded or uplinked data, rules, and code that affects software and software system behavior.",
+    "matrix_authority": "Center",
+    "matrix_class_marks": 2,
+    "matrix_f_authority": "X",
+    "matrix_f_mark": "",
+    "functional_category": "Software Testing",
+    "action_verbs": [
+      "develop",
+      "test"
+    ],
+    "srs_scope": "out",
+    "srs_evidence": "",
+    "source_url": "https://nodis3.gsfc.nasa.gov/npg_img/N_PR_7150_002D_/N_PR_7150_002D_.pdf"
+  },
+  {
+    "swe_id": "SWE-211",
+    "section": "4.5",
+    "clause_id": "4.5.14",
+    "text": "The project manager shall test embedded COTS, GOTS, MOTS, OSS, or reused software\ncomponents to the same level required to accept a custom developed software component for its\nintended use. [SWE-211]",
+    "notes": [],
+    "sources": [
+      "body",
+      "matrix"
+    ],
+    "matrix_section": "4.5.14",
+    "matrix_requirement_text": "The project manager shall test embedded COTS, GOTS, MOTS, OSS, or reused software components to the same level required to accept a custom developed software component for its intended use.",
+    "matrix_authority": "Center",
+    "matrix_class_marks": 3,
+    "matrix_f_authority": "",
+    "matrix_f_mark": "",
+    "functional_category": "Software Testing",
+    "action_verbs": [
+      "develop",
+      "test"
+    ],
+    "srs_scope": "out",
+    "srs_evidence": "",
+    "source_url": "https://nodis3.gsfc.nasa.gov/npg_img/N_PR_7150_002D_/N_PR_7150_002D_.pdf"
+  },
+  {
+    "swe_id": "SWE-075",
+    "section": "4.6",
+    "clause_id": "4.6.2",
+    "text": "The project manager shall plan and implement software operations, maintenance, and\nretirement activities. [SWE-075]",
+    "notes": [],
+    "sources": [
+      "body",
+      "matrix"
+    ],
+    "matrix_section": "4.6.2",
+    "matrix_requirement_text": "The project manager shall plan and implement software operations, maintenance, and retirement activities.",
+    "matrix_authority": "Center",
+    "matrix_class_marks": 4,
+    "matrix_f_authority": "X",
+    "matrix_f_mark": "",
+    "functional_category": "Software Operations, Maintenance, and Retirement",
+    "action_verbs": [],
+    "srs_scope": "out",
+    "srs_evidence": "",
+    "source_url": "https://nodis3.gsfc.nasa.gov/npg_img/N_PR_7150_002D_/N_PR_7150_002D_.pdf"
+  },
+  {
+    "swe_id": "SWE-077",
+    "section": "4.6",
+    "clause_id": "4.6.3",
+    "text": "The project manager shall complete and deliver the software product to the customer with\nappropriate records, including as-built records, to support the operations and maintenance phase of\nthe software’s life cycle. [SWE-077]",
+    "notes": [],
+    "sources": [
+      "body",
+      "matrix"
+    ],
+    "matrix_section": "4.6.3",
+    "matrix_requirement_text": "The project manager shall complete and deliver the software product to the customer with appropriate records, including as-built records, to support the operations and maintenance phase of the software’s life cycle.",
+    "matrix_authority": "Center",
+    "matrix_class_marks": 4,
+    "matrix_f_authority": "X",
+    "matrix_f_mark": "",
+    "functional_category": "Software Operations, Maintenance, and Retirement",
+    "action_verbs": [],
+    "srs_scope": "out",
+    "srs_evidence": "",
+    "source_url": "https://nodis3.gsfc.nasa.gov/npg_img/N_PR_7150_002D_/N_PR_7150_002D_.pdf"
+  },
+  {
+    "swe_id": "SWE-194",
+    "section": "4.6",
+    "clause_id": "4.6.4",
+    "text": "The project manager shall complete, prior to delivery, verification that all software\nrequirements identified for this delivery have been met or dispositioned, that all approved changes\nhave been implemented, and that all defects designated for resolution prior to delivery have been\nresolved. [SWE-194]",
+    "notes": [],
+    "sources": [
+      "body",
+      "matrix"
+    ],
+    "matrix_section": "4.6.4",
+    "matrix_requirement_text": "The project manager shall complete, prior to delivery, verification that all software requirements identified for this delivery have been met or dispositioned, that all approved changes have been implemented and that all defects designated for resolution prior to delivery",
+    "matrix_authority": "Center",
+    "matrix_class_marks": 4,
+    "matrix_f_authority": "X",
+    "matrix_f_mark": "",
+    "functional_category": "Software Operations, Maintenance, and Retirement",
+    "action_verbs": [],
+    "srs_scope": "out",
+    "srs_evidence": "",
+    "source_url": "https://nodis3.gsfc.nasa.gov/npg_img/N_PR_7150_002D_/N_PR_7150_002D_.pdf"
+  },
+  {
+    "swe_id": "SWE-195",
+    "section": "4.6",
+    "clause_id": "4.6.5",
+    "text": "The project manager shall maintain the software using standards and processes per the\napplicable software classification throughout the maintenance phase. [SWE-195]",
+    "notes": [],
+    "sources": [
+      "body",
+      "matrix"
+    ],
+    "matrix_section": "4.6.5",
+    "matrix_requirement_text": "The project manager shall maintain the software using standards and processes per the applicable software classification throughout the maintenance phase.",
+    "matrix_authority": "Center",
+    "matrix_class_marks": 4,
+    "matrix_f_authority": "X",
+    "matrix_f_mark": "",
+    "functional_category": "Software Operations, Maintenance, and Retirement",
+    "action_verbs": [
+      "maintain"
+    ],
+    "srs_scope": "out",
+    "srs_evidence": "",
+    "source_url": "https://nodis3.gsfc.nasa.gov/npg_img/N_PR_7150_002D_/N_PR_7150_002D_.pdf"
+  },
+  {
+    "swe_id": "SWE-196",
+    "section": "4.6",
+    "clause_id": "4.6.6",
+    "text": "The project manager shall identify the records and software tools to be archived, the location\nof the archive, and procedures for access to the products for software retirement or disposal.\n[SWE-196]",
+    "notes": [],
+    "sources": [
+      "body",
+      "matrix"
+    ],
+    "matrix_section": "4.6.6",
+    "matrix_requirement_text": "The project manager shall identify the records and software tools to be archived, the location of the archive, and procedures for access to the products for software retirement or disposal.",
+    "matrix_authority": "Center",
+    "matrix_class_marks": 4,
+    "matrix_f_authority": "X",
+    "matrix_f_mark": "",
+    "functional_category": "Software Operations, Maintenance, and Retirement",
+    "action_verbs": [],
+    "srs_scope": "out",
+    "srs_evidence": "",
+    "source_url": "https://nodis3.gsfc.nasa.gov/npg_img/N_PR_7150_002D_/N_PR_7150_002D_.pdf"
+  },
+  {
+    "swe_id": "SWE-079",
+    "section": "5.1",
+    "clause_id": "5.1.2",
+    "text": "The project manager shall develop a software configuration management plan that describes\nthe functions, responsibilities, and authority for the implementation of software configuration\nmanagement for the project. [SWE-079]",
+    "notes": [],
+    "sources": [
+      "body",
+      "matrix"
+    ],
+    "matrix_section": "5.1.2",
+    "matrix_requirement_text": "The project manager shall develop a software configuration management plan that describes the functions, responsibilities, and authority for the implementation of software configuration management for the project.",
+    "matrix_authority": "Center",
+    "matrix_class_marks": 4,
+    "matrix_f_authority": "X",
+    "matrix_f_mark": "",
+    "functional_category": "Software Configuration Management",
+    "action_verbs": [
+      "develop"
+    ],
+    "srs_scope": "out",
+    "srs_evidence": "",
+    "source_url": "https://nodis3.gsfc.nasa.gov/npg_img/N_PR_7150_002D_/N_PR_7150_002D_.pdf"
+  },
+  {
+    "swe_id": "SWE-080",
+    "section": "5.1",
+    "clause_id": "5.1.3",
+    "text": "The project manager shall track and evaluate changes to software products. [SWE-080]",
+    "notes": [],
+    "sources": [
+      "body",
+      "matrix"
+    ],
+    "matrix_section": "5.1.3",
+    "matrix_requirement_text": "The project manager shall track and evaluate changes to software products.",
+    "matrix_authority": "Center",
+    "matrix_class_marks": 4,
+    "matrix_f_authority": "X",
+    "matrix_f_mark": "",
+    "functional_category": "Software Configuration Management",
+    "action_verbs": [
+      "track"
+    ],
+    "srs_scope": "out",
+    "srs_evidence": "",
+    "source_url": "https://nodis3.gsfc.nasa.gov/npg_img/N_PR_7150_002D_/N_PR_7150_002D_.pdf"
+  },
+  {
+    "swe_id": "SWE-081",
+    "section": "5.1",
+    "clause_id": "5.1.4",
+    "text": "The project manager shall identify the software configuration items (e.g., software records,\ncode, data, tools, models, scripts) and their versions to be controlled for the project. [SWE-081]",
+    "notes": [
+      "Note: The items to be controlled include tools, items, or settings used to develop the\nsoftware, which could impact the software. Examples of such items include\ncompiler/assembler versions, makefiles, batch files, and specific environment settings."
+    ],
+    "sources": [
+      "body",
+      "matrix"
+    ],
+    "matrix_section": "5.1.4",
+    "matrix_requirement_text": "The project manager shall identify the software configuration items (e.g., software records, code, data, tools, models, scripts) and their versions to be controlled for the project.",
+    "matrix_authority": "Center",
+    "matrix_class_marks": 4,
+    "matrix_f_authority": "X",
+    "matrix_f_mark": "",
+    "functional_category": "Software Configuration Management",
+    "action_verbs": [],
+    "srs_scope": "out",
+    "srs_evidence": "",
+    "source_url": "https://nodis3.gsfc.nasa.gov/npg_img/N_PR_7150_002D_/N_PR_7150_002D_.pdf"
+  },
+  {
+    "swe_id": "SWE-082",
+    "section": "5.1",
+    "clause_id": "5.1.5",
+    "text": "The project manager shall establish and implement procedures to: [SWE-082]\na. Designate the levels of control through which each identified software configuration item is\nrequired to pass.\nb. Identify the persons or groups with authority to authorize changes.\nc. Identify the persons or groups to make changes at each level.",
+    "notes": [
+      "Note: IEEE 828-2012, IEEE Standard for Configuration Management in Systems and\nSoftware Engineering describes configuration management processes to be established,\nhow they are to be accomplished, who is responsible for doing specific activities, when they\nare to happen, and what specific resources are required. It addresses configuration\nmanagement activities over a product’s life cycle. Configuration management in systems\nand software engineering is a specialty discipline within the larger discipline of\nconfiguration management. Configuration management is essential to systems engineering\nand software engineering."
+    ],
+    "sources": [
+      "body",
+      "matrix"
+    ],
+    "matrix_section": "5.1.5",
+    "matrix_requirement_text": "The project manager shall establish and implement procedures to: a. Designate the levels of control through which each identified software",
+    "matrix_authority": "Center",
+    "matrix_class_marks": 4,
+    "matrix_f_authority": "X",
+    "matrix_f_mark": "",
+    "functional_category": "Software Configuration Management",
+    "action_verbs": [],
+    "srs_scope": "out",
+    "srs_evidence": "",
+    "source_url": "https://nodis3.gsfc.nasa.gov/npg_img/N_PR_7150_002D_/N_PR_7150_002D_.pdf"
+  },
+  {
+    "swe_id": "SWE-083",
+    "section": "5.1",
+    "clause_id": "5.1.6",
+    "text": "The project manager shall prepare and maintain records of the configuration status of software\nconfiguration items. [SWE-083]",
+    "notes": [],
+    "sources": [
+      "body",
+      "matrix"
+    ],
+    "matrix_section": "5.1.6",
+    "matrix_requirement_text": "The project manager shall prepare and maintain records of the configuration status of software configuration items.",
+    "matrix_authority": "Center",
+    "matrix_class_marks": 4,
+    "matrix_f_authority": "X",
+    "matrix_f_mark": "",
+    "functional_category": "Software Configuration Management",
+    "action_verbs": [
+      "maintain"
+    ],
+    "srs_scope": "out",
+    "srs_evidence": "",
+    "source_url": "https://nodis3.gsfc.nasa.gov/npg_img/N_PR_7150_002D_/N_PR_7150_002D_.pdf"
+  },
+  {
+    "swe_id": "SWE-084",
+    "section": "5.1",
+    "clause_id": "5.1.7",
+    "text": "The project manager shall perform software configuration audits to determine the correct\nversion of the software configuration items and verify that they conform to the records that define\nthem. [SWE-084]",
+    "notes": [],
+    "sources": [
+      "body",
+      "matrix"
+    ],
+    "matrix_section": "5.1.7",
+    "matrix_requirement_text": "The project manager shall perform software configuration audits to determine the correct version of the software configuration items and verify that they conform to the records that define them.",
+    "matrix_authority": "Center",
+    "matrix_class_marks": 4,
+    "matrix_f_authority": "X",
+    "matrix_f_mark": "",
+    "functional_category": "Software Configuration Management",
+    "action_verbs": [
+      "verify"
+    ],
+    "srs_scope": "out",
+    "srs_evidence": "",
+    "source_url": "https://nodis3.gsfc.nasa.gov/npg_img/N_PR_7150_002D_/N_PR_7150_002D_.pdf"
+  },
+  {
+    "swe_id": "SWE-085",
+    "section": "5.1",
+    "clause_id": "5.1.8",
+    "text": "The project manager shall establish and implement procedures for the storage, handling,\ndelivery, release, and maintenance of deliverable software products. [SWE-085]",
+    "notes": [],
+    "sources": [
+      "body",
+      "matrix"
+    ],
+    "matrix_section": "5.1.8",
+    "matrix_requirement_text": "The project manager shall establish and implement procedures for the storage, handling, delivery, release, and maintenance of deliverable software products.",
+    "matrix_authority": "Center",
+    "matrix_class_marks": 4,
+    "matrix_f_authority": "X",
+    "matrix_f_mark": "",
+    "functional_category": "Software Configuration Management",
+    "action_verbs": [],
+    "srs_scope": "out",
+    "srs_evidence": "",
+    "source_url": "https://nodis3.gsfc.nasa.gov/npg_img/N_PR_7150_002D_/N_PR_7150_002D_.pdf"
+  },
+  {
+    "swe_id": "SWE-045",
+    "section": "5.1",
+    "clause_id": "5.1.9",
+    "text": "The project manager shall participate in any joint NASA/developer audits. [SWE-045]",
+    "notes": [],
+    "sources": [
+      "body",
+      "matrix"
+    ],
+    "matrix_section": "5.1.9",
+    "matrix_requirement_text": "The project manager shall participate in any joint NASA/developer audits.",
+    "matrix_authority": "Center",
+    "matrix_class_marks": 3,
+    "matrix_f_authority": "X",
+    "matrix_f_mark": "",
+    "functional_category": "Software Configuration Management",
+    "action_verbs": [
+      "develop"
+    ],
+    "srs_scope": "out",
+    "srs_evidence": "",
+    "source_url": "https://nodis3.gsfc.nasa.gov/npg_img/N_PR_7150_002D_/N_PR_7150_002D_.pdf"
+  },
+  {
+    "swe_id": "SWE-086",
+    "section": "5.2",
+    "clause_id": "5.2",
+    "text": "The project manager shall record, analyze, plan, track, control, and communicate all of the software\nrisks and mitigation plans. [SWE-086]",
+    "notes": [
+      "Note: Project managers should be aware of any risks that remain after mitigations have\nbeen completed or after a risk has been accepted."
+    ],
+    "sources": [
+      "body",
+      "matrix"
+    ],
+    "matrix_section": "5.2",
+    "matrix_requirement_text": "The project manager shall record, analyze, plan, track, control, and communicate all of the software risks and mitigation plans.",
+    "matrix_authority": "Center",
+    "matrix_class_marks": 3,
+    "matrix_f_authority": "X",
+    "matrix_f_mark": "",
+    "functional_category": "Software Risk Management",
+    "action_verbs": [
+      "track"
+    ],
+    "srs_scope": "out",
+    "srs_evidence": "",
+    "source_url": "https://nodis3.gsfc.nasa.gov/npg_img/N_PR_7150_002D_/N_PR_7150_002D_.pdf"
+  },
+  {
+    "swe_id": "SWE-087",
+    "section": "5.3",
+    "clause_id": "5.3.2",
+    "text": "The project manager shall perform and report the results of software peer reviews or software\ninspections for: [SWE-087]\na. Software requirements.\nb. Software plans, including cybersecurity.\nc. Any design items that the project identified for software peer review or software inspections\naccording to the software development plans.\nd. Software code as defined in the software and or project plans.\ne. Software test procedures.",
+    "notes": [
+      "Note: Software peer reviews or software inspections are recommended best practices for all\nsafety and mission-success related software components. Recommended best practices and\nguidelines for software formal inspections are contained in NASA-STD-8739.9, Software\nFormal Inspection Standard."
+    ],
+    "sources": [
+      "body",
+      "matrix"
+    ],
+    "matrix_section": "5.3.2",
+    "matrix_requirement_text": "The project manager shall perform and report the results of software peer reviews or software inspections for: a. Software requirements. b. Software plans, including",
+    "matrix_authority": "Center",
+    "matrix_class_marks": 3,
+    "matrix_f_authority": "X",
+    "matrix_f_mark": "",
+    "functional_category": "Software Peer Reviews/Inspections",
+    "action_verbs": [
+      "develop",
+      "test",
+      "review"
+    ],
+    "srs_scope": "out",
+    "srs_evidence": "",
+    "source_url": "https://nodis3.gsfc.nasa.gov/npg_img/N_PR_7150_002D_/N_PR_7150_002D_.pdf"
+  },
+  {
+    "swe_id": "SWE-088",
+    "section": "5.3",
+    "clause_id": "5.3.3",
+    "text": "The project manager shall, for each planned software peer review or software inspection:\n[SWE-088]\na. Use a checklist or formal reading technique (e.g., perspective-based reading) to evaluate the work\nproducts.\nb. Use established readiness and completion criteria.\nc. Track actions identified in the reviews until they are resolved.\nd. Identify the required participants.",
+    "notes": [],
+    "sources": [
+      "body",
+      "matrix"
+    ],
+    "matrix_section": "5.3.3",
+    "matrix_requirement_text": "The project manager shall, for each planned software peer review or software inspection: a. Use a checklist or formal reading technique (e.g., perspective based reading) to evaluate the work products. b. Use established readiness and completion criteria. c. Track actions identified in the reviews until they are resolved. d. Identify the required participants.",
+    "matrix_authority": "Center",
+    "matrix_class_marks": 3,
+    "matrix_f_authority": "",
+    "matrix_f_mark": "",
+    "functional_category": "Software Peer Reviews/Inspections",
+    "action_verbs": [
+      "track",
+      "review"
+    ],
+    "srs_scope": "out",
+    "srs_evidence": "",
+    "source_url": "https://nodis3.gsfc.nasa.gov/npg_img/N_PR_7150_002D_/N_PR_7150_002D_.pdf"
+  },
+  {
+    "swe_id": "SWE-089",
+    "section": "5.3",
+    "clause_id": "5.3.4",
+    "text": "The project manager shall, for each planned software peer review or software inspection,\nrecord necessary measurements. [SWE-089]",
+    "notes": [],
+    "sources": [
+      "body",
+      "matrix"
+    ],
+    "matrix_section": "5.3.4",
+    "matrix_requirement_text": "The project manager shall, for each planned software peer review or software inspection, record necessary measurements.",
+    "matrix_authority": "Center",
+    "matrix_class_marks": 3,
+    "matrix_f_authority": "X",
+    "matrix_f_mark": "",
+    "functional_category": "Software Peer Reviews/Inspections",
+    "action_verbs": [
+      "review"
+    ],
+    "srs_scope": "out",
+    "srs_evidence": "",
+    "source_url": "https://nodis3.gsfc.nasa.gov/npg_img/N_PR_7150_002D_/N_PR_7150_002D_.pdf"
+  },
+  {
+    "swe_id": "SWE-090",
+    "section": "5.4",
+    "clause_id": "5.4.2",
+    "text": "The project manager shall establish, record, maintain, report, and utilize software management\nand technical measurements. [SWE-090]",
+    "notes": [
+      "Note: The NASA-HDBK-2203 contains a set of candidate management indicators that may\nbe used on a software development project. The NASA Chief Engineer may identify and\ndocument additional Center measurement objectives, software measurements, collection\nprocedures and guidelines, and analysis procedures for selected software projects and\nsoftware development organizations. The software measurement process includes\ncollecting software technical measurement data from the project’s software developer(s)."
+    ],
+    "sources": [
+      "body",
+      "matrix"
+    ],
+    "matrix_section": "5.4.2",
+    "matrix_requirement_text": "The project manager shall establish, record, maintain, report, and utilize software management and technical measurements.",
+    "matrix_authority": "Center",
+    "matrix_class_marks": 3,
+    "matrix_f_authority": "",
+    "matrix_f_mark": "",
+    "functional_category": "Software Measurements",
+    "action_verbs": [
+      "maintain"
+    ],
+    "srs_scope": "out",
+    "srs_evidence": "",
+    "source_url": "https://nodis3.gsfc.nasa.gov/npg_img/N_PR_7150_002D_/N_PR_7150_002D_.pdf"
+  },
+  {
+    "swe_id": "SWE-093",
+    "section": "5.4",
+    "clause_id": "5.4.3",
+    "text": "The project manager shall analyze software measurement data collected using documented\nproject-specified and Center/organizational analysis procedures. [SWE-093]",
+    "notes": [],
+    "sources": [
+      "body",
+      "matrix"
+    ],
+    "matrix_section": "5.4.3",
+    "matrix_requirement_text": "The project manager shall analyze software measurement data collected using documented project-specified and Center/organizational analysis procedures.",
+    "matrix_authority": "Center",
+    "matrix_class_marks": 3,
+    "matrix_f_authority": "",
+    "matrix_f_mark": "",
+    "functional_category": "Software Measurements",
+    "action_verbs": [
+      "document"
+    ],
+    "srs_scope": "out",
+    "srs_evidence": "",
+    "source_url": "https://nodis3.gsfc.nasa.gov/npg_img/N_PR_7150_002D_/N_PR_7150_002D_.pdf"
+  },
+  {
+    "swe_id": "SWE-094",
+    "section": "5.4",
+    "clause_id": "5.4.4",
+    "text": "The project manager shall provide access to the software measurement data, measurement\nanalyses, and software development status as requested to the sponsoring Mission Directorate, the\nNASA Chief Engineer, the Center Technical Authorities, HQ SMA, and other organizations as\nappropriate. [SWE-094]",
+    "notes": [],
+    "sources": [
+      "body",
+      "matrix"
+    ],
+    "matrix_section": "5.4.4",
+    "matrix_requirement_text": "The project manager shall provide access to the software measurement data, measurement analyses, and software development status as requested to the sponsoring Mission Directorate, the NASA Chief Engineer, the Center TAs, HQ SMA, and other organizations as appropriate.",
+    "matrix_authority": "Center",
+    "matrix_class_marks": 3,
+    "matrix_f_authority": "",
+    "matrix_f_mark": "",
+    "functional_category": "Software Measurements",
+    "action_verbs": [
+      "develop"
+    ],
+    "srs_scope": "out",
+    "srs_evidence": "",
+    "source_url": "https://nodis3.gsfc.nasa.gov/npg_img/N_PR_7150_002D_/N_PR_7150_002D_.pdf"
+  },
+  {
+    "swe_id": "SWE-199",
+    "section": "5.4",
+    "clause_id": "5.4.5",
+    "text": "The project manager shall monitor measures to ensure the software will meet or exceed\nperformance and functionality requirements, including satisfying constraints. [SWE-199]",
+    "notes": [
+      "Note: The metrics could include planned and actual use of computer hardware resources\n(such as processor capacity, memory capacity, input/output device capacity, auxiliary\nstorage device capacity, and communications/network equipment capacity, bus traffic,\npartition allocation) over time. As part of the verification of the software detailed design,\nthe developer will update the estimation of the technical resource metrics. As part of the\nverification of the coding, testing, and validation, the technical resource metrics will be\nupdated with the measured values and will be compared to the margins."
+    ],
+    "sources": [
+      "body",
+      "matrix"
+    ],
+    "matrix_section": "5.4.5",
+    "matrix_requirement_text": "The project manager shall monitor measures to ensure the software will meet or exceed performance and functionality requirements, including satisfying constraints.",
+    "matrix_authority": "Center",
+    "matrix_class_marks": 3,
+    "matrix_f_authority": "",
+    "matrix_f_mark": "",
+    "functional_category": "Software Measurements",
+    "action_verbs": [],
+    "srs_scope": "out",
+    "srs_evidence": "",
+    "source_url": "https://nodis3.gsfc.nasa.gov/npg_img/N_PR_7150_002D_/N_PR_7150_002D_.pdf"
+  },
+  {
+    "swe_id": "SWE-200",
+    "section": "5.4",
+    "clause_id": "5.4.6",
+    "text": "The project manager shall collect, track, and report software requirements volatility metrics.\n[SWE-200]",
+    "notes": [],
+    "sources": [
+      "body",
+      "matrix"
+    ],
+    "matrix_section": "5.4.6",
+    "matrix_requirement_text": "The project manager shall collect, track, and report software requirements volatility metrics.",
+    "matrix_authority": "Center",
+    "matrix_class_marks": 2,
+    "matrix_f_authority": "",
+    "matrix_f_mark": "",
+    "functional_category": "Software Measurements",
+    "action_verbs": [
+      "track"
+    ],
+    "srs_scope": "out",
+    "srs_evidence": "",
+    "source_url": "https://nodis3.gsfc.nasa.gov/npg_img/N_PR_7150_002D_/N_PR_7150_002D_.pdf"
+  },
+  {
+    "swe_id": "SWE-201",
+    "section": "5.5",
+    "clause_id": "5.5.1",
+    "text": "The project manager shall track and maintain software non-conformances (including defects in\ntools and appropriate ground software). [SWE-201]",
+    "notes": [],
+    "sources": [
+      "body",
+      "matrix"
+    ],
+    "matrix_section": "5.5.1",
+    "matrix_requirement_text": "The project manager shall track and maintain software non-conformances (including defects in tools and appropriate ground software).",
+    "matrix_authority": "Center",
+    "matrix_class_marks": 4,
+    "matrix_f_authority": "X",
+    "matrix_f_mark": "",
+    "functional_category": "Software Non-Conformance or Defect Management",
+    "action_verbs": [
+      "track",
+      "maintain"
+    ],
+    "srs_scope": "out",
+    "srs_evidence": "",
+    "source_url": "https://nodis3.gsfc.nasa.gov/npg_img/N_PR_7150_002D_/N_PR_7150_002D_.pdf"
+  },
+  {
+    "swe_id": "SWE-202",
+    "section": "5.5",
+    "clause_id": "5.5.2",
+    "text": "The project manager shall define and implement clear software severity levels for all software\nnon-conformances (including tools, COTS, GOTS, MOTS, OSS, reused software components, and\napplicable ground systems). [SWE-202]",
+    "notes": [
+      "Note: At a minimum, classes should include loss of life or loss of vehicle, mission success,\nvisible to the user with operational workarounds, and an ‘other’ class that does not meet\nprevious criteria."
+    ],
+    "sources": [
+      "body",
+      "matrix"
+    ],
+    "matrix_section": "5.5.2",
+    "matrix_requirement_text": "The project manager shall define and implement clear software severity levels for all software non-conformances (including tools, COTS, GOTS, MOTS, OSS, reused software components, and applicable ground systems).",
+    "matrix_authority": "Center",
+    "matrix_class_marks": 3,
+    "matrix_f_authority": "X",
+    "matrix_f_mark": "",
+    "functional_category": "Software Non-Conformance or Defect Management",
+    "action_verbs": [],
+    "srs_scope": "out",
+    "srs_evidence": "",
+    "source_url": "https://nodis3.gsfc.nasa.gov/npg_img/N_PR_7150_002D_/N_PR_7150_002D_.pdf"
+  },
+  {
+    "swe_id": "SWE-203",
+    "section": "5.5",
+    "clause_id": "5.5.3",
+    "text": "The project manager shall implement mandatory assessments of reported non-conformances\nfor all COTS, GOTS, MOTS, OSS, and/or reused software components. [SWE-203]",
+    "notes": [
+      "Note: This includes operating systems, run-time systems, device drivers, code generators,\ncompilers, math libraries, and build and Configuration Management (CM) tools. It should\nbe performed pre-flight, with mandatory code audits for critical defects."
+    ],
+    "sources": [
+      "body",
+      "matrix"
+    ],
+    "matrix_section": "5.5.3",
+    "matrix_requirement_text": "The project manager shall implement mandatory assessments of reported non-conformances for all COTS, GOTS, MOTS, OSS, and/or reused software components.",
+    "matrix_authority": "Center",
+    "matrix_class_marks": 3,
+    "matrix_f_authority": "",
+    "matrix_f_mark": "",
+    "functional_category": "Software Non-Conformance or Defect Management",
+    "action_verbs": [
+      "assess"
+    ],
+    "srs_scope": "out",
+    "srs_evidence": "",
+    "source_url": "https://nodis3.gsfc.nasa.gov/npg_img/N_PR_7150_002D_/N_PR_7150_002D_.pdf"
+  },
+  {
+    "swe_id": "SWE-204",
+    "section": "5.5",
+    "clause_id": "5.5.4",
+    "text": "The project manager shall implement process assessments for all high-severity software\nnon-conformances (closed loop process). [SWE-204]",
+    "notes": [],
+    "sources": [
+      "body",
+      "matrix"
+    ],
+    "matrix_section": "5.5.4",
+    "matrix_requirement_text": "The project manager shall implement process assessments for all high severity software non-conformances (closed loop process).",
+    "matrix_authority": "Center",
+    "matrix_class_marks": 2,
+    "matrix_f_authority": "",
+    "matrix_f_mark": "",
+    "functional_category": "Software Non-Conformance or Defect Management",
+    "action_verbs": [
+      "assess"
+    ],
+    "srs_scope": "out",
+    "srs_evidence": "",
+    "source_url": "https://nodis3.gsfc.nasa.gov/npg_img/N_PR_7150_002D_/N_PR_7150_002D_.pdf"
+  }
+]

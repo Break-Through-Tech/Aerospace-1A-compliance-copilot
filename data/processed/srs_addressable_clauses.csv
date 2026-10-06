@@ -1,0 +1,79 @@
+swe_id,section,clause_id,text,notes,sources,matrix_section,matrix_requirement_text,matrix_authority,matrix_class_marks,matrix_f_authority,matrix_f_mark,functional_category,action_verbs,srs_scope,srs_evidence,source_url
+SWE-034,3.1,3.1.5,"The project manager shall define and document the acceptance criteria for the software.
+[SWE-034]",[],"['body', 'matrix']",3.1.5,The project manager shall define and document the acceptance criteria for the software.,Center,4,X,,Software Life Cycle Planning,['document'],partial,Verification method and pass criteria per requirement.,https://nodis3.gsfc.nasa.gov/npg_img/N_PR_7150_002D_/N_PR_7150_002D_.pdf
+SWE-027,3.1,3.1.14,"The project manager shall satisfy the following conditions when a COTS, GOTS, MOTS,
+OSS, or reused software component is acquired or used: [SWE-027]
+a. The requirements to be met by the software component are identified.
+b. The software component includes documentation to fulfill its intended purpose (e.g., usage
+instructions).
+c. Proprietary rights, usage rights, ownership, warranty, licensing rights, transfer rights, and
+conditions of use (e.g., required copyright, author, and applicable license notices within the software
+code, or a requirement to redistribute the licensed software only under the same license (e.g., GNU
+GPL, ver. 3, license)) have been addressed and coordinated with Center Intellectual Property
+Counsel.
+d. Future support for the software product is planned and adequate for project needs.
+e. The software component is verified and validated to the same level required to accept a similar
+developed software component for its intended use.
+f. The project has a plan to perform periodic assessments of vendor reported defects to ensure the
+defects do not impact the selected software components.","['Note: The project responsible for procuring off-the-shelf software is responsible for\ndocumenting, prior to procurement, a plan for verifying and validating the software to the\nsame level that would be required for a developed software component. The project ensures\nthat the COTS, GOTS, MOTS, reused, and auto-generated code software components and\ndata meet the applicable requirements in this directive assigned to its software\nclassification as shown in Appendix C.']","['body', 'matrix']",3.1.14,"The project manager shall satisfy the following conditions when a COTS, GOTS, MOTS, OSS, or reused software component is acquired or used: a. The requirements to be met by the software component are identified. b. The software component includes documentation to fulfill its intended purpose (e.g., usage instructions). c. Proprietary rights, usage",Center,4,X,,Software Life Cycle Planning,"['develop', 'document', 'assess']",partial,Item a only: requirements the COTS/GOTS/MOTS/OSS/reused component must meet.,https://nodis3.gsfc.nasa.gov/npg_img/N_PR_7150_002D_/N_PR_7150_002D_.pdf
+SWE-205,3.7,3.7.1,"The project manager, in conjunction with the SMA organization, shall determine if each
+software component is considered to be safety-critical per the criteria defined in
+NASA-STD-8739.8. [SWE-205]",[],"['body', 'matrix']",3.7.1,"The project manager, in conjunction with the SMA organization, shall determine if each software component is considered to be safety-critical per the criteria defined in NASA-STD-8739.8.",Center,5,,,Safety-Critical Software,[],partial,Safety-critical requirements or components are flagged.,https://nodis3.gsfc.nasa.gov/npg_img/N_PR_7150_002D_/N_PR_7150_002D_.pdf
+SWE-023,3.7,3.7.2,"If a project has safety-critical software, the project manager shall implement the safety-critical
+software requirements contained in NASA-STD-8739.8. [SWE-023]",[],"['body', 'matrix']",3.7.2,"If a project has safety-critical software, the project manager shall implement the safety-critical software requirements contained in NASA-STD-8739.8.",Center,4,,,Safety-Critical Software,[],partial,NASA-STD-8739.8 safety-critical requirements expressed as software requirements.,https://nodis3.gsfc.nasa.gov/npg_img/N_PR_7150_002D_/N_PR_7150_002D_.pdf
+SWE-134,3.7,3.7.3,"If a project has safety-critical software or mission-critical software, the project manager shall
+implement the following items in the software: [SWE-134]
+a. The software is initialized, at first start and restarts, to a known safe state.
+b. The software safely transitions between all predefined known states.
+c. Termination performed by software functions is performed to a known safe state.
+d. Operator overrides of software functions require at least two independent actions by an operator.
+e. Software rejects commands received out of sequence when execution of those commands out of
+sequence can cause a hazard.
+f. The software detects inadvertent memory modification and recovers to a known safe state.
+g. The software performs integrity checks on inputs and outputs to/from the software system.
+h. The software performs prerequisite checks prior to the execution of safety-critical software
+commands.
+i. No single software event or action is allowed to initiate an identified hazard.
+j. The software responds to an off-nominal condition within the time needed to prevent a hazardous
+event.
+k. The software provides error handling.
+l. The software can place the system into a safe state.","['Note: These requirements apply to components that reside in a mission-critical or\nsafety-critical system, and the components control, mitigate, or contribute to a hazard as\nwell as software used to command hazardous operations/activities.']","['body', 'matrix']",3.7.3,"If a project has safety-critical software or mission-critical software, the project manager shall implement the following items in the software: a. The software is initialized, at first start and restarts, to a known safe state. b. The software safely transitions between all predefined known states. c. Termination performed by software functions is performed to a known safe state. d. Operator overrides of software functions require at least two independent actions by an operator. e. Software rejects commands received out of sequence when execution of those commands out of sequence can cause a hazard. f. The software detects inadvertent memory modification and recovers to a known safe state. g. The software performs integrity checks on inputs and outputs to/from the software system. h. The software performs prerequisite checks prior to the execution of safety-critical software commands. i. No single software event or action is allowed to initiate an identified hazard. j. The software responds to an off-nominal condition within the time needed to prevent a hazardous event. k. The software provides error handling.",Center,4,,,Safety-Critical Software,[],partial,"Requirements covering items a-l: safe init, safe transitions, command checks, error handling, safe state.",https://nodis3.gsfc.nasa.gov/npg_img/N_PR_7150_002D_/N_PR_7150_002D_.pdf
+SWE-147,3.10,3.10.1,"The project manager shall specify reusability requirements that apply to its software
+development activities to enable future reuse of the software, including the models, simulations, and
+associated data used as inputs for auto-generation of software, for U.S. Government purposes.
+[SWE-147]",[],"['body', 'matrix']",3.10.1,The project manager shall specify reusability requirements that apply to its software development activities to enable future reuse,Center,4,X,,Software Reuse,['develop'],partial,Reusability requirements are specified.,https://nodis3.gsfc.nasa.gov/npg_img/N_PR_7150_002D_/N_PR_7150_002D_.pdf
+SWE-154,3.11,3.11.3,"The project manager shall identify cybersecurity risks, along with their mitigations, in flight
+and ground software systems and plan the mitigations for these systems. [SWE-154]","['Note: Project Protection Plans describe the program’s approach for planning and\nimplementing the requirements for information, physical, personnel, industrial, and\ncounterintelligence/counterterrorism security, and for security awareness/education\nrequirements in accordance with NPR 1600.1, NASA Security Program Procedural\nRequirements, NPD 1600.2, the NASA Security Policy, NPD 2810.1, and NPR 2810.1.\nInclude provisions in the plan to protect personnel, facilities, mission-essential\ninfrastructure, and critical program information from potential threats and vulnerabilities\nthat may be identified during the threat and vulnerability assessment process.']","['body', 'matrix']",3.11.3,"The project manager shall identify cybersecurity risks, along with their mitigations, in flight and ground software systems and plan the mitigations for these systems.","Center
+and
+Center
+CIO",4,,,Software Cybersecurity,[],partial,Cybersecurity mitigations stated as security requirements.,https://nodis3.gsfc.nasa.gov/npg_img/N_PR_7150_002D_/N_PR_7150_002D_.pdf
+SWE-157,3.11,3.11.4,"The project manager shall implement protections for software systems with communications
+capabilities against unauthorized access per the requirements contained in the NASA-STD-1006,
+Space System Protection Standard. [SWE-157]",[],"['body', 'matrix']",3.11.4,"The project manager shall implement protections for software systems with communications capabilities against unauthorized access per the requirements contained in the Space System Protection Standard, NASA-STD-1006.","Center
+and
+Center
+CIO",4,,,Software Cybersecurity,[],partial,Access control and authentication requirements for software with communications capability.,https://nodis3.gsfc.nasa.gov/npg_img/N_PR_7150_002D_/N_PR_7150_002D_.pdf
+SWE-210,3.11,3.11.8,"The project manager shall identify software requirements for the collection, reporting, and
+storage of data relating to the detection of adversarial actions. [SWE-210]","['Note: Monitoring of key software observables (e.g., number of failed login attempts,\nperformance changes, internal communication changes) is needed to detect adversarial\nactions that threaten mission success. When an adversarial action occurs, it should be\nreported. Raw event data should be further analyzed to determine whether an anomalous\nevent represents an attack, and if so, the nature of the attack.']","['body', 'matrix']",3.11.8,"The project manager shall identify software requirements for the collection, reporting, and storage of data relating to the detection of adversarial actions.",Center,3,X,,Software Cybersecurity,[],direct,"Requirements for collecting, reporting, and storing data on detected adversarial actions.",https://nodis3.gsfc.nasa.gov/npg_img/N_PR_7150_002D_/N_PR_7150_002D_.pdf
+SWE-052,3.12,3.12.1,"The project manager shall perform, record, and maintain bi-directional traceability between
+the following software elements: [SWE-052]
+Table 1. Bi-directional traceability by software classification
+Class A, B,
+Bi-directional Traceability Class D Class F
+and C
+Higher-level requirements to the software requirements X X
+Software requirements to the system hazards X X
+Software requirements to the software design components X
+Software design components to the software code X
+Software requirements to the software verification(s) X X X
+Software requirements to the software non-conformances X X X","['Note: The project manager will maintain bi-directional traceability between the software\nrequirements and software-related system hazards, including hazardous controls,\nhazardous mitigations, hazardous conditions, and hazardous events.']","['body', 'matrix']",3.12.1,"The project manager shall perform, record, and maintain bi-directional traceability between the following software elements: (See Table in 3.12.1)",Center,4,X,,Software Bi-Directional Traceability,['maintain'],partial,Upward traceability to parent requirements and traceability to hazards. Design/code/test links live elsewhere.,https://nodis3.gsfc.nasa.gov/npg_img/N_PR_7150_002D_/N_PR_7150_002D_.pdf
+SWE-050,4.1,4.1.2,"The project manager shall establish, capture, record, approve, and maintain software
+requirements, including requirements for COTS, GOTS, MOTS, OSS, or reused software
+components, as part of the technical specification. [SWE-050]","['Note: The software technical requirements definition process is used to transform the\nbaselined stakeholder expectations into unique, quantitative, and measurable technical\nsoftware requirements that can be used for defining a design solution for the software end\nproducts and related enabling products. This process also includes validation of the\nrequirements to ensure that the requirements are well-formed (clear and unambiguous),\ncomplete (agrees with customer and stakeholder needs and expectations), consistent\n(conflict free), and individually verifiable and traceable to a higher level requirement.\nRecommended content for a software specification can be found in NASA-HDBK-2203.']","['body', 'matrix']",4.1.2,"The project manager shall establish, capture, record, approve, and maintain software requirements, including requirements for COTS, GOTS, MOTS, OSS, or reused software components, as part of the technical specification.",Center,4,X,,Software Requirements,['maintain'],direct,"Requirements are uniquely identified and approved, including requirements for COTS/GOTS/MOTS/OSS or reused components.",https://nodis3.gsfc.nasa.gov/npg_img/N_PR_7150_002D_/N_PR_7150_002D_.pdf
+SWE-051,4.1,4.1.3,"The project manager shall perform software requirements analysis based on flowed-down and
+derived requirements from the top-level systems engineering requirements, safety and reliability
+analyses, and the hardware specifications and design. [SWE-051]",[],"['body', 'matrix']",4.1.3,"The project manager shall perform software requirements analysis based on flowed-down and derived requirements from the top-level systems engineering requirements, safety and reliability analyses, and the hardware specifications and design.",Center,3,,,Software Requirements,[],partial,Parent references on flowed-down requirements; derived requirements flagged with rationale.,https://nodis3.gsfc.nasa.gov/npg_img/N_PR_7150_002D_/N_PR_7150_002D_.pdf
+SWE-184,4.1,4.1.4,"The project manager shall include software related safety constraints, controls, mitigations, and
+assumptions between the hardware, operator, and software in the software requirements
+documentation. [SWE-184]",[],"['body', 'matrix']",4.1.4,"The project manager shall include software related safety constraints, controls, mitigations and assumptions between the hardware, operator, and software in the software requirements documentation.",Center,3,,,Software Requirements,['document'],direct,"Safety constraints, controls, mitigations, and assumptions between hardware, operator, and software are stated.",https://nodis3.gsfc.nasa.gov/npg_img/N_PR_7150_002D_/N_PR_7150_002D_.pdf
+SWE-053,4.1,4.1.5,The project manager shall track and manage changes to the software requirements. [SWE-053],[],"['body', 'matrix']",4.1.5,The project manager shall track and manage changes to the software requirements.,Center,4,X,,Software Requirements,['track'],partial,"Revision history, stable requirement IDs, and change markings.",https://nodis3.gsfc.nasa.gov/npg_img/N_PR_7150_002D_/N_PR_7150_002D_.pdf
