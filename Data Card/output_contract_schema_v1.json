@@ -1,0 +1,777 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:btt-aerospace:srs-copilot:output-contract:1.0.0",
+  "title": "BTT NASA SRS Compliance Copilot - Output Contract v1",
+  "description": "Evaluates the SRS text and documents evidence only; does not certify NASA project compliance.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "run",
+    "requirement_reviews",
+    "relationships",
+    "document_findings",
+    "swe_coverage"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "run": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "input_document_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "input_document_version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "input_source": {
+          "type": "string",
+          "minLength": 1
+        },
+        "evaluation_scope": {
+          "type": "string",
+          "enum": [
+            "DEMO",
+            "FULL_SRS"
+          ]
+        },
+        "npr_reference_version": {
+          "const": "NPR-7150.2D"
+        },
+        "handbook_reference": {
+          "const": "NASA-HDBK-2203-5.09"
+        },
+        "method": {
+          "type": "string",
+          "minLength": 1
+        },
+        "generated_at_utc": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "limitations": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "input_document_id",
+        "input_document_version",
+        "input_source",
+        "evaluation_scope",
+        "npr_reference_version",
+        "handbook_reference",
+        "method",
+        "generated_at_utc",
+        "limitations"
+      ]
+    },
+    "requirement_reviews": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "requirement_id": {
+            "type": "string",
+            "pattern": "^[A-Za-z][A-Za-z0-9_.-]{2,63}$"
+          },
+          "raw_text": {
+            "type": "string",
+            "minLength": 1
+          },
+          "software_requirement_status": {
+            "type": "string",
+            "enum": [
+              "YES",
+              "NO",
+              "UNCERTAIN"
+            ]
+          },
+          "quality_status": {
+            "type": "string",
+            "enum": [
+              "ACCEPTABLE",
+              "NEEDS_REVIEW",
+              "UNDETERMINED"
+            ]
+          },
+          "quality_issues": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "issue_code": {
+                  "type": "string",
+                  "enum": [
+                    "VAGUE_CRITERION",
+                    "UNDEFINED_TERM",
+                    "UNSPECIFIED_RESPONSE",
+                    "ALLOCATION_UNCLEAR",
+                    "UNVERIFIABLE_ABSOLUTE",
+                    "ESCAPE_CLAUSE",
+                    "SCOPE_AMBIGUITY",
+                    "SAFETY_INTERACTION",
+                    "OVERLAP_CLARIFICATION",
+                    "INCOMPLETE_TRACEABILITY",
+                    "MISSING_QUALIFICATION_PROVISIONS",
+                    "MISSING_ACCEPTANCE_CRITERIA",
+                    "UNNUMBERED_REQUIREMENTS",
+                    "INCOMPLETE_SAFETY_DEFINITIONS",
+                    "OTHER"
+                  ]
+                },
+                "severity": {
+                  "type": "string",
+                  "enum": [
+                    "MINOR",
+                    "MAJOR",
+                    "CRITICAL",
+                    "UNDETERMINED"
+                  ]
+                },
+                "explanation": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "srs_evidence": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "locator": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "excerpt": {
+                        "type": "string",
+                        "minLength": 1
+                      }
+                    },
+                    "required": [
+                      "locator",
+                      "excerpt"
+                    ]
+                  },
+                  "minItems": 1
+                },
+                "nasa_references": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "document": {
+                        "type": "string",
+                        "enum": [
+                          "NPR-7150.2D",
+                          "NASA-HDBK-2203-5.09"
+                        ]
+                      },
+                      "authority": {
+                        "type": "string",
+                        "enum": [
+                          "NPR_REQUIREMENT",
+                          "HANDBOOK_GUIDANCE"
+                        ]
+                      },
+                      "section": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "swe_id": {
+                        "oneOf": [
+                          {
+                            "type": "string",
+                            "pattern": "^SWE-\\d{3}$"
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      },
+                      "url": {
+                        "type": "string",
+                        "format": "uri"
+                      }
+                    },
+                    "required": [
+                      "document",
+                      "authority",
+                      "section",
+                      "swe_id",
+                      "url"
+                    ],
+                    "description": "Reference to an actual NASA provision; SWE number is null for handbook guidance."
+                  },
+                  "minItems": 1
+                },
+                "recommendation": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "requires_stakeholder_input": {
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "issue_code",
+                "severity",
+                "explanation",
+                "srs_evidence",
+                "nasa_references",
+                "recommendation",
+                "requires_stakeholder_input"
+              ]
+            }
+          },
+          "primary_swe_id": {
+            "oneOf": [
+              {
+                "type": "string",
+                "pattern": "^SWE-\\d{3}$"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "primary_swe_strength": {
+            "oneOf": [
+              {
+                "type": "string",
+                "enum": [
+                  "DIRECT_CONTENT",
+                  "PARTIAL_CONTENT",
+                  "INDIRECT_CONTEXT"
+                ]
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "swe_links": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "swe_id": {
+                  "type": "string",
+                  "pattern": "^SWE-\\d{3}$"
+                },
+                "strength": {
+                  "type": "string",
+                  "enum": [
+                    "DIRECT_CONTENT",
+                    "PARTIAL_CONTENT",
+                    "INDIRECT_CONTEXT"
+                  ]
+                },
+                "explanation": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "srs_evidence": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "locator": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "excerpt": {
+                        "type": "string",
+                        "minLength": 1
+                      }
+                    },
+                    "required": [
+                      "locator",
+                      "excerpt"
+                    ]
+                  },
+                  "minItems": 1
+                },
+                "nasa_reference": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "document": {
+                      "type": "string",
+                      "enum": [
+                        "NPR-7150.2D",
+                        "NASA-HDBK-2203-5.09"
+                      ]
+                    },
+                    "authority": {
+                      "type": "string",
+                      "enum": [
+                        "NPR_REQUIREMENT",
+                        "HANDBOOK_GUIDANCE"
+                      ]
+                    },
+                    "section": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "swe_id": {
+                      "oneOf": [
+                        {
+                          "type": "string",
+                          "pattern": "^SWE-\\d{3}$"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "url": {
+                      "type": "string",
+                      "format": "uri"
+                    }
+                  },
+                  "required": [
+                    "document",
+                    "authority",
+                    "section",
+                    "swe_id",
+                    "url"
+                  ],
+                  "description": "Reference to an actual NASA provision; SWE number is null for handbook guidance."
+                }
+              },
+              "required": [
+                "swe_id",
+                "strength",
+                "explanation",
+                "srs_evidence",
+                "nasa_reference"
+              ]
+            }
+          },
+          "summary": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "requirement_id",
+          "raw_text",
+          "software_requirement_status",
+          "quality_status",
+          "quality_issues",
+          "primary_swe_id",
+          "primary_swe_strength",
+          "swe_links",
+          "summary"
+        ]
+      }
+    },
+    "relationships": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "relationship_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "requirement_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^[A-Za-z][A-Za-z0-9_.-]{2,63}$"
+            },
+            "minItems": 2,
+            "uniqueItems": true
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "NO_CONFIRMED_CONFLICT",
+              "NEEDS_CLARIFICATION",
+              "CONFIRMED_CONFLICT"
+            ]
+          },
+          "issue_code": {
+            "type": "string",
+            "enum": [
+              "NONE",
+              "SAFETY_INTERACTION",
+              "OVERLAP_CLARIFICATION",
+              "OTHER"
+            ]
+          },
+          "explanation": {
+            "type": "string",
+            "minLength": 1
+          },
+          "srs_evidence": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "locator": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "excerpt": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "required": [
+                "locator",
+                "excerpt"
+              ]
+            },
+            "minItems": 2
+          },
+          "nasa_references": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "document": {
+                  "type": "string",
+                  "enum": [
+                    "NPR-7150.2D",
+                    "NASA-HDBK-2203-5.09"
+                  ]
+                },
+                "authority": {
+                  "type": "string",
+                  "enum": [
+                    "NPR_REQUIREMENT",
+                    "HANDBOOK_GUIDANCE"
+                  ]
+                },
+                "section": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "swe_id": {
+                  "oneOf": [
+                    {
+                      "type": "string",
+                      "pattern": "^SWE-\\d{3}$"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "url": {
+                  "type": "string",
+                  "format": "uri"
+                }
+              },
+              "required": [
+                "document",
+                "authority",
+                "section",
+                "swe_id",
+                "url"
+              ],
+              "description": "Reference to an actual NASA provision; SWE number is null for handbook guidance."
+            },
+            "minItems": 1
+          },
+          "recommendation": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "relationship_id",
+          "requirement_ids",
+          "status",
+          "issue_code",
+          "explanation",
+          "srs_evidence",
+          "nasa_references",
+          "recommendation"
+        ]
+      }
+    },
+    "document_findings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "finding_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "criterion": {
+            "type": "string",
+            "enum": [
+              "TRACEABILITY",
+              "QUALIFICATION_PROVISIONS",
+              "ACCEPTANCE_CRITERIA",
+              "REQUIREMENT_IDENTIFIERS",
+              "SAFETY_DEFINITIONS",
+              "OTHER"
+            ]
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "PRESENT",
+              "PARTIAL",
+              "MISSING",
+              "UNDETERMINED"
+            ]
+          },
+          "issue_code": {
+            "type": "string",
+            "minLength": 1
+          },
+          "searched_scope": {
+            "type": "string",
+            "minLength": 1
+          },
+          "explanation": {
+            "type": "string",
+            "minLength": 1
+          },
+          "srs_evidence": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "locator": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "excerpt": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "required": [
+                "locator",
+                "excerpt"
+              ]
+            }
+          },
+          "nasa_references": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "document": {
+                  "type": "string",
+                  "enum": [
+                    "NPR-7150.2D",
+                    "NASA-HDBK-2203-5.09"
+                  ]
+                },
+                "authority": {
+                  "type": "string",
+                  "enum": [
+                    "NPR_REQUIREMENT",
+                    "HANDBOOK_GUIDANCE"
+                  ]
+                },
+                "section": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "swe_id": {
+                  "oneOf": [
+                    {
+                      "type": "string",
+                      "pattern": "^SWE-\\d{3}$"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "url": {
+                  "type": "string",
+                  "format": "uri"
+                }
+              },
+              "required": [
+                "document",
+                "authority",
+                "section",
+                "swe_id",
+                "url"
+              ],
+              "description": "Reference to an actual NASA provision; SWE number is null for handbook guidance."
+            },
+            "minItems": 1
+          },
+          "recommendation": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "finding_id",
+          "criterion",
+          "status",
+          "issue_code",
+          "searched_scope",
+          "explanation",
+          "srs_evidence",
+          "nasa_references",
+          "recommendation"
+        ]
+      }
+    },
+    "swe_coverage": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "swe_id": {
+            "type": "string",
+            "enum": [
+              "SWE-050",
+              "SWE-051",
+              "SWE-184",
+              "SWE-053",
+              "SWE-054",
+              "SWE-055"
+            ]
+          },
+          "document_evidence": {
+            "type": "string",
+            "enum": [
+              "DOCUMENTED",
+              "PARTIAL_EVIDENCE",
+              "NO_SRS_EVIDENCE",
+              "NOT_ASSESSABLE"
+            ]
+          },
+          "project_compliance": {
+            "const": "NOT_DETERMINED"
+          },
+          "rationale": {
+            "type": "string",
+            "minLength": 1
+          },
+          "supported_by_requirement_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^[A-Za-z][A-Za-z0-9_.-]{2,63}$"
+            },
+            "uniqueItems": true
+          },
+          "srs_evidence": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "locator": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "excerpt": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "required": [
+                "locator",
+                "excerpt"
+              ]
+            }
+          },
+          "external_evidence_needed": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "uniqueItems": true
+          },
+          "nasa_reference": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "document": {
+                "type": "string",
+                "enum": [
+                  "NPR-7150.2D",
+                  "NASA-HDBK-2203-5.09"
+                ]
+              },
+              "authority": {
+                "type": "string",
+                "enum": [
+                  "NPR_REQUIREMENT",
+                  "HANDBOOK_GUIDANCE"
+                ]
+              },
+              "section": {
+                "type": "string",
+                "minLength": 1
+              },
+              "swe_id": {
+                "oneOf": [
+                  {
+                    "type": "string",
+                    "pattern": "^SWE-\\d{3}$"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "url": {
+                "type": "string",
+                "format": "uri"
+              }
+            },
+            "required": [
+              "document",
+              "authority",
+              "section",
+              "swe_id",
+              "url"
+            ],
+            "description": "Reference to an actual NASA provision; SWE number is null for handbook guidance."
+          }
+        },
+        "required": [
+          "swe_id",
+          "document_evidence",
+          "project_compliance",
+          "rationale",
+          "supported_by_requirement_ids",
+          "srs_evidence",
+          "external_evidence_needed",
+          "nasa_reference"
+        ]
+      }
+    }
+  }
+}

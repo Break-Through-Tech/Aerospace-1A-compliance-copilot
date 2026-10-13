@@ -1,0 +1,12 @@
+case_id,scope,target_ids,expected_outcome,issue_code,gold_rationale
+RQ-001,REQUIREMENT,SFMC-REQ-002,ACCEPTABLE,NONE,Quantified update interval and operating-mode scope make this a testable software behavior.
+RQ-003,REQUIREMENT,SFMC-REQ-006,NEEDS_REVIEW,VAGUE_CRITERION,Acceptance distance is undefined; no objective pass/fail tolerance can be derived.
+RQ-006,REQUIREMENT,SFMC-REQ-010,NEEDS_REVIEW,UNSPECIFIED_RESPONSE,Engine-failure trigger exists but the required corrective behavior is unspecified.
+RQ-011,REQUIREMENT,SFMC-REQ-021,NEEDS_REVIEW,VAGUE_CRITERION,"Quickly lacks a deadline, dangerous lacks classification, and respond lacks a named action."
+RQ-015,REQUIREMENT,SFMC-REQ-035,NEEDS_REVIEW,SAFETY_INTERACTION,Always is broad and its application to safety inhibits is unspecified; does not by itself prove an inconsistency with REQ-015.
+RQ-017,REQUIREMENT,SFMC-REQ-037,NEEDS_REVIEW,VAGUE_CRITERION,Human perception is subjective and no maximum latency is stated.
+RQ-020,REQUIREMENT,SFMC-REQ-043,NEEDS_REVIEW,ESCAPE_CLAUSE,Whenever possible does not define which losses require which retained functions.
+REL-002,RELATIONSHIP,SFMC-REQ-002;SFMC-REQ-038,NO_CONFIRMED_CONFLICT,NONE,Both are minima. Updating the same field at >=10 Hz also satisfies a >=2 Hz floor. There may be scope ambiguity but no necessary conflict.
+DOC-001,DOCUMENT,SH-SRS-001:§10,PARTIAL,INCOMPLETE_TRACEABILITY,"Ten parent mission needs are listed, but links from individual SFMC requirements to parents are absent."
+SWE-001,SWE_COVERAGE,SWE-050,PARTIAL_EVIDENCE,INCOMPLETE_LIFECYCLE_EVIDENCE,Capture/record indicators exist but approval and maintenance cannot be established from this SRS.
+SWE-003,SWE_COVERAGE,SWE-184,PARTIAL_EVIDENCE,INCOMPLETE_SAFETY_DEFINITIONS,"Direct examples of documented controls exist, but comprehensiveness of hardware/operator/software safety constraints is unverified."

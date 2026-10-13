@@ -1,0 +1,223 @@
+{
+  "schema_version": "1.0.0",
+  "run": {
+    "input_document_id": "SH-SRS-001",
+    "input_document_version": "1.0",
+    "input_source": "https://github.com/Break-Through-Tech/Aerospace-1B-compliance-copilot/blob/main/data/Starhawk%20Mission%20Computer%20SRS.md",
+    "evaluation_scope": "DEMO",
+    "npr_reference_version": "NPR-7150.2D",
+    "handbook_reference": "NASA-HDBK-2203-5.09",
+    "method": "Illustrative advisor-authored example; not a claim of model performance",
+    "generated_at_utc": "2026-10-13T00:00:00Z",
+    "limitations": [
+      "Demo includes only three requirements and selected document-level assessments.",
+      "No NASA project compliance is determined from the SRS alone."
+    ]
+  },
+  "requirement_reviews": [
+    {
+      "requirement_id": "SFMC-REQ-002",
+      "raw_text": "The SFMC shall update the displayed spacecraft position at least once every 500 milliseconds while the spacecraft is in Manual Flight, Autopilot, or Combat mode.",
+      "software_requirement_status": "YES",
+      "quality_status": "ACCEPTABLE",
+      "quality_issues": [],
+      "primary_swe_id": null,
+      "primary_swe_strength": null,
+      "swe_links": [],
+      "summary": "Quantified update threshold and explicit mode constraints; no quality defect identified in this limited review."
+    },
+    {
+      "requirement_id": "SFMC-REQ-015",
+      "raw_text": "The SFMC shall never permit the pilot to fire a weapon at a friendly spacecraft.",
+      "software_requirement_status": "YES",
+      "quality_status": "NEEDS_REVIEW",
+      "quality_issues": [
+        {
+          "issue_code": "UNDEFINED_TERM",
+          "severity": "CRITICAL",
+          "explanation": "The SRS does not define which spacecraft are friendly; Open Item 10 recognizes the missing criteria. This leaves a safety inhibit difficult to verify.",
+          "srs_evidence": [
+            {
+              "locator": "§3.3, SFMC-REQ-015",
+              "excerpt": "at a friendly spacecraft"
+            },
+            {
+              "locator": "§11, Open Item 10",
+              "excerpt": "Criteria for determining whether a detected spacecraft is friendly or hostile."
+            }
+          ],
+          "nasa_references": [
+            {
+              "document": "NASA-HDBK-2203-5.09",
+              "authority": "HANDBOOK_GUIDANCE",
+              "section": "§3.2.1",
+              "swe_id": null,
+              "url": "https://swehb.nasa.gov/spaces/SWEHBVD/pages/102695669/5.09+-+SRS+-+Software+Requirements+Specification"
+            },
+            {
+              "document": "NPR-7150.2D",
+              "authority": "NPR_REQUIREMENT",
+              "section": "§4.1.4",
+              "swe_id": "SWE-184",
+              "url": "https://nodis3.gsfc.nasa.gov/displayDir.cfm?Internal_ID=N_PR_7150_002D_&page_name=Chapter4"
+            }
+          ],
+          "recommendation": "Have mission/safety stakeholders specify classification criteria and handling of unknown status.",
+          "requires_stakeholder_input": true
+        }
+      ],
+      "primary_swe_id": "SWE-184",
+      "primary_swe_strength": "PARTIAL_CONTENT",
+      "swe_links": [
+        {
+          "swe_id": "SWE-184",
+          "strength": "PARTIAL_CONTENT",
+          "explanation": "The requirement documents an operator/software weapon safety inhibit, but its criteria are unresolved and comprehensive safety coverage is unverified.",
+          "srs_evidence": [
+            {
+              "locator": "§3.3, SFMC-REQ-015",
+              "excerpt": "The SFMC shall never permit the pilot to fire a weapon at a friendly spacecraft."
+            }
+          ],
+          "nasa_reference": {
+            "document": "NPR-7150.2D",
+            "authority": "NPR_REQUIREMENT",
+            "section": "§4.1.4",
+            "swe_id": "SWE-184",
+            "url": "https://nodis3.gsfc.nasa.gov/displayDir.cfm?Internal_ID=N_PR_7150_002D_&page_name=Chapter4"
+          }
+        }
+      ],
+      "summary": "Relevant safety control is recorded, but its classification rule requires stakeholder resolution."
+    },
+    {
+      "requirement_id": "SFMC-REQ-035",
+      "raw_text": "The pilot shall always be able to override automatic spacecraft controls.",
+      "software_requirement_status": "YES",
+      "quality_status": "NEEDS_REVIEW",
+      "quality_issues": [
+        {
+          "issue_code": "SAFETY_INTERACTION",
+          "severity": "MAJOR",
+          "explanation": "The override domain and relationship to non-overridable safety inhibits are unspecified; a contradiction with REQ-015 is possible but not proven.",
+          "srs_evidence": [
+            {
+              "locator": "§4, SFMC-REQ-035",
+              "excerpt": "always be able to override automatic spacecraft controls"
+            }
+          ],
+          "nasa_references": [
+            {
+              "document": "NASA-HDBK-2203-5.09",
+              "authority": "HANDBOOK_GUIDANCE",
+              "section": "§3.2.1",
+              "swe_id": null,
+              "url": "https://swehb.nasa.gov/spaces/SWEHBVD/pages/102695669/5.09+-+SRS+-+Software+Requirements+Specification"
+            },
+            {
+              "document": "NPR-7150.2D",
+              "authority": "NPR_REQUIREMENT",
+              "section": "§4.1.4",
+              "swe_id": "SWE-184",
+              "url": "https://nodis3.gsfc.nasa.gov/displayDir.cfm?Internal_ID=N_PR_7150_002D_&page_name=Chapter4"
+            }
+          ],
+          "recommendation": "Specify override scope and precedence for safety interlocks.",
+          "requires_stakeholder_input": true
+        }
+      ],
+      "primary_swe_id": null,
+      "primary_swe_strength": null,
+      "swe_links": [],
+      "summary": "Broad override rule needs safety-interface clarification."
+    }
+  ],
+  "relationships": [
+    {
+      "relationship_id": "REL-001",
+      "requirement_ids": [
+        "SFMC-REQ-015",
+        "SFMC-REQ-035"
+      ],
+      "status": "NEEDS_CLARIFICATION",
+      "issue_code": "SAFETY_INTERACTION",
+      "explanation": "Whether weapons safety inhibits are included in pilot-overridable automatic controls is not specified; both may be satisfiable if the inhibit is non-overridable.",
+      "srs_evidence": [
+        {
+          "locator": "§3.3, SFMC-REQ-015",
+          "excerpt": "never permit the pilot to fire a weapon at a friendly spacecraft"
+        },
+        {
+          "locator": "§4, SFMC-REQ-035",
+          "excerpt": "always be able to override automatic spacecraft controls"
+        }
+      ],
+      "nasa_references": [
+        {
+          "document": "NPR-7150.2D",
+          "authority": "NPR_REQUIREMENT",
+          "section": "§4.1.4",
+          "swe_id": "SWE-184",
+          "url": "https://nodis3.gsfc.nasa.gov/displayDir.cfm?Internal_ID=N_PR_7150_002D_&page_name=Chapter4"
+        },
+        {
+          "document": "NPR-7150.2D",
+          "authority": "NPR_REQUIREMENT",
+          "section": "§4.1.6",
+          "swe_id": "SWE-054",
+          "url": "https://nodis3.gsfc.nasa.gov/displayDir.cfm?Internal_ID=N_PR_7150_002D_&page_name=Chapter4"
+        }
+      ],
+      "recommendation": "Clarify safety inhibit precedence; do not assert a confirmed conflict from the text alone."
+    }
+  ],
+  "document_findings": [
+    {
+      "finding_id": "DOC-002",
+      "criterion": "QUALIFICATION_PROVISIONS",
+      "status": "MISSING",
+      "issue_code": "MISSING_QUALIFICATION_PROVISIONS",
+      "searched_scope": "SRS §§1–11",
+      "explanation": "No explicit qualification/verification methods are supplied for the requirements. This is a Handbook recommendation gap, not proof of NPR violation.",
+      "srs_evidence": [],
+      "nasa_references": [
+        {
+          "document": "NASA-HDBK-2203-5.09",
+          "authority": "HANDBOOK_GUIDANCE",
+          "section": "§1.c",
+          "swe_id": null,
+          "url": "https://swehb.nasa.gov/spaces/SWEHBVD/pages/102695669/5.09+-+SRS+-+Software+Requirements+Specification"
+        }
+      ],
+      "recommendation": "Record demonstration, test, analysis, or inspection methods or reference a companion verification matrix."
+    }
+  ],
+  "swe_coverage": [
+    {
+      "swe_id": "SWE-184",
+      "document_evidence": "PARTIAL_EVIDENCE",
+      "project_compliance": "NOT_DETERMINED",
+      "rationale": "At least one relevant documented safety control exists; completeness against safety/hazard analyses cannot be established.",
+      "supported_by_requirement_ids": [
+        "SFMC-REQ-015"
+      ],
+      "srs_evidence": [
+        {
+          "locator": "§3.3, SFMC-REQ-015",
+          "excerpt": "never permit the pilot to fire a weapon at a friendly spacecraft"
+        }
+      ],
+      "external_evidence_needed": [
+        "Safety/hazard analysis and allocation records",
+        "Approved friend/foe criteria and safety-control precedence"
+      ],
+      "nasa_reference": {
+        "document": "NPR-7150.2D",
+        "authority": "NPR_REQUIREMENT",
+        "section": "§4.1.4",
+        "swe_id": "SWE-184",
+        "url": "https://nodis3.gsfc.nasa.gov/displayDir.cfm?Internal_ID=N_PR_7150_002D_&page_name=Chapter4"
+      }
+    }
+  ]
+}
