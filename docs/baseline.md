@@ -117,9 +117,15 @@ not handled. Ranking and evidence coverage need benchmark-guided improvement.
 
 ## Benchmark evaluation
 
-The advisor's benchmark and Data Card are absent. Ordinary runs record
+The advisor's Data Card is now in `Data Card/`. It provides 37 benchmark cases
+(11 CALIBRATION with gold labels, 26 HOLDOUT with labels withheld) using the
+Output Contract v1 vocabulary (e.g. `ACCEPTABLE`/`NEEDS_REVIEW`, `DOCUMENTED`/
+`NOT_ASSESSABLE`). These labels are not directly comparable to this baseline's
+`Meets`/`Partial`/`Gap` pair verdicts; a scope mapping is required first
+(tracked in #16). Until then, ordinary runs record
 `evaluation_status=awaiting_advisor_benchmark`, without invented performance.
 Hand-authored test fixtures validate behavior; they are not ground truth.
+
 
 | CSV column | Allowed values |
 | --- | --- |
