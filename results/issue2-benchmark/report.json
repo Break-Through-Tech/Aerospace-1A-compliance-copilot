@@ -1,0 +1,1766 @@
+{
+  "schema_version": "1.0.0",
+  "run": {
+    "input_document_id": "SH-SRS-001",
+    "input_document_version": "1.0",
+    "input_source": "data/Starhawk Mission Computer SRS.md",
+    "evaluation_scope": "FULL_SRS",
+    "npr_reference_version": "NPR-7150.2D",
+    "handbook_reference": "NASA-HDBK-2203-5.09",
+    "method": "Non-LLM frozen phrase-rule quality baseline with source-grounded full-SRS interaction, document and six-SWE evidence checks",
+    "generated_at_utc": "2026-11-18T00:27:02.919554Z",
+    "limitations": [
+      "All supplied numbered requirements and requested benchmark scopes are represented; unnumbered interface shall statements are separate document findings.",
+      "Quality phrase rules and narrow positive check remain unchanged; other quality cases explicitly remain UNDETERMINED.",
+      "Relationship clarifications identify text-supported possible interactions; no confirmed conflict is inferred from unequal minima or unspecified override scope.",
+      "Document checks search the named sections and recognize explicit headings/phrases; absence findings concern SRS guidance, not NASA project noncompliance.",
+      "SWE-051 uses visible analysis-input context only. SWE-053/054/055 process performance is NOT_ASSESSABLE from the SRS and requires external records.",
+      "All project compliance remains NOT_DETERMINED. A complete report structure does not certify complete quality, safety, analysis, validation or implementation correctness.",
+      "No holdout labels are read and no holdout accuracy is determined; public calibration scores must be evaluated separately after prediction.",
+      "Core NPR section references were checked against bundled NPR 7150.2D page32; current controlled-standard applicability and tailoring need human review."
+    ]
+  },
+  "requirement_reviews": [
+    {
+      "requirement_id": "SFMC-REQ-001",
+      "raw_text": "The SFMC shall display the spacecraft's current position to the pilot.",
+      "software_requirement_status": "YES",
+      "quality_status": "UNDETERMINED",
+      "quality_issues": [],
+      "primary_swe_id": null,
+      "primary_swe_strength": null,
+      "swe_links": [],
+      "summary": "No original phrase rule matched and the narrow positive check does not apply; quality needs human assessment."
+    },
+    {
+      "requirement_id": "SFMC-REQ-002",
+      "raw_text": "The SFMC shall update the displayed spacecraft position at least once every 500 milliseconds while the spacecraft is in Manual Flight, Autopilot, or Combat mode.",
+      "software_requirement_status": "YES",
+      "quality_status": "ACCEPTABLE",
+      "quality_issues": [],
+      "primary_swe_id": null,
+      "primary_swe_strength": null,
+      "swe_links": [],
+      "summary": "Explicit software display-update minimum and operating context; no defect demonstrated by this limited writing check."
+    },
+    {
+      "requirement_id": "SFMC-REQ-003",
+      "raw_text": "The SFMC shall allow the pilot to select a navigation destination.",
+      "software_requirement_status": "YES",
+      "quality_status": "UNDETERMINED",
+      "quality_issues": [],
+      "primary_swe_id": null,
+      "primary_swe_strength": null,
+      "swe_links": [],
+      "summary": "No original phrase rule matched and the narrow positive check does not apply; quality needs human assessment."
+    },
+    {
+      "requirement_id": "SFMC-REQ-004",
+      "raw_text": "When the pilot selects a destination, the SFMC shall calculate a safe and efficient route to the destination.",
+      "software_requirement_status": "YES",
+      "quality_status": "NEEDS_REVIEW",
+      "quality_issues": [
+        {
+          "issue_code": "VAGUE_CRITERION",
+          "severity": "MAJOR",
+          "explanation": "Existing baseline phrase rule matched 'safe and efficient': Define safety and efficiency criteria.",
+          "srs_evidence": [
+            {
+              "locator": "SFMC-REQ-004",
+              "excerpt": "When the pilot selects a destination, the SFMC shall calculate a safe and efficient route to the destination."
+            }
+          ],
+          "nasa_references": [
+            {
+              "document": "NASA-HDBK-2203-5.09",
+              "authority": "HANDBOOK_GUIDANCE",
+              "section": "5.09",
+              "swe_id": null,
+              "url": "https://swehb.nasa.gov/spaces/SWEHBVD/pages/102695669/5.09+-+SRS+-+Software+Requirements+Specification"
+            }
+          ],
+          "recommendation": "Define safety and efficiency criteria.",
+          "requires_stakeholder_input": true
+        }
+      ],
+      "primary_swe_id": null,
+      "primary_swe_strength": null,
+      "swe_links": [],
+      "summary": "Existing ambiguity rules identified a writing concern."
+    },
+    {
+      "requirement_id": "SFMC-REQ-005",
+      "raw_text": "When Autopilot mode is enabled, the SFMC shall control the spacecraft propulsion system to follow the selected route.",
+      "software_requirement_status": "YES",
+      "quality_status": "UNDETERMINED",
+      "quality_issues": [],
+      "primary_swe_id": null,
+      "primary_swe_strength": null,
+      "swe_links": [],
+      "summary": "No original phrase rule matched and the narrow positive check does not apply; quality needs human assessment."
+    },
+    {
+      "requirement_id": "SFMC-REQ-006",
+      "raw_text": "The autopilot shall deliver the spacecraft reasonably close to the selected destination.",
+      "software_requirement_status": "UNCERTAIN",
+      "quality_status": "NEEDS_REVIEW",
+      "quality_issues": [
+        {
+          "issue_code": "VAGUE_CRITERION",
+          "severity": "MAJOR",
+          "explanation": "Existing baseline phrase rule matched 'reasonably close': Define an acceptable arrival distance.",
+          "srs_evidence": [
+            {
+              "locator": "SFMC-REQ-006",
+              "excerpt": "The autopilot shall deliver the spacecraft reasonably close to the selected destination."
+            }
+          ],
+          "nasa_references": [
+            {
+              "document": "NASA-HDBK-2203-5.09",
+              "authority": "HANDBOOK_GUIDANCE",
+              "section": "5.09",
+              "swe_id": null,
+              "url": "https://swehb.nasa.gov/spaces/SWEHBVD/pages/102695669/5.09+-+SRS+-+Software+Requirements+Specification"
+            }
+          ],
+          "recommendation": "Define an acceptable arrival distance.",
+          "requires_stakeholder_input": true
+        }
+      ],
+      "primary_swe_id": null,
+      "primary_swe_strength": null,
+      "swe_links": [],
+      "summary": "Existing ambiguity rules identified a writing concern."
+    },
+    {
+      "requirement_id": "SFMC-REQ-007",
+      "raw_text": "The SFMC shall continuously monitor the status of the spacecraft's main engines.",
+      "software_requirement_status": "YES",
+      "quality_status": "UNDETERMINED",
+      "quality_issues": [],
+      "primary_swe_id": null,
+      "primary_swe_strength": null,
+      "swe_links": [],
+      "summary": "No original phrase rule matched and the narrow positive check does not apply; quality needs human assessment."
+    },
+    {
+      "requirement_id": "SFMC-REQ-008",
+      "raw_text": "The SFMC shall display a low-fuel warning when remaining fuel falls below 15 percent of usable fuel capacity.",
+      "software_requirement_status": "YES",
+      "quality_status": "UNDETERMINED",
+      "quality_issues": [],
+      "primary_swe_id": null,
+      "primary_swe_strength": null,
+      "swe_links": [],
+      "summary": "No original phrase rule matched and the narrow positive check does not apply; quality needs human assessment."
+    },
+    {
+      "requirement_id": "SFMC-REQ-009",
+      "raw_text": "When remaining fuel falls below 5 percent of usable fuel capacity, the SFMC shall display a critical-fuel warning and generate an audible alarm.",
+      "software_requirement_status": "YES",
+      "quality_status": "UNDETERMINED",
+      "quality_issues": [],
+      "primary_swe_id": null,
+      "primary_swe_strength": null,
+      "swe_links": [],
+      "summary": "No original phrase rule matched and the narrow positive check does not apply; quality needs human assessment."
+    },
+    {
+      "requirement_id": "SFMC-REQ-010",
+      "raw_text": "If the SFMC detects a failure of a main engine, it shall notify the pilot and take appropriate corrective action.",
+      "software_requirement_status": "UNCERTAIN",
+      "quality_status": "NEEDS_REVIEW",
+      "quality_issues": [
+        {
+          "issue_code": "UNSPECIFIED_RESPONSE",
+          "severity": "MAJOR",
+          "explanation": "Existing baseline phrase rule matched 'appropriate corrective action': Define the required corrective action.",
+          "srs_evidence": [
+            {
+              "locator": "SFMC-REQ-010",
+              "excerpt": "If the SFMC detects a failure of a main engine, it shall notify the pilot and take appropriate corrective action."
+            }
+          ],
+          "nasa_references": [
+            {
+              "document": "NASA-HDBK-2203-5.09",
+              "authority": "HANDBOOK_GUIDANCE",
+              "section": "5.09",
+              "swe_id": null,
+              "url": "https://swehb.nasa.gov/spaces/SWEHBVD/pages/102695669/5.09+-+SRS+-+Software+Requirements+Specification"
+            }
+          ],
+          "recommendation": "Define the required corrective action.",
+          "requires_stakeholder_input": true
+        }
+      ],
+      "primary_swe_id": null,
+      "primary_swe_strength": null,
+      "swe_links": [],
+      "summary": "Existing ambiguity rules identified a writing concern."
+    },
+    {
+      "requirement_id": "SFMC-REQ-011",
+      "raw_text": "The SFMC shall display detected spacecraft within sensor range.",
+      "software_requirement_status": "YES",
+      "quality_status": "UNDETERMINED",
+      "quality_issues": [],
+      "primary_swe_id": null,
+      "primary_swe_strength": null,
+      "swe_links": [],
+      "summary": "No original phrase rule matched and the narrow positive check does not apply; quality needs human assessment."
+    },
+    {
+      "requirement_id": "SFMC-REQ-012",
+      "raw_text": "The SFMC shall allow the pilot to designate a detected spacecraft as a target.",
+      "software_requirement_status": "YES",
+      "quality_status": "UNDETERMINED",
+      "quality_issues": [],
+      "primary_swe_id": null,
+      "primary_swe_strength": null,
+      "swe_links": [],
+      "summary": "No original phrase rule matched and the narrow positive check does not apply; quality needs human assessment."
+    },
+    {
+      "requirement_id": "SFMC-REQ-013",
+      "raw_text": "For a selected target, the SFMC shall display: - relative distance, - relative velocity, - target classification, and - targeting status.",
+      "software_requirement_status": "YES",
+      "quality_status": "UNDETERMINED",
+      "quality_issues": [],
+      "primary_swe_id": null,
+      "primary_swe_strength": null,
+      "swe_links": [],
+      "summary": "No original phrase rule matched and the narrow positive check does not apply; quality needs human assessment."
+    },
+    {
+      "requirement_id": "SFMC-REQ-014",
+      "raw_text": "The SFMC shall prevent a weapon from firing unless the pilot has authorized weapons operation.",
+      "software_requirement_status": "YES",
+      "quality_status": "UNDETERMINED",
+      "quality_issues": [],
+      "primary_swe_id": "SWE-184",
+      "primary_swe_strength": "DIRECT_CONTENT",
+      "swe_links": [
+        {
+          "swe_id": "SWE-184",
+          "strength": "DIRECT_CONTENT",
+          "explanation": "Explicit mandatory safety-control behavior; complete safety coverage is unverified.",
+          "srs_evidence": [
+            {
+              "locator": "SFMC-REQ-014",
+              "excerpt": "The SFMC shall prevent a weapon from firing unless the pilot has authorized weapons operation."
+            }
+          ],
+          "nasa_reference": {
+            "document": "NPR-7150.2D",
+            "authority": "NPR_REQUIREMENT",
+            "section": "§4.1.4",
+            "swe_id": "SWE-184",
+            "url": "https://nodis3.gsfc.nasa.gov/displayDir.cfm?Internal_ID=N_PR_7150_002D_&page_name=Chapter4"
+          }
+        }
+      ],
+      "summary": "No original phrase rule matched and the narrow positive check does not apply; quality needs human assessment."
+    },
+    {
+      "requirement_id": "SFMC-REQ-015",
+      "raw_text": "The SFMC shall never permit the pilot to fire a weapon at a friendly spacecraft.",
+      "software_requirement_status": "YES",
+      "quality_status": "NEEDS_REVIEW",
+      "quality_issues": [
+        {
+          "issue_code": "UNDEFINED_TERM",
+          "severity": "MAJOR",
+          "explanation": "Existing baseline phrase rule matched 'friendly spacecraft': Define the criteria for identifying friendly, hostile, or unknown spacecraft.",
+          "srs_evidence": [
+            {
+              "locator": "SFMC-REQ-015",
+              "excerpt": "The SFMC shall never permit the pilot to fire a weapon at a friendly spacecraft."
+            }
+          ],
+          "nasa_references": [
+            {
+              "document": "NASA-HDBK-2203-5.09",
+              "authority": "HANDBOOK_GUIDANCE",
+              "section": "5.09",
+              "swe_id": null,
+              "url": "https://swehb.nasa.gov/spaces/SWEHBVD/pages/102695669/5.09+-+SRS+-+Software+Requirements+Specification"
+            }
+          ],
+          "recommendation": "Define the criteria for identifying friendly, hostile, or unknown spacecraft.",
+          "requires_stakeholder_input": true
+        }
+      ],
+      "primary_swe_id": "SWE-184",
+      "primary_swe_strength": "DIRECT_CONTENT",
+      "swe_links": [
+        {
+          "swe_id": "SWE-184",
+          "strength": "DIRECT_CONTENT",
+          "explanation": "Explicit prohibition of weapon firing documents safety-control content; complete safety definitions and precedence remain unverified.",
+          "srs_evidence": [
+            {
+              "locator": "SFMC-REQ-015",
+              "excerpt": "The SFMC shall never permit the pilot to fire a weapon at a friendly spacecraft."
+            }
+          ],
+          "nasa_reference": {
+            "document": "NPR-7150.2D",
+            "authority": "NPR_REQUIREMENT",
+            "section": "§4.1.4",
+            "swe_id": "SWE-184",
+            "url": "https://nodis3.gsfc.nasa.gov/displayDir.cfm?Internal_ID=N_PR_7150_002D_&page_name=Chapter4"
+          }
+        }
+      ],
+      "summary": "Existing ambiguity rules identified a writing concern."
+    },
+    {
+      "requirement_id": "SFMC-REQ-016",
+      "raw_text": "The targeting system shall be extremely accurate.",
+      "software_requirement_status": "UNCERTAIN",
+      "quality_status": "NEEDS_REVIEW",
+      "quality_issues": [
+        {
+          "issue_code": "VAGUE_CRITERION",
+          "severity": "MAJOR",
+          "explanation": "Existing baseline phrase rule matched 'extremely accurate': Define the accuracy metric and limit.",
+          "srs_evidence": [
+            {
+              "locator": "SFMC-REQ-016",
+              "excerpt": "The targeting system shall be extremely accurate."
+            }
+          ],
+          "nasa_references": [
+            {
+              "document": "NASA-HDBK-2203-5.09",
+              "authority": "HANDBOOK_GUIDANCE",
+              "section": "5.09",
+              "swe_id": null,
+              "url": "https://swehb.nasa.gov/spaces/SWEHBVD/pages/102695669/5.09+-+SRS+-+Software+Requirements+Specification"
+            }
+          ],
+          "recommendation": "Define the accuracy metric and limit.",
+          "requires_stakeholder_input": true
+        }
+      ],
+      "primary_swe_id": null,
+      "primary_swe_strength": null,
+      "swe_links": [],
+      "summary": "Existing ambiguity rules identified a writing concern."
+    },
+    {
+      "requirement_id": "SFMC-REQ-017",
+      "raw_text": "When the Defensive System identifies an incoming threat, the SFMC shall display a threat warning to the pilot.",
+      "software_requirement_status": "YES",
+      "quality_status": "UNDETERMINED",
+      "quality_issues": [],
+      "primary_swe_id": null,
+      "primary_swe_strength": null,
+      "swe_links": [],
+      "summary": "No original phrase rule matched and the narrow positive check does not apply; quality needs human assessment."
+    },
+    {
+      "requirement_id": "SFMC-REQ-018",
+      "raw_text": "The SFMC shall clearly indicate which incoming threat represents the greatest danger to the spacecraft.",
+      "software_requirement_status": "YES",
+      "quality_status": "NEEDS_REVIEW",
+      "quality_issues": [
+        {
+          "issue_code": "VAGUE_CRITERION",
+          "severity": "MAJOR",
+          "explanation": "Existing baseline phrase rule matched 'greatest danger': Define the threat-priority factors and ranking method.",
+          "srs_evidence": [
+            {
+              "locator": "SFMC-REQ-018",
+              "excerpt": "The SFMC shall clearly indicate which incoming threat represents the greatest danger to the spacecraft."
+            }
+          ],
+          "nasa_references": [
+            {
+              "document": "NASA-HDBK-2203-5.09",
+              "authority": "HANDBOOK_GUIDANCE",
+              "section": "5.09",
+              "swe_id": null,
+              "url": "https://swehb.nasa.gov/spaces/SWEHBVD/pages/102695669/5.09+-+SRS+-+Software+Requirements+Specification"
+            }
+          ],
+          "recommendation": "Define the threat-priority factors and ranking method.",
+          "requires_stakeholder_input": true
+        }
+      ],
+      "primary_swe_id": null,
+      "primary_swe_strength": null,
+      "swe_links": [],
+      "summary": "Existing ambiguity rules identified a writing concern."
+    },
+    {
+      "requirement_id": "SFMC-REQ-019",
+      "raw_text": "When the spacecraft enters Combat mode, the SFMC shall activate the defensive shields.",
+      "software_requirement_status": "YES",
+      "quality_status": "UNDETERMINED",
+      "quality_issues": [],
+      "primary_swe_id": null,
+      "primary_swe_strength": null,
+      "swe_links": [],
+      "summary": "No original phrase rule matched and the narrow positive check does not apply; quality needs human assessment."
+    },
+    {
+      "requirement_id": "SFMC-REQ-020",
+      "raw_text": "The SFMC shall automatically deploy countermeasures against incoming guided weapons when automatic defense is enabled.",
+      "software_requirement_status": "YES",
+      "quality_status": "UNDETERMINED",
+      "quality_issues": [],
+      "primary_swe_id": null,
+      "primary_swe_strength": null,
+      "swe_links": [],
+      "summary": "No original phrase rule matched and the narrow positive check does not apply; quality needs human assessment."
+    },
+    {
+      "requirement_id": "SFMC-REQ-021",
+      "raw_text": "The SFMC shall respond quickly to dangerous threats.",
+      "software_requirement_status": "YES",
+      "quality_status": "NEEDS_REVIEW",
+      "quality_issues": [
+        {
+          "issue_code": "VAGUE_CRITERION",
+          "severity": "MAJOR",
+          "explanation": "Existing baseline phrase rule matched 'quickly': Specify a measurable response-time limit.",
+          "srs_evidence": [
+            {
+              "locator": "SFMC-REQ-021",
+              "excerpt": "The SFMC shall respond quickly to dangerous threats."
+            }
+          ],
+          "nasa_references": [
+            {
+              "document": "NASA-HDBK-2203-5.09",
+              "authority": "HANDBOOK_GUIDANCE",
+              "section": "5.09",
+              "swe_id": null,
+              "url": "https://swehb.nasa.gov/spaces/SWEHBVD/pages/102695669/5.09+-+SRS+-+Software+Requirements+Specification"
+            }
+          ],
+          "recommendation": "Specify a measurable response-time limit.",
+          "requires_stakeholder_input": true
+        }
+      ],
+      "primary_swe_id": null,
+      "primary_swe_strength": null,
+      "swe_links": [],
+      "summary": "Existing ambiguity rules identified a writing concern."
+    },
+    {
+      "requirement_id": "SFMC-REQ-022",
+      "raw_text": "The SFMC shall allow the pilot to transmit messages to fleet command.",
+      "software_requirement_status": "YES",
+      "quality_status": "UNDETERMINED",
+      "quality_issues": [],
+      "primary_swe_id": null,
+      "primary_swe_strength": null,
+      "swe_links": [],
+      "summary": "No original phrase rule matched and the narrow positive check does not apply; quality needs human assessment."
+    },
+    {
+      "requirement_id": "SFMC-REQ-023",
+      "raw_text": "The SFMC shall notify the pilot when a new fleet message is received.",
+      "software_requirement_status": "YES",
+      "quality_status": "UNDETERMINED",
+      "quality_issues": [],
+      "primary_swe_id": null,
+      "primary_swe_strength": null,
+      "swe_links": [],
+      "summary": "No original phrase rule matched and the narrow positive check does not apply; quality needs human assessment."
+    },
+    {
+      "requirement_id": "SFMC-REQ-024",
+      "raw_text": "The SFMC shall allow the pilot to designate an outgoing message as an emergency message.",
+      "software_requirement_status": "YES",
+      "quality_status": "UNDETERMINED",
+      "quality_issues": [],
+      "primary_swe_id": null,
+      "primary_swe_strength": null,
+      "swe_links": [],
+      "summary": "No original phrase rule matched and the narrow positive check does not apply; quality needs human assessment."
+    },
+    {
+      "requirement_id": "SFMC-REQ-025",
+      "raw_text": "All important communications shall be securely encrypted.",
+      "software_requirement_status": "UNCERTAIN",
+      "quality_status": "NEEDS_REVIEW",
+      "quality_issues": [
+        {
+          "issue_code": "UNDEFINED_TERM",
+          "severity": "MAJOR",
+          "explanation": "Existing baseline phrase rule matched 'important': Identify exactly which data or communications are covered.",
+          "srs_evidence": [
+            {
+              "locator": "SFMC-REQ-025",
+              "excerpt": "All important communications shall be securely encrypted."
+            }
+          ],
+          "nasa_references": [
+            {
+              "document": "NASA-HDBK-2203-5.09",
+              "authority": "HANDBOOK_GUIDANCE",
+              "section": "5.09",
+              "swe_id": null,
+              "url": "https://swehb.nasa.gov/spaces/SWEHBVD/pages/102695669/5.09+-+SRS+-+Software+Requirements+Specification"
+            }
+          ],
+          "recommendation": "Identify exactly which data or communications are covered.",
+          "requires_stakeholder_input": true
+        },
+        {
+          "issue_code": "VAGUE_CRITERION",
+          "severity": "MAJOR",
+          "explanation": "Existing baseline phrase rule matched 'securely encrypted': Identify the applicable encryption requirements.",
+          "srs_evidence": [
+            {
+              "locator": "SFMC-REQ-025",
+              "excerpt": "All important communications shall be securely encrypted."
+            }
+          ],
+          "nasa_references": [
+            {
+              "document": "NASA-HDBK-2203-5.09",
+              "authority": "HANDBOOK_GUIDANCE",
+              "section": "5.09",
+              "swe_id": null,
+              "url": "https://swehb.nasa.gov/spaces/SWEHBVD/pages/102695669/5.09+-+SRS+-+Software+Requirements+Specification"
+            }
+          ],
+          "recommendation": "Identify the applicable encryption requirements.",
+          "requires_stakeholder_input": true
+        }
+      ],
+      "primary_swe_id": null,
+      "primary_swe_strength": null,
+      "swe_links": [],
+      "summary": "Existing ambiguity rules identified a writing concern."
+    },
+    {
+      "requirement_id": "SFMC-REQ-026",
+      "raw_text": "The SFMC shall monitor the health of the Navigation, Propulsion, Weapons, Defensive, and Communications systems.",
+      "software_requirement_status": "YES",
+      "quality_status": "UNDETERMINED",
+      "quality_issues": [],
+      "primary_swe_id": null,
+      "primary_swe_strength": null,
+      "swe_links": [],
+      "summary": "No original phrase rule matched and the narrow positive check does not apply; quality needs human assessment."
+    },
+    {
+      "requirement_id": "SFMC-REQ-027",
+      "raw_text": "When a monitored subsystem reports a fault, the SFMC shall display the affected subsystem and the reported fault to the pilot within 1 second.",
+      "software_requirement_status": "YES",
+      "quality_status": "UNDETERMINED",
+      "quality_issues": [],
+      "primary_swe_id": null,
+      "primary_swe_strength": null,
+      "swe_links": [],
+      "summary": "No original phrase rule matched and the narrow positive check does not apply; quality needs human assessment."
+    },
+    {
+      "requirement_id": "SFMC-REQ-028",
+      "raw_text": "The SFMC shall record detected spacecraft faults in a mission fault log.",
+      "software_requirement_status": "YES",
+      "quality_status": "UNDETERMINED",
+      "quality_issues": [],
+      "primary_swe_id": null,
+      "primary_swe_strength": null,
+      "swe_links": [],
+      "summary": "No original phrase rule matched and the narrow positive check does not apply; quality needs human assessment."
+    },
+    {
+      "requirement_id": "SFMC-REQ-029",
+      "raw_text": "For each recorded fault, the mission fault log shall contain: - fault identifier, - affected subsystem, - time of detection, and - fault description.",
+      "software_requirement_status": "UNCERTAIN",
+      "quality_status": "UNDETERMINED",
+      "quality_issues": [],
+      "primary_swe_id": null,
+      "primary_swe_strength": null,
+      "swe_links": [],
+      "summary": "No original phrase rule matched and the narrow positive check does not apply; quality needs human assessment."
+    },
+    {
+      "requirement_id": "SFMC-REQ-030",
+      "raw_text": "The SFMC shall immediately notify the pilot of all critical faults.",
+      "software_requirement_status": "YES",
+      "quality_status": "NEEDS_REVIEW",
+      "quality_issues": [
+        {
+          "issue_code": "VAGUE_CRITERION",
+          "severity": "MAJOR",
+          "explanation": "Existing baseline phrase rule matched 'immediately': Clarify the maximum allowed response time.",
+          "srs_evidence": [
+            {
+              "locator": "SFMC-REQ-030",
+              "excerpt": "The SFMC shall immediately notify the pilot of all critical faults."
+            }
+          ],
+          "nasa_references": [
+            {
+              "document": "NASA-HDBK-2203-5.09",
+              "authority": "HANDBOOK_GUIDANCE",
+              "section": "5.09",
+              "swe_id": null,
+              "url": "https://swehb.nasa.gov/spaces/SWEHBVD/pages/102695669/5.09+-+SRS+-+Software+Requirements+Specification"
+            }
+          ],
+          "recommendation": "Clarify the maximum allowed response time.",
+          "requires_stakeholder_input": true
+        }
+      ],
+      "primary_swe_id": null,
+      "primary_swe_strength": null,
+      "swe_links": [],
+      "summary": "Existing ambiguity rules identified a writing concern."
+    },
+    {
+      "requirement_id": "SFMC-REQ-031",
+      "raw_text": "The pilot shall be able to place the SFMC into Emergency mode using a dedicated cockpit control.",
+      "software_requirement_status": "UNCERTAIN",
+      "quality_status": "UNDETERMINED",
+      "quality_issues": [],
+      "primary_swe_id": null,
+      "primary_swe_strength": null,
+      "swe_links": [],
+      "summary": "No original phrase rule matched and the narrow positive check does not apply; quality needs human assessment."
+    },
+    {
+      "requirement_id": "SFMC-REQ-032",
+      "raw_text": "While operating in Emergency mode, the SFMC shall prioritize life-support, navigation, and propulsion functions over nonessential spacecraft functions.",
+      "software_requirement_status": "YES",
+      "quality_status": "NEEDS_REVIEW",
+      "quality_issues": [
+        {
+          "issue_code": "UNDEFINED_TERM",
+          "severity": "MAJOR",
+          "explanation": "Existing baseline phrase rule matched 'nonessential spacecraft functions': Identify the functions that may be delayed or disabled in Emergency mode.",
+          "srs_evidence": [
+            {
+              "locator": "SFMC-REQ-032",
+              "excerpt": "While operating in Emergency mode, the SFMC shall prioritize life-support, navigation, and propulsion functions over nonessential spacecraft functions."
+            }
+          ],
+          "nasa_references": [
+            {
+              "document": "NASA-HDBK-2203-5.09",
+              "authority": "HANDBOOK_GUIDANCE",
+              "section": "5.09",
+              "swe_id": null,
+              "url": "https://swehb.nasa.gov/spaces/SWEHBVD/pages/102695669/5.09+-+SRS+-+Software+Requirements+Specification"
+            }
+          ],
+          "recommendation": "Identify the functions that may be delayed or disabled in Emergency mode.",
+          "requires_stakeholder_input": true
+        }
+      ],
+      "primary_swe_id": null,
+      "primary_swe_strength": null,
+      "swe_links": [],
+      "summary": "Existing ambiguity rules identified a writing concern."
+    },
+    {
+      "requirement_id": "SFMC-REQ-033",
+      "raw_text": "If the spacecraft is seriously damaged, the SFMC shall automatically determine the safest destination.",
+      "software_requirement_status": "YES",
+      "quality_status": "NEEDS_REVIEW",
+      "quality_issues": [
+        {
+          "issue_code": "VAGUE_CRITERION",
+          "severity": "MAJOR",
+          "explanation": "Existing baseline phrase rule matched 'seriously damaged': Define the condition that triggers this behavior.",
+          "srs_evidence": [
+            {
+              "locator": "SFMC-REQ-033",
+              "excerpt": "If the spacecraft is seriously damaged, the SFMC shall automatically determine the safest destination."
+            }
+          ],
+          "nasa_references": [
+            {
+              "document": "NASA-HDBK-2203-5.09",
+              "authority": "HANDBOOK_GUIDANCE",
+              "section": "5.09",
+              "swe_id": null,
+              "url": "https://swehb.nasa.gov/spaces/SWEHBVD/pages/102695669/5.09+-+SRS+-+Software+Requirements+Specification"
+            }
+          ],
+          "recommendation": "Define the condition that triggers this behavior.",
+          "requires_stakeholder_input": true
+        },
+        {
+          "issue_code": "VAGUE_CRITERION",
+          "severity": "MAJOR",
+          "explanation": "Existing baseline phrase rule matched 'safest destination': Define destination selection criteria.",
+          "srs_evidence": [
+            {
+              "locator": "SFMC-REQ-033",
+              "excerpt": "If the spacecraft is seriously damaged, the SFMC shall automatically determine the safest destination."
+            }
+          ],
+          "nasa_references": [
+            {
+              "document": "NASA-HDBK-2203-5.09",
+              "authority": "HANDBOOK_GUIDANCE",
+              "section": "5.09",
+              "swe_id": null,
+              "url": "https://swehb.nasa.gov/spaces/SWEHBVD/pages/102695669/5.09+-+SRS+-+Software+Requirements+Specification"
+            }
+          ],
+          "recommendation": "Define destination selection criteria.",
+          "requires_stakeholder_input": true
+        }
+      ],
+      "primary_swe_id": null,
+      "primary_swe_strength": null,
+      "swe_links": [],
+      "summary": "Existing ambiguity rules identified a writing concern."
+    },
+    {
+      "requirement_id": "SFMC-REQ-034",
+      "raw_text": "The SFMC shall be capable of automatically flying the spacecraft to a safe location during an emergency.",
+      "software_requirement_status": "YES",
+      "quality_status": "NEEDS_REVIEW",
+      "quality_issues": [
+        {
+          "issue_code": "VAGUE_CRITERION",
+          "severity": "MAJOR",
+          "explanation": "Existing baseline phrase rule matched 'safe location': Define what qualifies as a safe location.",
+          "srs_evidence": [
+            {
+              "locator": "SFMC-REQ-034",
+              "excerpt": "The SFMC shall be capable of automatically flying the spacecraft to a safe location during an emergency."
+            }
+          ],
+          "nasa_references": [
+            {
+              "document": "NASA-HDBK-2203-5.09",
+              "authority": "HANDBOOK_GUIDANCE",
+              "section": "5.09",
+              "swe_id": null,
+              "url": "https://swehb.nasa.gov/spaces/SWEHBVD/pages/102695669/5.09+-+SRS+-+Software+Requirements+Specification"
+            }
+          ],
+          "recommendation": "Define what qualifies as a safe location.",
+          "requires_stakeholder_input": true
+        }
+      ],
+      "primary_swe_id": null,
+      "primary_swe_strength": null,
+      "swe_links": [],
+      "summary": "Existing ambiguity rules identified a writing concern."
+    },
+    {
+      "requirement_id": "SFMC-REQ-035",
+      "raw_text": "The pilot shall always be able to override automatic spacecraft controls.",
+      "software_requirement_status": "UNCERTAIN",
+      "quality_status": "UNDETERMINED",
+      "quality_issues": [],
+      "primary_swe_id": null,
+      "primary_swe_strength": null,
+      "swe_links": [],
+      "summary": "No original phrase rule matched and the narrow positive check does not apply; quality needs human assessment."
+    },
+    {
+      "requirement_id": "SFMC-REQ-036",
+      "raw_text": "The SFMC shall become operational within 30 seconds after spacecraft computer power is applied.",
+      "software_requirement_status": "YES",
+      "quality_status": "UNDETERMINED",
+      "quality_issues": [],
+      "primary_swe_id": null,
+      "primary_swe_strength": null,
+      "swe_links": [],
+      "summary": "No original phrase rule matched and the narrow positive check does not apply; quality needs human assessment."
+    },
+    {
+      "requirement_id": "SFMC-REQ-037",
+      "raw_text": "The SFMC shall respond to pilot commands without noticeable delay.",
+      "software_requirement_status": "YES",
+      "quality_status": "NEEDS_REVIEW",
+      "quality_issues": [
+        {
+          "issue_code": "VAGUE_CRITERION",
+          "severity": "MAJOR",
+          "explanation": "Existing baseline phrase rule matched 'without noticeable delay': Response time is subjective.",
+          "srs_evidence": [
+            {
+              "locator": "SFMC-REQ-037",
+              "excerpt": "The SFMC shall respond to pilot commands without noticeable delay."
+            }
+          ],
+          "nasa_references": [
+            {
+              "document": "NASA-HDBK-2203-5.09",
+              "authority": "HANDBOOK_GUIDANCE",
+              "section": "5.09",
+              "swe_id": null,
+              "url": "https://swehb.nasa.gov/spaces/SWEHBVD/pages/102695669/5.09+-+SRS+-+Software+Requirements+Specification"
+            }
+          ],
+          "recommendation": "Response time is subjective.",
+          "requires_stakeholder_input": true
+        }
+      ],
+      "primary_swe_id": null,
+      "primary_swe_strength": null,
+      "swe_links": [],
+      "summary": "Existing ambiguity rules identified a writing concern."
+    },
+    {
+      "requirement_id": "SFMC-REQ-038",
+      "raw_text": "During normal operation, the SFMC shall update flight information displayed to the pilot at least 10 times per second.",
+      "software_requirement_status": "YES",
+      "quality_status": "ACCEPTABLE",
+      "quality_issues": [],
+      "primary_swe_id": null,
+      "primary_swe_strength": null,
+      "swe_links": [],
+      "summary": "Explicit software display-update minimum and operating context; no defect demonstrated by this limited writing check."
+    },
+    {
+      "requirement_id": "SFMC-REQ-039",
+      "raw_text": "The SFMC shall operate continuously for missions lasting up to 72 hours.",
+      "software_requirement_status": "YES",
+      "quality_status": "UNDETERMINED",
+      "quality_issues": [],
+      "primary_swe_id": null,
+      "primary_swe_strength": null,
+      "swe_links": [],
+      "summary": "No original phrase rule matched and the narrow positive check does not apply; quality needs human assessment."
+    },
+    {
+      "requirement_id": "SFMC-REQ-040",
+      "raw_text": "The SFMC software shall never crash during a mission.",
+      "software_requirement_status": "YES",
+      "quality_status": "UNDETERMINED",
+      "quality_issues": [],
+      "primary_swe_id": null,
+      "primary_swe_strength": null,
+      "swe_links": [],
+      "summary": "No original phrase rule matched and the narrow positive check does not apply; quality needs human assessment."
+    },
+    {
+      "requirement_id": "SFMC-REQ-041",
+      "raw_text": "If a recoverable software fault occurs, the SFMC shall recover automatically without requiring pilot intervention.",
+      "software_requirement_status": "YES",
+      "quality_status": "UNDETERMINED",
+      "quality_issues": [],
+      "primary_swe_id": null,
+      "primary_swe_strength": null,
+      "swe_links": [],
+      "summary": "No original phrase rule matched and the narrow positive check does not apply; quality needs human assessment."
+    },
+    {
+      "requirement_id": "SFMC-REQ-042",
+      "raw_text": "Recovery from a software fault shall not cause the loss of important mission data.",
+      "software_requirement_status": "UNCERTAIN",
+      "quality_status": "NEEDS_REVIEW",
+      "quality_issues": [
+        {
+          "issue_code": "UNDEFINED_TERM",
+          "severity": "MAJOR",
+          "explanation": "Existing baseline phrase rule matched 'important': Identify exactly which data or communications are covered.",
+          "srs_evidence": [
+            {
+              "locator": "SFMC-REQ-042",
+              "excerpt": "Recovery from a software fault shall not cause the loss of important mission data."
+            }
+          ],
+          "nasa_references": [
+            {
+              "document": "NASA-HDBK-2203-5.09",
+              "authority": "HANDBOOK_GUIDANCE",
+              "section": "5.09",
+              "swe_id": null,
+              "url": "https://swehb.nasa.gov/spaces/SWEHBVD/pages/102695669/5.09+-+SRS+-+Software+Requirements+Specification"
+            }
+          ],
+          "recommendation": "Identify exactly which data or communications are covered.",
+          "requires_stakeholder_input": true
+        }
+      ],
+      "primary_swe_id": null,
+      "primary_swe_strength": null,
+      "swe_links": [],
+      "summary": "Existing ambiguity rules identified a writing concern."
+    },
+    {
+      "requirement_id": "SFMC-REQ-043",
+      "raw_text": "If a spacecraft subsystem becomes unavailable, the SFMC shall continue operating using the remaining available systems whenever possible.",
+      "software_requirement_status": "YES",
+      "quality_status": "NEEDS_REVIEW",
+      "quality_issues": [
+        {
+          "issue_code": "ESCAPE_CLAUSE",
+          "severity": "MAJOR",
+          "explanation": "Existing baseline phrase rule matched 'whenever possible': Define when continued operation is required.",
+          "srs_evidence": [
+            {
+              "locator": "SFMC-REQ-043",
+              "excerpt": "If a spacecraft subsystem becomes unavailable, the SFMC shall continue operating using the remaining available systems whenever possible."
+            }
+          ],
+          "nasa_references": [
+            {
+              "document": "NASA-HDBK-2203-5.09",
+              "authority": "HANDBOOK_GUIDANCE",
+              "section": "5.09",
+              "swe_id": null,
+              "url": "https://swehb.nasa.gov/spaces/SWEHBVD/pages/102695669/5.09+-+SRS+-+Software+Requirements+Specification"
+            }
+          ],
+          "recommendation": "Define when continued operation is required.",
+          "requires_stakeholder_input": true
+        }
+      ],
+      "primary_swe_id": null,
+      "primary_swe_strength": null,
+      "swe_links": [],
+      "summary": "Existing ambiguity rules identified a writing concern."
+    },
+    {
+      "requirement_id": "SFMC-REQ-044",
+      "raw_text": "The SFMC shall maintain a mission log.",
+      "software_requirement_status": "YES",
+      "quality_status": "UNDETERMINED",
+      "quality_issues": [],
+      "primary_swe_id": null,
+      "primary_swe_strength": null,
+      "swe_links": [],
+      "summary": "No original phrase rule matched and the narrow positive check does not apply; quality needs human assessment."
+    },
+    {
+      "requirement_id": "SFMC-REQ-045",
+      "raw_text": "The mission log shall record: - changes in operating mode, - pilot commands, - detected faults, - weapons firing events, - emergency events, and - communications with fleet command.",
+      "software_requirement_status": "UNCERTAIN",
+      "quality_status": "UNDETERMINED",
+      "quality_issues": [],
+      "primary_swe_id": null,
+      "primary_swe_strength": null,
+      "swe_links": [],
+      "summary": "No original phrase rule matched and the narrow positive check does not apply; quality needs human assessment."
+    },
+    {
+      "requirement_id": "SFMC-REQ-046",
+      "raw_text": "Each mission-log entry shall include the spacecraft mission time at which the event occurred.",
+      "software_requirement_status": "UNCERTAIN",
+      "quality_status": "UNDETERMINED",
+      "quality_issues": [],
+      "primary_swe_id": null,
+      "primary_swe_strength": null,
+      "swe_links": [],
+      "summary": "No original phrase rule matched and the narrow positive check does not apply; quality needs human assessment."
+    },
+    {
+      "requirement_id": "SFMC-REQ-047",
+      "raw_text": "The mission log shall contain sufficient storage for an entire mission.",
+      "software_requirement_status": "UNCERTAIN",
+      "quality_status": "NEEDS_REVIEW",
+      "quality_issues": [
+        {
+          "issue_code": "VAGUE_CRITERION",
+          "severity": "MAJOR",
+          "explanation": "Existing baseline phrase rule matched 'sufficient storage': Define storage capacity or the expected workload.",
+          "srs_evidence": [
+            {
+              "locator": "SFMC-REQ-047",
+              "excerpt": "The mission log shall contain sufficient storage for an entire mission."
+            }
+          ],
+          "nasa_references": [
+            {
+              "document": "NASA-HDBK-2203-5.09",
+              "authority": "HANDBOOK_GUIDANCE",
+              "section": "5.09",
+              "swe_id": null,
+              "url": "https://swehb.nasa.gov/spaces/SWEHBVD/pages/102695669/5.09+-+SRS+-+Software+Requirements+Specification"
+            }
+          ],
+          "recommendation": "Define storage capacity or the expected workload.",
+          "requires_stakeholder_input": true
+        }
+      ],
+      "primary_swe_id": null,
+      "primary_swe_strength": null,
+      "swe_links": [],
+      "summary": "Existing ambiguity rules identified a writing concern."
+    },
+    {
+      "requirement_id": "SFMC-REQ-048",
+      "raw_text": "The SFMC shall verify that the pilot is authorized before enabling spacecraft operation.",
+      "software_requirement_status": "YES",
+      "quality_status": "UNDETERMINED",
+      "quality_issues": [],
+      "primary_swe_id": null,
+      "primary_swe_strength": null,
+      "swe_links": [],
+      "summary": "No original phrase rule matched and the narrow positive check does not apply; quality needs human assessment."
+    },
+    {
+      "requirement_id": "SFMC-REQ-049",
+      "raw_text": "The SFMC shall reject unauthorized commands received through the spacecraft communications system.",
+      "software_requirement_status": "YES",
+      "quality_status": "UNDETERMINED",
+      "quality_issues": [],
+      "primary_swe_id": null,
+      "primary_swe_strength": null,
+      "swe_links": [],
+      "summary": "No original phrase rule matched and the narrow positive check does not apply; quality needs human assessment."
+    },
+    {
+      "requirement_id": "SFMC-REQ-050",
+      "raw_text": "The SFMC shall use state-of-the-art security techniques to protect the spacecraft from cyberattack.",
+      "software_requirement_status": "YES",
+      "quality_status": "NEEDS_REVIEW",
+      "quality_issues": [
+        {
+          "issue_code": "VAGUE_CRITERION",
+          "severity": "MAJOR",
+          "explanation": "Existing baseline phrase rule matched 'state-of-the-art': Identify the applicable security criteria.",
+          "srs_evidence": [
+            {
+              "locator": "SFMC-REQ-050",
+              "excerpt": "The SFMC shall use state-of-the-art security techniques to protect the spacecraft from cyberattack."
+            }
+          ],
+          "nasa_references": [
+            {
+              "document": "NASA-HDBK-2203-5.09",
+              "authority": "HANDBOOK_GUIDANCE",
+              "section": "5.09",
+              "swe_id": null,
+              "url": "https://swehb.nasa.gov/spaces/SWEHBVD/pages/102695669/5.09+-+SRS+-+Software+Requirements+Specification"
+            }
+          ],
+          "recommendation": "Identify the applicable security criteria.",
+          "requires_stakeholder_input": true
+        }
+      ],
+      "primary_swe_id": null,
+      "primary_swe_strength": null,
+      "swe_links": [],
+      "summary": "Existing ambiguity rules identified a writing concern."
+    },
+    {
+      "requirement_id": "SFMC-REQ-051",
+      "raw_text": "The SFMC software shall execute on the Starhawk Flight Computer.",
+      "software_requirement_status": "YES",
+      "quality_status": "UNDETERMINED",
+      "quality_issues": [],
+      "primary_swe_id": null,
+      "primary_swe_strength": null,
+      "swe_links": [],
+      "summary": "No original phrase rule matched and the narrow positive check does not apply; quality needs human assessment."
+    },
+    {
+      "requirement_id": "SFMC-REQ-052",
+      "raw_text": "The SFMC shall communicate with spacecraft subsystems using the Starhawk spacecraft data network.",
+      "software_requirement_status": "YES",
+      "quality_status": "UNDETERMINED",
+      "quality_issues": [],
+      "primary_swe_id": null,
+      "primary_swe_strength": null,
+      "swe_links": [],
+      "summary": "No original phrase rule matched and the narrow positive check does not apply; quality needs human assessment."
+    },
+    {
+      "requirement_id": "SFMC-REQ-053",
+      "raw_text": "Authorized maintenance personnel shall be able to install updated SFMC software while the spacecraft is in Standby mode.",
+      "software_requirement_status": "UNCERTAIN",
+      "quality_status": "UNDETERMINED",
+      "quality_issues": [],
+      "primary_swe_id": null,
+      "primary_swe_strength": null,
+      "swe_links": [],
+      "summary": "No original phrase rule matched and the narrow positive check does not apply; quality needs human assessment."
+    },
+    {
+      "requirement_id": "SFMC-REQ-054",
+      "raw_text": "The SFMC shall verify the integrity and authenticity of a software update before installing it.",
+      "software_requirement_status": "YES",
+      "quality_status": "UNDETERMINED",
+      "quality_issues": [],
+      "primary_swe_id": null,
+      "primary_swe_strength": null,
+      "swe_links": [],
+      "summary": "No original phrase rule matched and the narrow positive check does not apply; quality needs human assessment."
+    }
+  ],
+  "relationships": [
+    {
+      "relationship_id": "REL-001",
+      "requirement_ids": [
+        "SFMC-REQ-015",
+        "SFMC-REQ-035"
+      ],
+      "status": "NEEDS_CLARIFICATION",
+      "issue_code": "SAFETY_INTERACTION",
+      "explanation": "An absolute weapons restriction and a pilot override of automatic controls may interact. The text does not establish that the weapons inhibit is an overridable automatic control, or state their precedence; a confirmed contradiction is not demonstrated.",
+      "srs_evidence": [
+        {
+          "locator": "SFMC-REQ-015",
+          "excerpt": "The SFMC shall never permit the pilot to fire a weapon at a friendly spacecraft."
+        },
+        {
+          "locator": "SFMC-REQ-035",
+          "excerpt": "The pilot shall always be able to override automatic spacecraft controls."
+        }
+      ],
+      "nasa_references": [
+        {
+          "document": "NASA-HDBK-2203-5.09",
+          "authority": "HANDBOOK_GUIDANCE",
+          "section": "5.09",
+          "swe_id": null,
+          "url": "https://swehb.nasa.gov/spaces/SWEHBVD/pages/102695669/5.09+-+SRS+-+Software+Requirements+Specification"
+        }
+      ],
+      "recommendation": "Clarify scope, activation conditions, safety precedence and shared definitions with stakeholders."
+    },
+    {
+      "relationship_id": "REL-002",
+      "requirement_ids": [
+        "SFMC-REQ-002",
+        "SFMC-REQ-038"
+      ],
+      "status": "NO_CONFIRMED_CONFLICT",
+      "issue_code": "NONE",
+      "explanation": "Both statements specify lower update-rate bounds (2 and 10 Hz). A rate at or above both minima satisfies both on any overlapping field; different fields or modes do not establish a contradiction.",
+      "srs_evidence": [
+        {
+          "locator": "SFMC-REQ-002",
+          "excerpt": "The SFMC shall update the displayed spacecraft position at least once every 500 milliseconds while the spacecraft is in Manual Flight, Autopilot, or Combat mode."
+        },
+        {
+          "locator": "SFMC-REQ-038",
+          "excerpt": "During normal operation, the SFMC shall update flight information displayed to the pilot at least 10 times per second."
+        }
+      ],
+      "nasa_references": [
+        {
+          "document": "NASA-HDBK-2203-5.09",
+          "authority": "HANDBOOK_GUIDANCE",
+          "section": "5.09",
+          "swe_id": null,
+          "url": "https://swehb.nasa.gov/spaces/SWEHBVD/pages/102695669/5.09+-+SRS+-+Software+Requirements+Specification"
+        }
+      ],
+      "recommendation": "Clarify scope, activation conditions, safety precedence and shared definitions with stakeholders."
+    },
+    {
+      "relationship_id": "REL-003",
+      "requirement_ids": [
+        "SFMC-REQ-033",
+        "SFMC-REQ-034"
+      ],
+      "status": "NEEDS_CLARIFICATION",
+      "issue_code": "OVERLAP_CLARIFICATION",
+      "explanation": "Automatic destination selection and automatic flight to a safe location describe related emergency-navigation behavior. Their destination/location definitions, activation conditions and handoff are not tied together explicitly. Both could coexist; clarification is needed rather than a confirmed contradiction.",
+      "srs_evidence": [
+        {
+          "locator": "SFMC-REQ-033",
+          "excerpt": "If the spacecraft is seriously damaged, the SFMC shall automatically determine the safest destination."
+        },
+        {
+          "locator": "SFMC-REQ-034",
+          "excerpt": "The SFMC shall be capable of automatically flying the spacecraft to a safe location during an emergency."
+        }
+      ],
+      "nasa_references": [
+        {
+          "document": "NASA-HDBK-2203-5.09",
+          "authority": "HANDBOOK_GUIDANCE",
+          "section": "5.09",
+          "swe_id": null,
+          "url": "https://swehb.nasa.gov/spaces/SWEHBVD/pages/102695669/5.09+-+SRS+-+Software+Requirements+Specification"
+        }
+      ],
+      "recommendation": "Clarify scope, activation conditions, safety precedence and shared definitions with stakeholders."
+    }
+  ],
+  "document_findings": [
+    {
+      "finding_id": "DOC-001",
+      "criterion": "TRACEABILITY",
+      "status": "PARTIAL",
+      "issue_code": "INCOMPLETE_TRACEABILITY",
+      "searched_scope": "SH-SRS-001:§10",
+      "explanation": "10 parent mission needs are listed; 54 numbered requirements lack explicit links in §10. This is a limited Handbook guidance check, not NPR noncompliance.",
+      "srs_evidence": [
+        {
+          "locator": "§10 Requirement Traceability",
+          "excerpt": "The following high-level mission needs are the source of the software requirements in this specification.\n\n| Mission Need | Description |\n|---|---|\n| MN-01 | The pilot must be able to navigate the spacecraft to a selected destination. |\n| MN-02 | The pilot must be able to monitor and control spacecraft propulsion. |\n| MN-03 | The spacecraft must support combat targeting and weapons operation. |\n| MN-04 | The spacecraft must protect itself against external threats. |\n| MN-05 | The pilot must be able to communicate with fleet command. |\n| MN-06 | The pilot must be informed of spacecraft failures. |\n| MN-07 | The spacecraft must support safe operation during emergencies. |\n| MN-08 | The mission computer must remain operational throughout a mission. |\n| MN-09 | Mission events must be recorded for later analysis. |\n| MN-10 | Unauthorized users must not be able to control the spacecraft. |\n\nA complete requirement-to-mission-need traceability matrix has not yet been developed.\n\n---"
+        }
+      ],
+      "nasa_references": [
+        {
+          "document": "NASA-HDBK-2203-5.09",
+          "authority": "HANDBOOK_GUIDANCE",
+          "section": "5.09",
+          "swe_id": null,
+          "url": "https://swehb.nasa.gov/spaces/SWEHBVD/pages/102695669/5.09+-+SRS+-+Software+Requirements+Specification"
+        }
+      ],
+      "recommendation": "Review requirement-to-parent links and companion engineering artifacts."
+    },
+    {
+      "finding_id": "DOC-002",
+      "criterion": "QUALIFICATION_PROVISIONS",
+      "status": "MISSING",
+      "issue_code": "MISSING_QUALIFICATION_PROVISIONS",
+      "searched_scope": "SH-SRS-001:FULL",
+      "explanation": "The inspected full SRS has no qualification/verification/validation/acceptance section or recognized reference to a verification/qualification matrix or plan. Numeric behavior requirements do not supply a verification plan. This is a Handbook guidance gap, not an NPR noncompliance determination.",
+      "srs_evidence": [],
+      "nasa_references": [
+        {
+          "document": "NASA-HDBK-2203-5.09",
+          "authority": "HANDBOOK_GUIDANCE",
+          "section": "5.09",
+          "swe_id": null,
+          "url": "https://swehb.nasa.gov/spaces/SWEHBVD/pages/102695669/5.09+-+SRS+-+Software+Requirements+Specification"
+        }
+      ],
+      "recommendation": "Define qualification provisions, verification methods and pass criteria with stakeholders."
+    },
+    {
+      "finding_id": "DOC-003",
+      "criterion": "ACCEPTANCE_CRITERIA",
+      "status": "PARTIAL",
+      "issue_code": "INCOMPLETE_ACCEPTANCE_CRITERIA",
+      "searched_scope": "SH-SRS-001:§§3–9",
+      "explanation": "The inspected technical sections contain 7 requirements with explicit normative numeric/time bounds, providing measurable acceptance conditions. Complete requirement-to-verification-method coverage, procedures and pass criteria remain unverified; these conditions do not by themselves establish complete qualification provisions.",
+      "srs_evidence": [
+        {
+          "locator": "SFMC-REQ-002",
+          "excerpt": "The SFMC shall update the displayed spacecraft position at least once every 500 milliseconds while the spacecraft is in Manual Flight, Autopilot, or Combat mode."
+        },
+        {
+          "locator": "SFMC-REQ-008",
+          "excerpt": "The SFMC shall display a low-fuel warning when remaining fuel falls below 15 percent of usable fuel capacity."
+        },
+        {
+          "locator": "SFMC-REQ-009",
+          "excerpt": "When remaining fuel falls below 5 percent of usable fuel capacity, the SFMC shall display a critical-fuel warning and generate an audible alarm."
+        },
+        {
+          "locator": "SFMC-REQ-027",
+          "excerpt": "When a monitored subsystem reports a fault, the SFMC shall display the affected subsystem and the reported fault to the pilot within 1 second."
+        },
+        {
+          "locator": "SFMC-REQ-036",
+          "excerpt": "The SFMC shall become operational within 30 seconds after spacecraft computer power is applied."
+        },
+        {
+          "locator": "SFMC-REQ-038",
+          "excerpt": "During normal operation, the SFMC shall update flight information displayed to the pilot at least 10 times per second."
+        },
+        {
+          "locator": "SFMC-REQ-039",
+          "excerpt": "The SFMC shall operate continuously for missions lasting up to 72 hours."
+        }
+      ],
+      "nasa_references": [
+        {
+          "document": "NASA-HDBK-2203-5.09",
+          "authority": "HANDBOOK_GUIDANCE",
+          "section": "5.09",
+          "swe_id": null,
+          "url": "https://swehb.nasa.gov/spaces/SWEHBVD/pages/102695669/5.09+-+SRS+-+Software+Requirements+Specification"
+        }
+      ],
+      "recommendation": "Retain the measurable conditions and complete verification-method, procedure and pass-criteria coverage for the remaining requirements."
+    },
+    {
+      "finding_id": "DOC-004",
+      "criterion": "REQUIREMENT_IDENTIFIERS",
+      "status": "PARTIAL",
+      "issue_code": "UNNUMBERED_REQUIREMENTS",
+      "searched_scope": "SH-SRS-001:§2.1",
+      "explanation": "2 unnumbered normative statements were found in the inspected interface section; they need stable IDs or explicit links to numbered requirements.",
+      "srs_evidence": [
+        {
+          "locator": "§2.1 Pilot Interface",
+          "excerpt": "The SFMC shall receive pilot commands from the cockpit controls."
+        },
+        {
+          "locator": "§2.1 Pilot Interface",
+          "excerpt": "The SFMC shall display spacecraft status information on the pilot's primary display."
+        }
+      ],
+      "nasa_references": [
+        {
+          "document": "NASA-HDBK-2203-5.09",
+          "authority": "HANDBOOK_GUIDANCE",
+          "section": "5.09",
+          "swe_id": null,
+          "url": "https://swehb.nasa.gov/spaces/SWEHBVD/pages/102695669/5.09+-+SRS+-+Software+Requirements+Specification"
+        }
+      ],
+      "recommendation": "Assign stable identifiers or document an explicit relationship to existing numbered requirements."
+    },
+    {
+      "finding_id": "DOC-005",
+      "criterion": "SAFETY_DEFINITIONS",
+      "status": "PARTIAL",
+      "issue_code": "INCOMPLETE_SAFETY_DEFINITIONS",
+      "searched_scope": "SH-SRS-001:§§3.3,4,11",
+      "explanation": "The inspected scope documents operating requirements but its open items explicitly leave safety-related terms or criteria unresolved. Complete hazard coverage, allocation and precedence cannot be determined from this SRS.",
+      "srs_evidence": [
+        {
+          "locator": "§11 Open Items",
+          "excerpt": "# 11. Open Items\n\nThe following items remain to be resolved during development:\n\n1. Definition of a **safe route**.\n2. Definition of an acceptable distance from a selected destination.\n3. Definition of **critical fault**.\n4. Definition of **important communication**.\n5. Definition of a **safe location** during an emergency.\n6. Required mission-log storage capacity.\n7. Required targeting accuracy.\n8. Maximum acceptable response time for pilot commands.\n9. Required cybersecurity algorithms and standards.\n10. Criteria for determining whether a detected spacecraft is friendly or hostile."
+        }
+      ],
+      "nasa_references": [
+        {
+          "document": "NASA-HDBK-2203-5.09",
+          "authority": "HANDBOOK_GUIDANCE",
+          "section": "5.09",
+          "swe_id": null,
+          "url": "https://swehb.nasa.gov/spaces/SWEHBVD/pages/102695669/5.09+-+SRS+-+Software+Requirements+Specification"
+        }
+      ],
+      "recommendation": "Resolve safety-related definitions, classifications and control precedence with the responsible stakeholders and hazard analysis."
+    }
+  ],
+  "swe_coverage": [
+    {
+      "swe_id": "SWE-050",
+      "document_evidence": "PARTIAL_EVIDENCE",
+      "project_compliance": "NOT_DETERMINED",
+      "rationale": "Stable numbered requirements provide capture/record evidence; approval, maintenance and component coverage are unverified from the SRS alone.",
+      "supported_by_requirement_ids": [
+        "SFMC-REQ-001",
+        "SFMC-REQ-002",
+        "SFMC-REQ-003",
+        "SFMC-REQ-004",
+        "SFMC-REQ-005",
+        "SFMC-REQ-006",
+        "SFMC-REQ-007",
+        "SFMC-REQ-008",
+        "SFMC-REQ-009",
+        "SFMC-REQ-010",
+        "SFMC-REQ-011",
+        "SFMC-REQ-012",
+        "SFMC-REQ-013",
+        "SFMC-REQ-014",
+        "SFMC-REQ-015",
+        "SFMC-REQ-016",
+        "SFMC-REQ-017",
+        "SFMC-REQ-018",
+        "SFMC-REQ-019",
+        "SFMC-REQ-020",
+        "SFMC-REQ-021",
+        "SFMC-REQ-022",
+        "SFMC-REQ-023",
+        "SFMC-REQ-024",
+        "SFMC-REQ-025",
+        "SFMC-REQ-026",
+        "SFMC-REQ-027",
+        "SFMC-REQ-028",
+        "SFMC-REQ-029",
+        "SFMC-REQ-030",
+        "SFMC-REQ-031",
+        "SFMC-REQ-032",
+        "SFMC-REQ-033",
+        "SFMC-REQ-034",
+        "SFMC-REQ-035",
+        "SFMC-REQ-036",
+        "SFMC-REQ-037",
+        "SFMC-REQ-038",
+        "SFMC-REQ-039",
+        "SFMC-REQ-040",
+        "SFMC-REQ-041",
+        "SFMC-REQ-042",
+        "SFMC-REQ-043",
+        "SFMC-REQ-044",
+        "SFMC-REQ-045",
+        "SFMC-REQ-046",
+        "SFMC-REQ-047",
+        "SFMC-REQ-048",
+        "SFMC-REQ-049",
+        "SFMC-REQ-050",
+        "SFMC-REQ-051",
+        "SFMC-REQ-052",
+        "SFMC-REQ-053",
+        "SFMC-REQ-054"
+      ],
+      "srs_evidence": [
+        {
+          "locator": "SFMC-REQ-001",
+          "excerpt": "The SFMC shall display the spacecraft's current position to the pilot."
+        },
+        {
+          "locator": "SFMC-REQ-002",
+          "excerpt": "The SFMC shall update the displayed spacecraft position at least once every 500 milliseconds while the spacecraft is in Manual Flight, Autopilot, or Combat mode."
+        },
+        {
+          "locator": "SFMC-REQ-003",
+          "excerpt": "The SFMC shall allow the pilot to select a navigation destination."
+        },
+        {
+          "locator": "SFMC-REQ-004",
+          "excerpt": "When the pilot selects a destination, the SFMC shall calculate a safe and efficient route to the destination."
+        },
+        {
+          "locator": "SFMC-REQ-005",
+          "excerpt": "When Autopilot mode is enabled, the SFMC shall control the spacecraft propulsion system to follow the selected route."
+        },
+        {
+          "locator": "SFMC-REQ-006",
+          "excerpt": "The autopilot shall deliver the spacecraft reasonably close to the selected destination."
+        },
+        {
+          "locator": "SFMC-REQ-007",
+          "excerpt": "The SFMC shall continuously monitor the status of the spacecraft's main engines."
+        },
+        {
+          "locator": "SFMC-REQ-008",
+          "excerpt": "The SFMC shall display a low-fuel warning when remaining fuel falls below 15 percent of usable fuel capacity."
+        },
+        {
+          "locator": "SFMC-REQ-009",
+          "excerpt": "When remaining fuel falls below 5 percent of usable fuel capacity, the SFMC shall display a critical-fuel warning and generate an audible alarm."
+        },
+        {
+          "locator": "SFMC-REQ-010",
+          "excerpt": "If the SFMC detects a failure of a main engine, it shall notify the pilot and take appropriate corrective action."
+        },
+        {
+          "locator": "SFMC-REQ-011",
+          "excerpt": "The SFMC shall display detected spacecraft within sensor range."
+        },
+        {
+          "locator": "SFMC-REQ-012",
+          "excerpt": "The SFMC shall allow the pilot to designate a detected spacecraft as a target."
+        },
+        {
+          "locator": "SFMC-REQ-013",
+          "excerpt": "For a selected target, the SFMC shall display: - relative distance, - relative velocity, - target classification, and - targeting status."
+        },
+        {
+          "locator": "SFMC-REQ-014",
+          "excerpt": "The SFMC shall prevent a weapon from firing unless the pilot has authorized weapons operation."
+        },
+        {
+          "locator": "SFMC-REQ-015",
+          "excerpt": "The SFMC shall never permit the pilot to fire a weapon at a friendly spacecraft."
+        },
+        {
+          "locator": "SFMC-REQ-016",
+          "excerpt": "The targeting system shall be extremely accurate."
+        },
+        {
+          "locator": "SFMC-REQ-017",
+          "excerpt": "When the Defensive System identifies an incoming threat, the SFMC shall display a threat warning to the pilot."
+        },
+        {
+          "locator": "SFMC-REQ-018",
+          "excerpt": "The SFMC shall clearly indicate which incoming threat represents the greatest danger to the spacecraft."
+        },
+        {
+          "locator": "SFMC-REQ-019",
+          "excerpt": "When the spacecraft enters Combat mode, the SFMC shall activate the defensive shields."
+        },
+        {
+          "locator": "SFMC-REQ-020",
+          "excerpt": "The SFMC shall automatically deploy countermeasures against incoming guided weapons when automatic defense is enabled."
+        },
+        {
+          "locator": "SFMC-REQ-021",
+          "excerpt": "The SFMC shall respond quickly to dangerous threats."
+        },
+        {
+          "locator": "SFMC-REQ-022",
+          "excerpt": "The SFMC shall allow the pilot to transmit messages to fleet command."
+        },
+        {
+          "locator": "SFMC-REQ-023",
+          "excerpt": "The SFMC shall notify the pilot when a new fleet message is received."
+        },
+        {
+          "locator": "SFMC-REQ-024",
+          "excerpt": "The SFMC shall allow the pilot to designate an outgoing message as an emergency message."
+        },
+        {
+          "locator": "SFMC-REQ-025",
+          "excerpt": "All important communications shall be securely encrypted."
+        },
+        {
+          "locator": "SFMC-REQ-026",
+          "excerpt": "The SFMC shall monitor the health of the Navigation, Propulsion, Weapons, Defensive, and Communications systems."
+        },
+        {
+          "locator": "SFMC-REQ-027",
+          "excerpt": "When a monitored subsystem reports a fault, the SFMC shall display the affected subsystem and the reported fault to the pilot within 1 second."
+        },
+        {
+          "locator": "SFMC-REQ-028",
+          "excerpt": "The SFMC shall record detected spacecraft faults in a mission fault log."
+        },
+        {
+          "locator": "SFMC-REQ-029",
+          "excerpt": "For each recorded fault, the mission fault log shall contain: - fault identifier, - affected subsystem, - time of detection, and - fault description."
+        },
+        {
+          "locator": "SFMC-REQ-030",
+          "excerpt": "The SFMC shall immediately notify the pilot of all critical faults."
+        },
+        {
+          "locator": "SFMC-REQ-031",
+          "excerpt": "The pilot shall be able to place the SFMC into Emergency mode using a dedicated cockpit control."
+        },
+        {
+          "locator": "SFMC-REQ-032",
+          "excerpt": "While operating in Emergency mode, the SFMC shall prioritize life-support, navigation, and propulsion functions over nonessential spacecraft functions."
+        },
+        {
+          "locator": "SFMC-REQ-033",
+          "excerpt": "If the spacecraft is seriously damaged, the SFMC shall automatically determine the safest destination."
+        },
+        {
+          "locator": "SFMC-REQ-034",
+          "excerpt": "The SFMC shall be capable of automatically flying the spacecraft to a safe location during an emergency."
+        },
+        {
+          "locator": "SFMC-REQ-035",
+          "excerpt": "The pilot shall always be able to override automatic spacecraft controls."
+        },
+        {
+          "locator": "SFMC-REQ-036",
+          "excerpt": "The SFMC shall become operational within 30 seconds after spacecraft computer power is applied."
+        },
+        {
+          "locator": "SFMC-REQ-037",
+          "excerpt": "The SFMC shall respond to pilot commands without noticeable delay."
+        },
+        {
+          "locator": "SFMC-REQ-038",
+          "excerpt": "During normal operation, the SFMC shall update flight information displayed to the pilot at least 10 times per second."
+        },
+        {
+          "locator": "SFMC-REQ-039",
+          "excerpt": "The SFMC shall operate continuously for missions lasting up to 72 hours."
+        },
+        {
+          "locator": "SFMC-REQ-040",
+          "excerpt": "The SFMC software shall never crash during a mission."
+        },
+        {
+          "locator": "SFMC-REQ-041",
+          "excerpt": "If a recoverable software fault occurs, the SFMC shall recover automatically without requiring pilot intervention."
+        },
+        {
+          "locator": "SFMC-REQ-042",
+          "excerpt": "Recovery from a software fault shall not cause the loss of important mission data."
+        },
+        {
+          "locator": "SFMC-REQ-043",
+          "excerpt": "If a spacecraft subsystem becomes unavailable, the SFMC shall continue operating using the remaining available systems whenever possible."
+        },
+        {
+          "locator": "SFMC-REQ-044",
+          "excerpt": "The SFMC shall maintain a mission log."
+        },
+        {
+          "locator": "SFMC-REQ-045",
+          "excerpt": "The mission log shall record: - changes in operating mode, - pilot commands, - detected faults, - weapons firing events, - emergency events, and - communications with fleet command."
+        },
+        {
+          "locator": "SFMC-REQ-046",
+          "excerpt": "Each mission-log entry shall include the spacecraft mission time at which the event occurred."
+        },
+        {
+          "locator": "SFMC-REQ-047",
+          "excerpt": "The mission log shall contain sufficient storage for an entire mission."
+        },
+        {
+          "locator": "SFMC-REQ-048",
+          "excerpt": "The SFMC shall verify that the pilot is authorized before enabling spacecraft operation."
+        },
+        {
+          "locator": "SFMC-REQ-049",
+          "excerpt": "The SFMC shall reject unauthorized commands received through the spacecraft communications system."
+        },
+        {
+          "locator": "SFMC-REQ-050",
+          "excerpt": "The SFMC shall use state-of-the-art security techniques to protect the spacecraft from cyberattack."
+        },
+        {
+          "locator": "SFMC-REQ-051",
+          "excerpt": "The SFMC software shall execute on the Starhawk Flight Computer."
+        },
+        {
+          "locator": "SFMC-REQ-052",
+          "excerpt": "The SFMC shall communicate with spacecraft subsystems using the Starhawk spacecraft data network."
+        },
+        {
+          "locator": "SFMC-REQ-053",
+          "excerpt": "Authorized maintenance personnel shall be able to install updated SFMC software while the spacecraft is in Standby mode."
+        },
+        {
+          "locator": "SFMC-REQ-054",
+          "excerpt": "The SFMC shall verify the integrity and authenticity of a software update before installing it."
+        }
+      ],
+      "external_evidence_needed": [
+        "Approval, baselining, maintenance and component requirements records"
+      ],
+      "nasa_reference": {
+        "document": "NPR-7150.2D",
+        "authority": "NPR_REQUIREMENT",
+        "section": "§4.1.2",
+        "swe_id": "SWE-050",
+        "url": "https://nodis3.gsfc.nasa.gov/displayDir.cfm?Internal_ID=N_PR_7150_002D_&page_name=Chapter4"
+      }
+    },
+    {
+      "swe_id": "SWE-051",
+      "document_evidence": "PARTIAL_EVIDENCE",
+      "project_compliance": "NOT_DETERMINED",
+      "rationale": "The SRS supplies parent mission-need and/or hardware/network context as inputs relevant to requirements analysis. This does not demonstrate flowed-down/derived analysis provenance, safety/reliability analyses, hardware-design reconciliation or approved allocations.",
+      "supported_by_requirement_ids": [
+        "SFMC-REQ-051",
+        "SFMC-REQ-052"
+      ],
+      "srs_evidence": [
+        {
+          "locator": "§10 Requirement Traceability",
+          "excerpt": "# 10. Requirement Traceability\n\nThe following high-level mission needs are the source of the software requirements in this specification.\n\n| Mission Need | Description |\n|---|---|\n| MN-01 | The pilot must be able to navigate the spacecraft to a selected destination. |\n| MN-02 | The pilot must be able to monitor and control spacecraft propulsion. |\n| MN-03 | The spacecraft must support combat targeting and weapons operation. |\n| MN-04 | The spacecraft must protect itself against external threats. |\n| MN-05 | The pilot must be able to communicate with fleet command. |\n| MN-06 | The pilot must be informed of spacecraft failures. |\n| MN-07 | The spacecraft must support safe operation during emergencies. |\n| MN-08 | The mission computer must remain operational throughout a mission. |\n| MN-09 | Mission events must be recorded for later analysis. |\n| MN-10 | Unauthorized users must not be able to control the spacecraft. |\n\nA complete requirement-to-mission-need traceability matrix has not yet been developed.\n\n---"
+        },
+        {
+          "locator": "SFMC-REQ-051",
+          "excerpt": "The SFMC software shall execute on the Starhawk Flight Computer."
+        },
+        {
+          "locator": "SFMC-REQ-052",
+          "excerpt": "The SFMC shall communicate with spacecraft subsystems using the Starhawk spacecraft data network."
+        }
+      ],
+      "external_evidence_needed": [
+        "Requirements analysis records and flowed-down/derived allocations",
+        "System requirements, safety and reliability analyses, hardware specifications and design"
+      ],
+      "nasa_reference": {
+        "document": "NPR-7150.2D",
+        "authority": "NPR_REQUIREMENT",
+        "section": "§4.1.3",
+        "swe_id": "SWE-051",
+        "url": "https://nodis3.gsfc.nasa.gov/displayDir.cfm?Internal_ID=N_PR_7150_002D_&page_name=Chapter4"
+      }
+    },
+    {
+      "swe_id": "SWE-184",
+      "document_evidence": "PARTIAL_EVIDENCE",
+      "project_compliance": "NOT_DETERMINED",
+      "rationale": "Mandatory safety-control wording is documented; complete hardware/operator/software constraints, mitigations and assumptions require external safety analysis.",
+      "supported_by_requirement_ids": [
+        "SFMC-REQ-014",
+        "SFMC-REQ-015"
+      ],
+      "srs_evidence": [
+        {
+          "locator": "SFMC-REQ-014",
+          "excerpt": "The SFMC shall prevent a weapon from firing unless the pilot has authorized weapons operation."
+        },
+        {
+          "locator": "SFMC-REQ-015",
+          "excerpt": "The SFMC shall never permit the pilot to fire a weapon at a friendly spacecraft."
+        }
+      ],
+      "external_evidence_needed": [
+        "Safety/hazard analyses and approved control allocation, definitions and precedence"
+      ],
+      "nasa_reference": {
+        "document": "NPR-7150.2D",
+        "authority": "NPR_REQUIREMENT",
+        "section": "§4.1.4",
+        "swe_id": "SWE-184",
+        "url": "https://nodis3.gsfc.nasa.gov/displayDir.cfm?Internal_ID=N_PR_7150_002D_&page_name=Chapter4"
+      }
+    },
+    {
+      "swe_id": "SWE-053",
+      "document_evidence": "NOT_ASSESSABLE",
+      "project_compliance": "NOT_DETERMINED",
+      "rationale": "Tracking and managing changes to requirements is a lifecycle process. SRS version metadata and software-update behavior do not establish requirement change control or completed change history. Assessment searched the full supplied SRS; project compliance is not determined.",
+      "supported_by_requirement_ids": [],
+      "srs_evidence": [
+        {
+          "locator": "SRS metadata",
+          "excerpt": "**Version:** 1.0"
+        },
+        {
+          "locator": "SRS metadata",
+          "excerpt": "**Status:** Draft for Review"
+        }
+      ],
+      "external_evidence_needed": [
+        "Approved requirements baselines and change requests",
+        "Requirement change history, impact analysis and configuration-control records"
+      ],
+      "nasa_reference": {
+        "document": "NPR-7150.2D",
+        "authority": "NPR_REQUIREMENT",
+        "section": "§4.1.5",
+        "swe_id": "SWE-053",
+        "url": "https://nodis3.gsfc.nasa.gov/displayDir.cfm?Internal_ID=N_PR_7150_002D_&page_name=Chapter4"
+      }
+    },
+    {
+      "swe_id": "SWE-054",
+      "document_evidence": "NOT_ASSESSABLE",
+      "project_compliance": "NOT_DETERMINED",
+      "rationale": "Identifying inconsistencies, initiating corrective actions and tracking them to closure spans requirements, plans and software products. SRS open items identify questions but do not establish cross-artifact corrective-action management or closure. Assessment searched the full supplied SRS; project compliance is not determined.",
+      "supported_by_requirement_ids": [],
+      "srs_evidence": [
+        {
+          "locator": "§11 Open Items",
+          "excerpt": "# 11. Open Items\n\nThe following items remain to be resolved during development:\n\n1. Definition of a **safe route**.\n2. Definition of an acceptable distance from a selected destination.\n3. Definition of **critical fault**.\n4. Definition of **important communication**.\n5. Definition of a **safe location** during an emergency.\n6. Required mission-log storage capacity.\n7. Required targeting accuracy.\n8. Maximum acceptable response time for pilot commands.\n9. Required cybersecurity algorithms and standards.\n10. Criteria for determining whether a detected spacecraft is friendly or hostile."
+        }
+      ],
+      "external_evidence_needed": [
+        "Inconsistency and corrective-action register with closure evidence",
+        "Reconciled requirements, project plans and software products"
+      ],
+      "nasa_reference": {
+        "document": "NPR-7150.2D",
+        "authority": "NPR_REQUIREMENT",
+        "section": "§4.1.6",
+        "swe_id": "SWE-054",
+        "url": "https://nodis3.gsfc.nasa.gov/displayDir.cfm?Internal_ID=N_PR_7150_002D_&page_name=Chapter4"
+      }
+    },
+    {
+      "swe_id": "SWE-055",
+      "document_evidence": "NOT_ASSESSABLE",
+      "project_compliance": "NOT_DETERMINED",
+      "rationale": "Validation of intended operation in the customer environment requires stakeholder validation records. A draft SRS, numeric requirements or runtime integrity checks do not establish that validation was performed. Assessment searched the full supplied SRS; project compliance is not determined.",
+      "supported_by_requirement_ids": [],
+      "srs_evidence": [
+        {
+          "locator": "SRS metadata",
+          "excerpt": "**Version:** 1.0"
+        },
+        {
+          "locator": "SRS metadata",
+          "excerpt": "**Status:** Draft for Review"
+        }
+      ],
+      "external_evidence_needed": [
+        "Customer/stakeholder requirements validation records",
+        "Intended-environment scenarios, review outcomes and validation approval records"
+      ],
+      "nasa_reference": {
+        "document": "NPR-7150.2D",
+        "authority": "NPR_REQUIREMENT",
+        "section": "§4.1.7",
+        "swe_id": "SWE-055",
+        "url": "https://nodis3.gsfc.nasa.gov/displayDir.cfm?Internal_ID=N_PR_7150_002D_&page_name=Chapter4"
+      }
+    }
+  ]
+}
