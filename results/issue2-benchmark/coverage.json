@@ -1,0 +1,182 @@
+{
+  "case_count": 37,
+  "prediction_count": 37,
+  "missing_case_ids": [],
+  "extra_case_ids": [],
+  "benchmark_requirement_ids_missing_from_srs": [],
+  "case_report_mapping_count": 37,
+  "case_report_mapping": [
+    {
+      "case_id": "RQ-001",
+      "report_reference": "requirement_reviews/SFMC-REQ-002"
+    },
+    {
+      "case_id": "RQ-002",
+      "report_reference": "requirement_reviews/SFMC-REQ-004"
+    },
+    {
+      "case_id": "RQ-003",
+      "report_reference": "requirement_reviews/SFMC-REQ-006"
+    },
+    {
+      "case_id": "RQ-004",
+      "report_reference": "requirement_reviews/SFMC-REQ-008"
+    },
+    {
+      "case_id": "RQ-005",
+      "report_reference": "requirement_reviews/SFMC-REQ-009"
+    },
+    {
+      "case_id": "RQ-006",
+      "report_reference": "requirement_reviews/SFMC-REQ-010"
+    },
+    {
+      "case_id": "RQ-007",
+      "report_reference": "requirement_reviews/SFMC-REQ-013"
+    },
+    {
+      "case_id": "RQ-008",
+      "report_reference": "requirement_reviews/SFMC-REQ-014"
+    },
+    {
+      "case_id": "RQ-009",
+      "report_reference": "requirement_reviews/SFMC-REQ-015"
+    },
+    {
+      "case_id": "RQ-010",
+      "report_reference": "requirement_reviews/SFMC-REQ-016"
+    },
+    {
+      "case_id": "RQ-011",
+      "report_reference": "requirement_reviews/SFMC-REQ-021"
+    },
+    {
+      "case_id": "RQ-012",
+      "report_reference": "requirement_reviews/SFMC-REQ-025"
+    },
+    {
+      "case_id": "RQ-013",
+      "report_reference": "requirement_reviews/SFMC-REQ-027"
+    },
+    {
+      "case_id": "RQ-014",
+      "report_reference": "requirement_reviews/SFMC-REQ-032"
+    },
+    {
+      "case_id": "RQ-015",
+      "report_reference": "requirement_reviews/SFMC-REQ-035"
+    },
+    {
+      "case_id": "RQ-016",
+      "report_reference": "requirement_reviews/SFMC-REQ-036"
+    },
+    {
+      "case_id": "RQ-017",
+      "report_reference": "requirement_reviews/SFMC-REQ-037"
+    },
+    {
+      "case_id": "RQ-018",
+      "report_reference": "requirement_reviews/SFMC-REQ-038"
+    },
+    {
+      "case_id": "RQ-019",
+      "report_reference": "requirement_reviews/SFMC-REQ-040"
+    },
+    {
+      "case_id": "RQ-020",
+      "report_reference": "requirement_reviews/SFMC-REQ-043"
+    },
+    {
+      "case_id": "RQ-021",
+      "report_reference": "requirement_reviews/SFMC-REQ-045"
+    },
+    {
+      "case_id": "RQ-022",
+      "report_reference": "requirement_reviews/SFMC-REQ-047"
+    },
+    {
+      "case_id": "RQ-023",
+      "report_reference": "requirement_reviews/SFMC-REQ-054"
+    },
+    {
+      "case_id": "REL-001",
+      "report_reference": "relationships/REL-001"
+    },
+    {
+      "case_id": "REL-002",
+      "report_reference": "relationships/REL-002"
+    },
+    {
+      "case_id": "REL-003",
+      "report_reference": "relationships/REL-003"
+    },
+    {
+      "case_id": "DOC-001",
+      "report_reference": "document_findings/DOC-001"
+    },
+    {
+      "case_id": "DOC-002",
+      "report_reference": "document_findings/DOC-002"
+    },
+    {
+      "case_id": "DOC-003",
+      "report_reference": "document_findings/DOC-003"
+    },
+    {
+      "case_id": "DOC-004",
+      "report_reference": "document_findings/DOC-004"
+    },
+    {
+      "case_id": "DOC-005",
+      "report_reference": "document_findings/DOC-005"
+    },
+    {
+      "case_id": "SWE-001",
+      "report_reference": "swe_coverage/SWE-050"
+    },
+    {
+      "case_id": "SWE-002",
+      "report_reference": "swe_coverage/SWE-051"
+    },
+    {
+      "case_id": "SWE-003",
+      "report_reference": "swe_coverage/SWE-184"
+    },
+    {
+      "case_id": "SWE-004",
+      "report_reference": "swe_coverage/SWE-053"
+    },
+    {
+      "case_id": "SWE-005",
+      "report_reference": "swe_coverage/SWE-054"
+    },
+    {
+      "case_id": "SWE-006",
+      "report_reference": "swe_coverage/SWE-055"
+    }
+  ],
+  "split_counts": {
+    "HOLDOUT": 26,
+    "CALIBRATION": 11
+  },
+  "abstention_count": 10,
+  "decision_count": 27,
+  "by_scope": {
+    "DOCUMENT": {
+      "cases": 5,
+      "abstentions": 0
+    },
+    "RELATIONSHIP": {
+      "cases": 3,
+      "abstentions": 0
+    },
+    "REQUIREMENT": {
+      "cases": 23,
+      "abstentions": 10
+    },
+    "SWE_COVERAGE": {
+      "cases": 6,
+      "abstentions": 0
+    }
+  }
+}
