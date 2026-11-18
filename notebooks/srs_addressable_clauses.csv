@@ -58,15 +58,12 @@ storage of data relating to the detection of adversarial actions. [SWE-210]","['
 SWE-052,3.12,3.12.1,"The project manager shall perform, record, and maintain bi-directional traceability between
 the following software elements: [SWE-052]
 Table 1. Bi-directional traceability by software classification
-Class A, B,
-Bi-directional Traceability Class D Class F
-and C
-Higher-level requirements to the software requirements X X
-Software requirements to the system hazards X X
-Software requirements to the software design components X
-Software design components to the software code X
-Software requirements to the software verification(s) X X X
-Software requirements to the software non-conformances X X X","['Note: The project manager will maintain bi-directional traceability between the software\nrequirements and software-related system hazards, including hazardous controls,\nhazardous mitigations, hazardous conditions, and hazardous events.']","['body', 'matrix']",3.12.1,"The project manager shall perform, record, and maintain bi-directional traceability between the following software elements: (See Table in 3.12.1)",Center,4,CIO,X,Software Bi-Directional Traceability,['maintain'],partial,Upward traceability to parent requirements and traceability to hazards. Design/code/test links live elsewhere.
+- Higher-level requirements to the software requirements: Class A, B, and C; Class F
+- Software requirements to the system hazards: Class A, B, and C; Class D
+- Software requirements to the software design components: Class A, B, and C
+- Software design components to the software code: Class A, B, and C
+- Software requirements to the software verification(s): Class A, B, and C; Class D; Class F
+- Software requirements to the software non-conformances: Class A, B, and C; Class D; Class F","['Note: The project manager will maintain bi-directional traceability between the software\nrequirements and software-related system hazards, including hazardous controls,\nhazardous mitigations, hazardous conditions, and hazardous events.']","['body', 'matrix']",3.12.1,"The project manager shall perform, record, and maintain bi-directional traceability between the following software elements: (See Table in 3.12.1)",Center,4,CIO,X,Software Bi-Directional Traceability,['maintain'],partial,Upward traceability to parent requirements and traceability to hazards. Design/code/test links live elsewhere.
 SWE-050,4.1,4.1.2,"The project manager shall establish, capture, record, approve, and maintain software
 requirements, including requirements for COTS, GOTS, MOTS, OSS, or reused software
 components, as part of the technical specification. [SWE-050]","['Note: The software technical requirements definition process is used to transform the\nbaselined stakeholder expectations into unique, quantitative, and measurable technical\nsoftware requirements that can be used for defining a design solution for the software end\nproducts and related enabling products. This process also includes validation of the\nrequirements to ensure that the requirements are well-formed (clear and unambiguous),\ncomplete (agrees with customer and stakeholder needs and expectations), consistent\n(conflict free), and individually verifiable and traceable to a higher level requirement.\nRecommended content for a software specification can be found in NASA-HDBK-2203.']","['body', 'matrix']",4.1.2,"The project manager shall establish, capture, record, approve, and maintain software requirements, including requirements for COTS, GOTS, MOTS, OSS, or reused software components, as part of the technical specification.",Center,4,CIO,X,Software Requirements,['maintain'],direct,"Requirements are uniquely identified and approved, including requirements for COTS/GOTS/MOTS/OSS or reused components."
@@ -77,3 +74,7 @@ SWE-184,4.1,4.1.4,"The project manager shall include software related safety con
 assumptions between the hardware, operator, and software in the software requirements
 documentation. [SWE-184]",[],"['body', 'matrix']",4.1.4,"The project manager shall include software related safety constraints, controls, mitigations and assumptions between the hardware, operator, and software in the software requirements documentation.",Center,3,,,Software Requirements,['document'],direct,"Safety constraints, controls, mitigations, and assumptions between hardware, operator, and software are stated."
 SWE-053,4.1,4.1.5,The project manager shall track and manage changes to the software requirements. [SWE-053],[],"['body', 'matrix']",4.1.5,The project manager shall track and manage changes to the software requirements.,Center,4,CIO,X,Software Requirements,['track'],partial,"Revision history, stable requirement IDs, and change markings."
+SWE-054,4.1,4.1.6,"The project manager shall identify, initiate corrective actions, and track until closure
+inconsistencies among requirements, project plans, and software products. [SWE-054]",[],"['body', 'matrix']",4.1.6,"The project manager shall identify, initiate corrective actions, and track until closure inconsistencies among requirements, project plans, and software products.",Center,4,CIO,X,Software Requirements,['track'],partial,"Open items, TBDs, and known inconsistencies are listed so they can be tracked to closure."
+SWE-055,4.1,4.1.7,"The project manager shall perform requirements validation to ensure that the software will
+perform as intended in the customer environment. [SWE-055]",[],"['body', 'matrix']",4.1.7,The project manager shall perform requirements validation to ensure that the software will perform as intended in the customer environment.,Center,4,CIO,X,Software Requirements,[],partial,"Intended use, operating modes, and mission needs are stated so requirements can be validated against them."

@@ -1,0 +1,26 @@
+{
+  "scope": "ISSUE_2_FIRST_TWO_CHECKLIST_ITEMS_ONLY",
+  "primary_method": "tfidf_cosine",
+  "comparison_method": "keyword_jaccard",
+  "corpus_mode": "srs_addressable",
+  "requirements": 54,
+  "selected_clauses": 16,
+  "pairs_per_method": 864,
+  "candidate_rows_by_method": {
+    "keyword_jaccard": 94,
+    "tfidf_cosine": 94
+  },
+  "no_candidate_requirements_by_method": {
+    "keyword_jaccard": 9,
+    "tfidf_cosine": 9
+  },
+  "wording_statuses": {
+    "NO_RULE_MATCH": 37,
+    "NEEDS_REVIEW": 17
+  },
+  "task_1_define_approach": "IMPLEMENTED",
+  "task_2_clause_scoring": "IMPLEMENTED",
+  "task_3_benchmark_evaluation": "DEFERRED",
+  "task_4_precision_recall": "DEFERRED",
+  "semantic_compliance": "NOT_ASSESSED"
+}

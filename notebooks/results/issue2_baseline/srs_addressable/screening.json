@@ -1,0 +1,660 @@
+[
+  {
+    "requirement_id": "SFMC-REQ-001",
+    "title": "Position Display",
+    "text": "The SFMC shall display the spacecraft's current position to the pilot.",
+    "findings": [],
+    "status": "NO_RULE_MATCH",
+    "compliance_verdict": null
+  },
+  {
+    "requirement_id": "SFMC-REQ-002",
+    "title": "Navigation Update",
+    "text": "The SFMC shall update the displayed spacecraft position at least once every 500 milliseconds while the spacecraft is in Manual Flight, Autopilot, or Combat mode.",
+    "findings": [],
+    "status": "NO_RULE_MATCH",
+    "compliance_verdict": null
+  },
+  {
+    "requirement_id": "SFMC-REQ-003",
+    "title": "Destination Selection",
+    "text": "The SFMC shall allow the pilot to select a navigation destination.",
+    "findings": [],
+    "status": "NO_RULE_MATCH",
+    "compliance_verdict": null
+  },
+  {
+    "requirement_id": "SFMC-REQ-004",
+    "title": "Route Calculation",
+    "text": "When the pilot selects a destination, the SFMC shall calculate a safe and efficient route to the destination.",
+    "findings": [
+      {
+        "rule_id": "AMB-13",
+        "phrase": "safe and efficient",
+        "start": 65,
+        "end": 83,
+        "matched_text": "safe and efficient",
+        "explanation": "Define safety and efficiency criteria.",
+        "authority_kind": "engineering_heuristic",
+        "supporting_guidance": "NPR7150.2D 4.1.2 Note; SWEHB5.09 1(b)",
+        "guidance_url": "https://swehb.nasa.gov/spaces/SWEHBVD/pages/102695669/5.09+-+SRS+-+Software+Requirements+Specification"
+      }
+    ],
+    "status": "NEEDS_REVIEW",
+    "compliance_verdict": null
+  },
+  {
+    "requirement_id": "SFMC-REQ-005",
+    "title": "Autopilot",
+    "text": "When Autopilot mode is enabled, the SFMC shall control the spacecraft propulsion system to follow the selected route.",
+    "findings": [],
+    "status": "NO_RULE_MATCH",
+    "compliance_verdict": null
+  },
+  {
+    "requirement_id": "SFMC-REQ-006",
+    "title": "Autopilot Arrival",
+    "text": "The autopilot shall deliver the spacecraft reasonably close to the selected destination.",
+    "findings": [
+      {
+        "rule_id": "AMB-04",
+        "phrase": "reasonably close",
+        "start": 43,
+        "end": 59,
+        "matched_text": "reasonably close",
+        "explanation": "Define an acceptable arrival distance.",
+        "authority_kind": "engineering_heuristic",
+        "supporting_guidance": "NPR7150.2D 4.1.2 Note; SWEHB5.09 1(b)",
+        "guidance_url": "https://swehb.nasa.gov/spaces/SWEHBVD/pages/102695669/5.09+-+SRS+-+Software+Requirements+Specification"
+      }
+    ],
+    "status": "NEEDS_REVIEW",
+    "compliance_verdict": null
+  },
+  {
+    "requirement_id": "SFMC-REQ-007",
+    "title": "Engine Status",
+    "text": "The SFMC shall continuously monitor the status of the spacecraft's main engines.",
+    "findings": [],
+    "status": "NO_RULE_MATCH",
+    "compliance_verdict": null
+  },
+  {
+    "requirement_id": "SFMC-REQ-008",
+    "title": "Fuel Warning",
+    "text": "The SFMC shall display a low-fuel warning when remaining fuel falls below 15 percent of usable fuel capacity.",
+    "findings": [],
+    "status": "NO_RULE_MATCH",
+    "compliance_verdict": null
+  },
+  {
+    "requirement_id": "SFMC-REQ-009",
+    "title": "Critical Fuel Warning",
+    "text": "When remaining fuel falls below 5 percent of usable fuel capacity, the SFMC shall display a critical-fuel warning and generate an audible alarm.",
+    "findings": [],
+    "status": "NO_RULE_MATCH",
+    "compliance_verdict": null
+  },
+  {
+    "requirement_id": "SFMC-REQ-010",
+    "title": "Engine Failure",
+    "text": "If the SFMC detects a failure of a main engine, it shall notify the pilot and take appropriate corrective action.",
+    "findings": [
+      {
+        "rule_id": "AMB-07",
+        "phrase": "appropriate corrective action",
+        "start": 83,
+        "end": 112,
+        "matched_text": "appropriate corrective action",
+        "explanation": "Define the required corrective action.",
+        "authority_kind": "engineering_heuristic",
+        "supporting_guidance": "NPR7150.2D 4.1.2 Note; SWEHB5.09 1(b)",
+        "guidance_url": "https://swehb.nasa.gov/spaces/SWEHBVD/pages/102695669/5.09+-+SRS+-+Software+Requirements+Specification"
+      }
+    ],
+    "status": "NEEDS_REVIEW",
+    "compliance_verdict": null
+  },
+  {
+    "requirement_id": "SFMC-REQ-011",
+    "title": "Target Detection",
+    "text": "The SFMC shall display detected spacecraft within sensor range.",
+    "findings": [],
+    "status": "NO_RULE_MATCH",
+    "compliance_verdict": null
+  },
+  {
+    "requirement_id": "SFMC-REQ-012",
+    "title": "Target Selection",
+    "text": "The SFMC shall allow the pilot to designate a detected spacecraft as a target.",
+    "findings": [],
+    "status": "NO_RULE_MATCH",
+    "compliance_verdict": null
+  },
+  {
+    "requirement_id": "SFMC-REQ-013",
+    "title": "Target Information",
+    "text": "For a selected target, the SFMC shall display: - relative distance, - relative velocity, - target classification, and - targeting status.",
+    "findings": [],
+    "status": "NO_RULE_MATCH",
+    "compliance_verdict": null
+  },
+  {
+    "requirement_id": "SFMC-REQ-014",
+    "title": "Weapons Authorization",
+    "text": "The SFMC shall prevent a weapon from firing unless the pilot has authorized weapons operation.",
+    "findings": [],
+    "status": "NO_RULE_MATCH",
+    "compliance_verdict": null
+  },
+  {
+    "requirement_id": "SFMC-REQ-015",
+    "title": "Friendly Spacecraft",
+    "text": "The SFMC shall never permit the pilot to fire a weapon at a friendly spacecraft.",
+    "findings": [
+      {
+        "rule_id": "AMB-16",
+        "phrase": "friendly spacecraft",
+        "start": 60,
+        "end": 79,
+        "matched_text": "friendly spacecraft",
+        "explanation": "Define the criteria for identifying friendly, hostile, or unknown spacecraft.",
+        "authority_kind": "engineering_heuristic",
+        "supporting_guidance": "NPR7150.2D 4.1.2 Note; SWEHB5.09 1(b)",
+        "guidance_url": "https://swehb.nasa.gov/spaces/SWEHBVD/pages/102695669/5.09+-+SRS+-+Software+Requirements+Specification"
+      }
+    ],
+    "status": "NEEDS_REVIEW",
+    "compliance_verdict": null
+  },
+  {
+    "requirement_id": "SFMC-REQ-016",
+    "title": "Targeting Performance",
+    "text": "The targeting system shall be extremely accurate.",
+    "findings": [
+      {
+        "rule_id": "AMB-05",
+        "phrase": "extremely accurate",
+        "start": 30,
+        "end": 48,
+        "matched_text": "extremely accurate",
+        "explanation": "Define the accuracy metric and limit.",
+        "authority_kind": "engineering_heuristic",
+        "supporting_guidance": "NPR7150.2D 4.1.2 Note; SWEHB5.09 1(b)",
+        "guidance_url": "https://swehb.nasa.gov/spaces/SWEHBVD/pages/102695669/5.09+-+SRS+-+Software+Requirements+Specification"
+      }
+    ],
+    "status": "NEEDS_REVIEW",
+    "compliance_verdict": null
+  },
+  {
+    "requirement_id": "SFMC-REQ-017",
+    "title": "Threat Warning",
+    "text": "When the Defensive System identifies an incoming threat, the SFMC shall display a threat warning to the pilot.",
+    "findings": [],
+    "status": "NO_RULE_MATCH",
+    "compliance_verdict": null
+  },
+  {
+    "requirement_id": "SFMC-REQ-018",
+    "title": "Threat Priority",
+    "text": "The SFMC shall clearly indicate which incoming threat represents the greatest danger to the spacecraft.",
+    "findings": [
+      {
+        "rule_id": "AMB-17",
+        "phrase": "greatest danger",
+        "start": 69,
+        "end": 84,
+        "matched_text": "greatest danger",
+        "explanation": "Define the threat-priority factors and ranking method.",
+        "authority_kind": "engineering_heuristic",
+        "supporting_guidance": "NPR7150.2D 4.1.2 Note; SWEHB5.09 1(b)",
+        "guidance_url": "https://swehb.nasa.gov/spaces/SWEHBVD/pages/102695669/5.09+-+SRS+-+Software+Requirements+Specification"
+      }
+    ],
+    "status": "NEEDS_REVIEW",
+    "compliance_verdict": null
+  },
+  {
+    "requirement_id": "SFMC-REQ-019",
+    "title": "Shield Activation",
+    "text": "When the spacecraft enters Combat mode, the SFMC shall activate the defensive shields.",
+    "findings": [],
+    "status": "NO_RULE_MATCH",
+    "compliance_verdict": null
+  },
+  {
+    "requirement_id": "SFMC-REQ-020",
+    "title": "Automatic Countermeasures",
+    "text": "The SFMC shall automatically deploy countermeasures against incoming guided weapons when automatic defense is enabled.",
+    "findings": [],
+    "status": "NO_RULE_MATCH",
+    "compliance_verdict": null
+  },
+  {
+    "requirement_id": "SFMC-REQ-021",
+    "title": "Defensive Response",
+    "text": "The SFMC shall respond quickly to dangerous threats.",
+    "findings": [
+      {
+        "rule_id": "AMB-01",
+        "phrase": "quickly",
+        "start": 23,
+        "end": 30,
+        "matched_text": "quickly",
+        "explanation": "Specify a measurable response-time limit.",
+        "authority_kind": "engineering_heuristic",
+        "supporting_guidance": "NPR7150.2D 4.1.2 Note; SWEHB5.09 1(b)",
+        "guidance_url": "https://swehb.nasa.gov/spaces/SWEHBVD/pages/102695669/5.09+-+SRS+-+Software+Requirements+Specification"
+      }
+    ],
+    "status": "NEEDS_REVIEW",
+    "compliance_verdict": null
+  },
+  {
+    "requirement_id": "SFMC-REQ-022",
+    "title": "Message Transmission",
+    "text": "The SFMC shall allow the pilot to transmit messages to fleet command.",
+    "findings": [],
+    "status": "NO_RULE_MATCH",
+    "compliance_verdict": null
+  },
+  {
+    "requirement_id": "SFMC-REQ-023",
+    "title": "Message Reception",
+    "text": "The SFMC shall notify the pilot when a new fleet message is received.",
+    "findings": [],
+    "status": "NO_RULE_MATCH",
+    "compliance_verdict": null
+  },
+  {
+    "requirement_id": "SFMC-REQ-024",
+    "title": "Emergency Message",
+    "text": "The SFMC shall allow the pilot to designate an outgoing message as an emergency message.",
+    "findings": [],
+    "status": "NO_RULE_MATCH",
+    "compliance_verdict": null
+  },
+  {
+    "requirement_id": "SFMC-REQ-025",
+    "title": "Secure Communications",
+    "text": "All important communications shall be securely encrypted.",
+    "findings": [
+      {
+        "rule_id": "AMB-06",
+        "phrase": "important",
+        "start": 4,
+        "end": 13,
+        "matched_text": "important",
+        "explanation": "Identify exactly which data or communications are covered.",
+        "authority_kind": "engineering_heuristic",
+        "supporting_guidance": "NPR7150.2D 4.1.2 Note; SWEHB5.09 1(b)",
+        "guidance_url": "https://swehb.nasa.gov/spaces/SWEHBVD/pages/102695669/5.09+-+SRS+-+Software+Requirements+Specification"
+      },
+      {
+        "rule_id": "AMB-12",
+        "phrase": "securely encrypted",
+        "start": 38,
+        "end": 56,
+        "matched_text": "securely encrypted",
+        "explanation": "Identify the applicable encryption requirements.",
+        "authority_kind": "engineering_heuristic",
+        "supporting_guidance": "NPR7150.2D 4.1.2 Note; SWEHB5.09 1(b)",
+        "guidance_url": "https://swehb.nasa.gov/spaces/SWEHBVD/pages/102695669/5.09+-+SRS+-+Software+Requirements+Specification"
+      }
+    ],
+    "status": "NEEDS_REVIEW",
+    "compliance_verdict": null
+  },
+  {
+    "requirement_id": "SFMC-REQ-026",
+    "title": "Subsystem Monitoring",
+    "text": "The SFMC shall monitor the health of the Navigation, Propulsion, Weapons, Defensive, and Communications systems.",
+    "findings": [],
+    "status": "NO_RULE_MATCH",
+    "compliance_verdict": null
+  },
+  {
+    "requirement_id": "SFMC-REQ-027",
+    "title": "Fault Display",
+    "text": "When a monitored subsystem reports a fault, the SFMC shall display the affected subsystem and the reported fault to the pilot within 1 second.",
+    "findings": [],
+    "status": "NO_RULE_MATCH",
+    "compliance_verdict": null
+  },
+  {
+    "requirement_id": "SFMC-REQ-028",
+    "title": "Fault Log",
+    "text": "The SFMC shall record detected spacecraft faults in a mission fault log.",
+    "findings": [],
+    "status": "NO_RULE_MATCH",
+    "compliance_verdict": null
+  },
+  {
+    "requirement_id": "SFMC-REQ-029",
+    "title": "Fault Log Contents",
+    "text": "For each recorded fault, the mission fault log shall contain: - fault identifier, - affected subsystem, - time of detection, and - fault description.",
+    "findings": [],
+    "status": "NO_RULE_MATCH",
+    "compliance_verdict": null
+  },
+  {
+    "requirement_id": "SFMC-REQ-030",
+    "title": "Critical Faults",
+    "text": "The SFMC shall immediately notify the pilot of all critical faults.",
+    "findings": [
+      {
+        "rule_id": "AMB-02",
+        "phrase": "immediately",
+        "start": 15,
+        "end": 26,
+        "matched_text": "immediately",
+        "explanation": "Clarify the maximum allowed response time.",
+        "authority_kind": "engineering_heuristic",
+        "supporting_guidance": "NPR7150.2D 4.1.2 Note; SWEHB5.09 1(b)",
+        "guidance_url": "https://swehb.nasa.gov/spaces/SWEHBVD/pages/102695669/5.09+-+SRS+-+Software+Requirements+Specification"
+      }
+    ],
+    "status": "NEEDS_REVIEW",
+    "compliance_verdict": null
+  },
+  {
+    "requirement_id": "SFMC-REQ-031",
+    "title": "Emergency Mode",
+    "text": "The pilot shall be able to place the SFMC into Emergency mode using a dedicated cockpit control.",
+    "findings": [],
+    "status": "NO_RULE_MATCH",
+    "compliance_verdict": null
+  },
+  {
+    "requirement_id": "SFMC-REQ-032",
+    "title": "Emergency Priorities",
+    "text": "While operating in Emergency mode, the SFMC shall prioritize life-support, navigation, and propulsion functions over nonessential spacecraft functions.",
+    "findings": [
+      {
+        "rule_id": "AMB-18",
+        "phrase": "nonessential spacecraft functions",
+        "start": 117,
+        "end": 150,
+        "matched_text": "nonessential spacecraft functions",
+        "explanation": "Identify the functions that may be delayed or disabled in Emergency mode.",
+        "authority_kind": "engineering_heuristic",
+        "supporting_guidance": "NPR7150.2D 4.1.2 Note; SWEHB5.09 1(b)",
+        "guidance_url": "https://swehb.nasa.gov/spaces/SWEHBVD/pages/102695669/5.09+-+SRS+-+Software+Requirements+Specification"
+      }
+    ],
+    "status": "NEEDS_REVIEW",
+    "compliance_verdict": null
+  },
+  {
+    "requirement_id": "SFMC-REQ-033",
+    "title": "Emergency Navigation",
+    "text": "If the spacecraft is seriously damaged, the SFMC shall automatically determine the safest destination.",
+    "findings": [
+      {
+        "rule_id": "AMB-09",
+        "phrase": "seriously damaged",
+        "start": 21,
+        "end": 38,
+        "matched_text": "seriously damaged",
+        "explanation": "Define the condition that triggers this behavior.",
+        "authority_kind": "engineering_heuristic",
+        "supporting_guidance": "NPR7150.2D 4.1.2 Note; SWEHB5.09 1(b)",
+        "guidance_url": "https://swehb.nasa.gov/spaces/SWEHBVD/pages/102695669/5.09+-+SRS+-+Software+Requirements+Specification"
+      },
+      {
+        "rule_id": "AMB-14",
+        "phrase": "safest destination",
+        "start": 83,
+        "end": 101,
+        "matched_text": "safest destination",
+        "explanation": "Define destination selection criteria.",
+        "authority_kind": "engineering_heuristic",
+        "supporting_guidance": "NPR7150.2D 4.1.2 Note; SWEHB5.09 1(b)",
+        "guidance_url": "https://swehb.nasa.gov/spaces/SWEHBVD/pages/102695669/5.09+-+SRS+-+Software+Requirements+Specification"
+      }
+    ],
+    "status": "NEEDS_REVIEW",
+    "compliance_verdict": null
+  },
+  {
+    "requirement_id": "SFMC-REQ-034",
+    "title": "Emergency Autopilot",
+    "text": "The SFMC shall be capable of automatically flying the spacecraft to a safe location during an emergency.",
+    "findings": [
+      {
+        "rule_id": "AMB-15",
+        "phrase": "safe location",
+        "start": 70,
+        "end": 83,
+        "matched_text": "safe location",
+        "explanation": "Define what qualifies as a safe location.",
+        "authority_kind": "engineering_heuristic",
+        "supporting_guidance": "NPR7150.2D 4.1.2 Note; SWEHB5.09 1(b)",
+        "guidance_url": "https://swehb.nasa.gov/spaces/SWEHBVD/pages/102695669/5.09+-+SRS+-+Software+Requirements+Specification"
+      }
+    ],
+    "status": "NEEDS_REVIEW",
+    "compliance_verdict": null
+  },
+  {
+    "requirement_id": "SFMC-REQ-035",
+    "title": "Pilot Override",
+    "text": "The pilot shall always be able to override automatic spacecraft controls.",
+    "findings": [],
+    "status": "NO_RULE_MATCH",
+    "compliance_verdict": null
+  },
+  {
+    "requirement_id": "SFMC-REQ-036",
+    "title": "Startup Time",
+    "text": "The SFMC shall become operational within 30 seconds after spacecraft computer power is applied.",
+    "findings": [],
+    "status": "NO_RULE_MATCH",
+    "compliance_verdict": null
+  },
+  {
+    "requirement_id": "SFMC-REQ-037",
+    "title": "Pilot Command Response",
+    "text": "The SFMC shall respond to pilot commands without noticeable delay.",
+    "findings": [
+      {
+        "rule_id": "AMB-03",
+        "phrase": "without noticeable delay",
+        "start": 41,
+        "end": 65,
+        "matched_text": "without noticeable delay",
+        "explanation": "Response time is subjective.",
+        "authority_kind": "engineering_heuristic",
+        "supporting_guidance": "NPR7150.2D 4.1.2 Note; SWEHB5.09 1(b)",
+        "guidance_url": "https://swehb.nasa.gov/spaces/SWEHBVD/pages/102695669/5.09+-+SRS+-+Software+Requirements+Specification"
+      }
+    ],
+    "status": "NEEDS_REVIEW",
+    "compliance_verdict": null
+  },
+  {
+    "requirement_id": "SFMC-REQ-038",
+    "title": "Display Update",
+    "text": "During normal operation, the SFMC shall update flight information displayed to the pilot at least 10 times per second.",
+    "findings": [],
+    "status": "NO_RULE_MATCH",
+    "compliance_verdict": null
+  },
+  {
+    "requirement_id": "SFMC-REQ-039",
+    "title": "Mission Duration",
+    "text": "The SFMC shall operate continuously for missions lasting up to 72 hours.",
+    "findings": [],
+    "status": "NO_RULE_MATCH",
+    "compliance_verdict": null
+  },
+  {
+    "requirement_id": "SFMC-REQ-040",
+    "title": "Software Failure",
+    "text": "The SFMC software shall never crash during a mission.",
+    "findings": [],
+    "status": "NO_RULE_MATCH",
+    "compliance_verdict": null
+  },
+  {
+    "requirement_id": "SFMC-REQ-041",
+    "title": "Fault Recovery",
+    "text": "If a recoverable software fault occurs, the SFMC shall recover automatically without requiring pilot intervention.",
+    "findings": [],
+    "status": "NO_RULE_MATCH",
+    "compliance_verdict": null
+  },
+  {
+    "requirement_id": "SFMC-REQ-042",
+    "title": "Data Preservation",
+    "text": "Recovery from a software fault shall not cause the loss of important mission data.",
+    "findings": [
+      {
+        "rule_id": "AMB-06",
+        "phrase": "important",
+        "start": 59,
+        "end": 68,
+        "matched_text": "important",
+        "explanation": "Identify exactly which data or communications are covered.",
+        "authority_kind": "engineering_heuristic",
+        "supporting_guidance": "NPR7150.2D 4.1.2 Note; SWEHB5.09 1(b)",
+        "guidance_url": "https://swehb.nasa.gov/spaces/SWEHBVD/pages/102695669/5.09+-+SRS+-+Software+Requirements+Specification"
+      }
+    ],
+    "status": "NEEDS_REVIEW",
+    "compliance_verdict": null
+  },
+  {
+    "requirement_id": "SFMC-REQ-043",
+    "title": "Degraded Operation",
+    "text": "If a spacecraft subsystem becomes unavailable, the SFMC shall continue operating using the remaining available systems whenever possible.",
+    "findings": [
+      {
+        "rule_id": "AMB-08",
+        "phrase": "whenever possible",
+        "start": 119,
+        "end": 136,
+        "matched_text": "whenever possible",
+        "explanation": "Define when continued operation is required.",
+        "authority_kind": "engineering_heuristic",
+        "supporting_guidance": "NPR7150.2D 4.1.2 Note; SWEHB5.09 1(b)",
+        "guidance_url": "https://swehb.nasa.gov/spaces/SWEHBVD/pages/102695669/5.09+-+SRS+-+Software+Requirements+Specification"
+      }
+    ],
+    "status": "NEEDS_REVIEW",
+    "compliance_verdict": null
+  },
+  {
+    "requirement_id": "SFMC-REQ-044",
+    "title": "Mission Log",
+    "text": "The SFMC shall maintain a mission log.",
+    "findings": [],
+    "status": "NO_RULE_MATCH",
+    "compliance_verdict": null
+  },
+  {
+    "requirement_id": "SFMC-REQ-045",
+    "title": "Mission Log Events",
+    "text": "The mission log shall record: - changes in operating mode, - pilot commands, - detected faults, - weapons firing events, - emergency events, and - communications with fleet command.",
+    "findings": [],
+    "status": "NO_RULE_MATCH",
+    "compliance_verdict": null
+  },
+  {
+    "requirement_id": "SFMC-REQ-046",
+    "title": "Event Time",
+    "text": "Each mission-log entry shall include the spacecraft mission time at which the event occurred.",
+    "findings": [],
+    "status": "NO_RULE_MATCH",
+    "compliance_verdict": null
+  },
+  {
+    "requirement_id": "SFMC-REQ-047",
+    "title": "Log Capacity",
+    "text": "The mission log shall contain sufficient storage for an entire mission.",
+    "findings": [
+      {
+        "rule_id": "AMB-10",
+        "phrase": "sufficient storage",
+        "start": 30,
+        "end": 48,
+        "matched_text": "sufficient storage",
+        "explanation": "Define storage capacity or the expected workload.",
+        "authority_kind": "engineering_heuristic",
+        "supporting_guidance": "NPR7150.2D 4.1.2 Note; SWEHB5.09 1(b)",
+        "guidance_url": "https://swehb.nasa.gov/spaces/SWEHBVD/pages/102695669/5.09+-+SRS+-+Software+Requirements+Specification"
+      }
+    ],
+    "status": "NEEDS_REVIEW",
+    "compliance_verdict": null
+  },
+  {
+    "requirement_id": "SFMC-REQ-048",
+    "title": "Pilot Authentication",
+    "text": "The SFMC shall verify that the pilot is authorized before enabling spacecraft operation.",
+    "findings": [],
+    "status": "NO_RULE_MATCH",
+    "compliance_verdict": null
+  },
+  {
+    "requirement_id": "SFMC-REQ-049",
+    "title": "Unauthorized Commands",
+    "text": "The SFMC shall reject unauthorized commands received through the spacecraft communications system.",
+    "findings": [],
+    "status": "NO_RULE_MATCH",
+    "compliance_verdict": null
+  },
+  {
+    "requirement_id": "SFMC-REQ-050",
+    "title": "Security",
+    "text": "The SFMC shall use state-of-the-art security techniques to protect the spacecraft from cyberattack.",
+    "findings": [
+      {
+        "rule_id": "AMB-11",
+        "phrase": "state-of-the-art",
+        "start": 19,
+        "end": 35,
+        "matched_text": "state-of-the-art",
+        "explanation": "Identify the applicable security criteria.",
+        "authority_kind": "engineering_heuristic",
+        "supporting_guidance": "NPR7150.2D 4.1.2 Note; SWEHB5.09 1(b)",
+        "guidance_url": "https://swehb.nasa.gov/spaces/SWEHBVD/pages/102695669/5.09+-+SRS+-+Software+Requirements+Specification"
+      }
+    ],
+    "status": "NEEDS_REVIEW",
+    "compliance_verdict": null
+  },
+  {
+    "requirement_id": "SFMC-REQ-051",
+    "title": "Hardware Platform",
+    "text": "The SFMC software shall execute on the Starhawk Flight Computer.",
+    "findings": [],
+    "status": "NO_RULE_MATCH",
+    "compliance_verdict": null
+  },
+  {
+    "requirement_id": "SFMC-REQ-052",
+    "title": "Network Interface",
+    "text": "The SFMC shall communicate with spacecraft subsystems using the Starhawk spacecraft data network.",
+    "findings": [],
+    "status": "NO_RULE_MATCH",
+    "compliance_verdict": null
+  },
+  {
+    "requirement_id": "SFMC-REQ-053",
+    "title": "Software Updates",
+    "text": "Authorized maintenance personnel shall be able to install updated SFMC software while the spacecraft is in Standby mode.",
+    "findings": [],
+    "status": "NO_RULE_MATCH",
+    "compliance_verdict": null
+  },
+  {
+    "requirement_id": "SFMC-REQ-054",
+    "title": "Update Integrity",
+    "text": "The SFMC shall verify the integrity and authenticity of a software update before installing it.",
+    "findings": [],
+    "status": "NO_RULE_MATCH",
+    "compliance_verdict": null
+  }
+]

@@ -19,7 +19,7 @@ flowchart TD
 ```
 
 Each clause is a document. IDF gives distinctive words more weight than shared
-words. Vocabulary and IDF are fitted only on the 14 SRS-addressable NASA clause
+words. Vocabulary and IDF are fitted only on the 16 SRS-addressable NASA clause
 texts. Requirement titles and text are transformed using the same weights.
 English stop words, boilerplate such as `shall` and `software`, SWE tags, and
 numeric references are excluded from matching.
@@ -40,8 +40,9 @@ python -m pytest -q
 ```
 
 The team's extraction, cleaning and applicability work remains in
-`Aerospace_1A.ipynb`. This baseline consumes its existing export of 14 SRS-addressable
-clauses. The `direct`/`partial` applicability labels are reused, not verdicts.
+`Aerospace_1A.ipynb`. This baseline consumes its existing export of 16 SRS-addressable
+clauses (the original 14 plus SWE-054 and SWE-055, added for the Data Card's core NPR
+scope). The `direct`/`partial` applicability labels are reused, not verdicts.
 The existing SRS parsing pattern and 18 keyword rules are reused with the same
 results on the supplied requirements.
 
@@ -103,11 +104,11 @@ by Git and can be rebuilt. Use `--output` to select another directory.
 
 On the bundled Starhawk corpus with `top_k=3`:
 
-- 54 requirements and 14 clauses produce 63 positive candidate pairs.
+- 54 requirements and 16 clauses produce 64 positive candidate pairs.
 - 17 requirements have no lexical match.
 - Original keyword checks flag 17 requirements; 37 have no rule match.
-- Candidate assessments yield 62 reviews and 1 partial-evidence result.
-- Document checks yield 4 gaps, 3 partial-evidence results and 7 reviews.
+- Candidate assessments yield 63 reviews and 1 partial-evidence result.
+- Document checks yield 4 gaps, 3 partial-evidence results and 9 reviews.
 
 These are pipeline observations, not accuracy measurements. NASA clause wording
 is often abstract, so matching misses related SRS terms. For example,

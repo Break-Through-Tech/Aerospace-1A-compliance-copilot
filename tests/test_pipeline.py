@@ -11,7 +11,7 @@ def test_real_corpus_exports_and_no_benchmark_claim(project_root, tmp_path):
     result = run_baseline(project_root, output_dir=tmp_path)
     assert result["metrics"]["evaluation_status"] == "awaiting_advisor_benchmark"
     assert result["matches"].requirement_id.nunique() == 54
-    assert len(result["document_assessments"]) == 14
+    assert len(result["document_assessments"]) == 16  # one per SRS-addressable clause (14 + SWE-054/055)
     citations = dict(zip(result["clauses"].swe_id, result["clauses"].clause_id))
     for row in result["assessments"].to_dict("records"):
         assert citations[row["swe_id"]] == row["clause_id"]
@@ -73,4 +73,4 @@ def test_existing_team_export_is_imported_without_reextracting(project_root, tmp
         content = target.read_bytes().replace(b"\r\n", b"\n")
         target.write_bytes(content.replace(b"\n", b"\r\n"))
     requirements, clauses, _ = load_inputs(tmp_path)
-    assert len(requirements) == 54 and len(clauses) == 14
+    assert len(requirements) == 54 and len(clauses) == 16  # 16 SRS-addressable clauses (14 + SWE-054/055)

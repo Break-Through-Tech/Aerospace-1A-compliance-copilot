@@ -1,0 +1,126 @@
+[
+  {
+    "swe_id": "SWE-023",
+    "clause_id": "3.7.2",
+    "text": "If a project has safety-critical software, the project manager shall implement the safety-critical\nsoftware requirements contained in NASA-STD-8739.8. [SWE-023]",
+    "notes": [],
+    "srs_scope": "partial"
+  },
+  {
+    "swe_id": "SWE-027",
+    "clause_id": "3.1.14",
+    "text": "The project manager shall satisfy the following conditions when a COTS, GOTS, MOTS,\nOSS, or reused software component is acquired or used: [SWE-027]\na. The requirements to be met by the software component are identified.\nb. The software component includes documentation to fulfill its intended purpose (e.g., usage\ninstructions).\nc. Proprietary rights, usage rights, ownership, warranty, licensing rights, transfer rights, and\nconditions of use (e.g., required copyright, author, and applicable license notices within the software\ncode, or a requirement to redistribute the licensed software only under the same license (e.g., GNU\nGPL, ver. 3, license)) have been addressed and coordinated with Center Intellectual Property\nCounsel.\nd. Future support for the software product is planned and adequate for project needs.\ne. The software component is verified and validated to the same level required to accept a similar\ndeveloped software component for its intended use.\nf. The project has a plan to perform periodic assessments of vendor reported defects to ensure the\ndefects do not impact the selected software components.",
+    "notes": [
+      "Note: The project responsible for procuring off-the-shelf software is responsible for\ndocumenting, prior to procurement, a plan for verifying and validating the software to the\nsame level that would be required for a developed software component. The project ensures\nthat the COTS, GOTS, MOTS, reused, and auto-generated code software components and\ndata meet the applicable requirements in this directive assigned to its software\nclassification as shown in Appendix C."
+    ],
+    "srs_scope": "partial"
+  },
+  {
+    "swe_id": "SWE-034",
+    "clause_id": "3.1.5",
+    "text": "The project manager shall define and document the acceptance criteria for the software.\n[SWE-034]",
+    "notes": [],
+    "srs_scope": "partial"
+  },
+  {
+    "swe_id": "SWE-050",
+    "clause_id": "4.1.2",
+    "text": "The project manager shall establish, capture, record, approve, and maintain software\nrequirements, including requirements for COTS, GOTS, MOTS, OSS, or reused software\ncomponents, as part of the technical specification. [SWE-050]",
+    "notes": [
+      "Note: The software technical requirements definition process is used to transform the\nbaselined stakeholder expectations into unique, quantitative, and measurable technical\nsoftware requirements that can be used for defining a design solution for the software end\nproducts and related enabling products. This process also includes validation of the\nrequirements to ensure that the requirements are well-formed (clear and unambiguous),\ncomplete (agrees with customer and stakeholder needs and expectations), consistent\n(conflict free), and individually verifiable and traceable to a higher level requirement.\nRecommended content for a software specification can be found in NASA-HDBK-2203."
+    ],
+    "srs_scope": "direct"
+  },
+  {
+    "swe_id": "SWE-051",
+    "clause_id": "4.1.3",
+    "text": "The project manager shall perform software requirements analysis based on flowed-down and\nderived requirements from the top-level systems engineering requirements, safety and reliability\nanalyses, and the hardware specifications and design. [SWE-051]",
+    "notes": [],
+    "srs_scope": "partial"
+  },
+  {
+    "swe_id": "SWE-052",
+    "clause_id": "3.12.1",
+    "text": "The project manager shall perform, record, and maintain bi-directional traceability between\nthe following software elements: [SWE-052]\nTable 1. Bi-directional traceability by software classification\n- Higher-level requirements to the software requirements: Class A, B, and C; Class F\n- Software requirements to the system hazards: Class A, B, and C; Class D\n- Software requirements to the software design components: Class A, B, and C\n- Software design components to the software code: Class A, B, and C\n- Software requirements to the software verification(s): Class A, B, and C; Class D; Class F\n- Software requirements to the software non-conformances: Class A, B, and C; Class D; Class F",
+    "notes": [
+      "Note: The project manager will maintain bi-directional traceability between the software\nrequirements and software-related system hazards, including hazardous controls,\nhazardous mitigations, hazardous conditions, and hazardous events."
+    ],
+    "srs_scope": "partial"
+  },
+  {
+    "swe_id": "SWE-053",
+    "clause_id": "4.1.5",
+    "text": "The project manager shall track and manage changes to the software requirements. [SWE-053]",
+    "notes": [],
+    "srs_scope": "partial"
+  },
+  {
+    "swe_id": "SWE-054",
+    "clause_id": "4.1.6",
+    "text": "The project manager shall identify, initiate corrective actions, and track until closure\ninconsistencies among requirements, project plans, and software products. [SWE-054]",
+    "notes": [],
+    "srs_scope": "partial"
+  },
+  {
+    "swe_id": "SWE-055",
+    "clause_id": "4.1.7",
+    "text": "The project manager shall perform requirements validation to ensure that the software will\nperform as intended in the customer environment. [SWE-055]",
+    "notes": [],
+    "srs_scope": "partial"
+  },
+  {
+    "swe_id": "SWE-134",
+    "clause_id": "3.7.3",
+    "text": "If a project has safety-critical software or mission-critical software, the project manager shall\nimplement the following items in the software: [SWE-134]\na. The software is initialized, at first start and restarts, to a known safe state.\nb. The software safely transitions between all predefined known states.\nc. Termination performed by software functions is performed to a known safe state.\nd. Operator overrides of software functions require at least two independent actions by an operator.\ne. Software rejects commands received out of sequence when execution of those commands out of\nsequence can cause a hazard.\nf. The software detects inadvertent memory modification and recovers to a known safe state.\ng. The software performs integrity checks on inputs and outputs to/from the software system.\nh. The software performs prerequisite checks prior to the execution of safety-critical software\ncommands.\ni. No single software event or action is allowed to initiate an identified hazard.\nj. The software responds to an off-nominal condition within the time needed to prevent a hazardous\nevent.\nk. The software provides error handling.\nl. The software can place the system into a safe state.",
+    "notes": [
+      "Note: These requirements apply to components that reside in a mission-critical or\nsafety-critical system, and the components control, mitigate, or contribute to a hazard as\nwell as software used to command hazardous operations/activities."
+    ],
+    "srs_scope": "partial"
+  },
+  {
+    "swe_id": "SWE-147",
+    "clause_id": "3.10.1",
+    "text": "The project manager shall specify reusability requirements that apply to its software\ndevelopment activities to enable future reuse of the software, including the models, simulations, and\nassociated data used as inputs for auto-generation of software, for U.S. Government purposes.\n[SWE-147]",
+    "notes": [],
+    "srs_scope": "partial"
+  },
+  {
+    "swe_id": "SWE-154",
+    "clause_id": "3.11.3",
+    "text": "The project manager shall identify cybersecurity risks, along with their mitigations, in flight\nand ground software systems and plan the mitigations for these systems. [SWE-154]",
+    "notes": [
+      "Note: Project Protection Plans describe the program’s approach for planning and\nimplementing the requirements for information, physical, personnel, industrial, and\ncounterintelligence/counterterrorism security, and for security awareness/education\nrequirements in accordance with NPR 1600.1, NASA Security Program Procedural\nRequirements, NPD 1600.2, the NASA Security Policy, NPD 2810.1, and NPR 2810.1.\nInclude provisions in the plan to protect personnel, facilities, mission-essential\ninfrastructure, and critical program information from potential threats and vulnerabilities\nthat may be identified during the threat and vulnerability assessment process."
+    ],
+    "srs_scope": "partial"
+  },
+  {
+    "swe_id": "SWE-157",
+    "clause_id": "3.11.4",
+    "text": "The project manager shall implement protections for software systems with communications\ncapabilities against unauthorized access per the requirements contained in the NASA-STD-1006,\nSpace System Protection Standard. [SWE-157]",
+    "notes": [],
+    "srs_scope": "partial"
+  },
+  {
+    "swe_id": "SWE-184",
+    "clause_id": "4.1.4",
+    "text": "The project manager shall include software related safety constraints, controls, mitigations, and\nassumptions between the hardware, operator, and software in the software requirements\ndocumentation. [SWE-184]",
+    "notes": [],
+    "srs_scope": "direct"
+  },
+  {
+    "swe_id": "SWE-205",
+    "clause_id": "3.7.1",
+    "text": "The project manager, in conjunction with the SMA organization, shall determine if each\nsoftware component is considered to be safety-critical per the criteria defined in\nNASA-STD-8739.8. [SWE-205]",
+    "notes": [],
+    "srs_scope": "partial"
+  },
+  {
+    "swe_id": "SWE-210",
+    "clause_id": "3.11.8",
+    "text": "The project manager shall identify software requirements for the collection, reporting, and\nstorage of data relating to the detection of adversarial actions. [SWE-210]",
+    "notes": [
+      "Note: Monitoring of key software observables (e.g., number of failed login attempts,\nperformance changes, internal communication changes) is needed to detect adversarial\nactions that threaten mission success. When an adversarial action occurs, it should be\nreported. Raw event data should be further analyzed to determine whether an anomalous\nevent represents an attack, and if so, the nature of the attack."
+    ],
+    "srs_scope": "direct"
+  }
+]

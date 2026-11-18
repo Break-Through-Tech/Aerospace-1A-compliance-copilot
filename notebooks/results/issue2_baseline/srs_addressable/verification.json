@@ -1,0 +1,10 @@
+{
+  "input_hashes": "PASS",
+  "numbered_ID_coverage": "PASS",
+  "original_phrase_control": "PASS",
+  "score_formula_checks": "PASS",
+  "complete_pair_coverage": "PASS",
+  "stable_top_k": "PASS",
+  "no_match_and_invalid_input_guards": "PASS",
+  "compliance_verdicts": "NOT_GENERATED"
+}

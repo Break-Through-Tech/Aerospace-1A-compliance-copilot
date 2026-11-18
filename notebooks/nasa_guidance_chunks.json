@@ -205,7 +205,7 @@
     "clause_id": "3.1.10",
     "text": "The project manager shall require the software developer(s) to provide NASA with electronic\naccess to the source code developed for the project in a modifiable format. [SWE-042]",
     "notes": [
-      "Note: The electronic access requirements for the source code, software products, and\nsoftware process tracking information implies that NASA gets electronic copies of the items\nfor use by NASA at NASA facilities. This requirement should include MOTS software,\nground test software, simulations, ground analysis software, ground control software,\n\n\n\n\n\nscience data processing software, hardware manufacturing software, and Class E and\nClass F software."
+      "Note: The electronic access requirements for the source code, software products, and\nsoftware process tracking information implies that NASA gets electronic copies of the items\nfor use by NASA at NASA facilities. This requirement should include MOTS software,\nground test software, simulations, ground analysis software, ground control software,\nscience data processing software, hardware manufacturing software, and Class E and\nClass F software."
     ],
     "sources": [
       "body",
@@ -473,7 +473,7 @@
     "clause_id": "3.4.1",
     "text": "The project manager shall plan, track, and ensure project specific software training for project\npersonnel. [SWE-017]",
     "notes": [
-      "Note: This includes any software assurance personnel assigned to the project.\n\ns"
+      "Note: This includes any software assurance personnel assigned to the project."
     ],
     "sources": [
       "body",
@@ -498,7 +498,7 @@
     "clause_id": "3.5.1",
     "text": "The project manager shall classify each system and subsystem containing software in\naccordance with the highest applicable software classification definitions for Classes A, B, C, D, E,\nand F software in Appendix D. [SWE-020]",
     "notes": [
-      "Note: The expected applicability of requirements in this directive to specific systems and\nsubsystems containing software is determined through the use of the NASA-wide definitions\nfor software classes in Appendix D in conjunction with the Requirements Mapping Matrix\nin Appendix C. These definitions are based on (1) usage of the software with or within a\nNASA system, (2) criticality of the system to NASA\u2019s major programs and projects, (3)\nextent to which humans depend upon the system, (4) developmental and operational\ncomplexity, and (5) extent of the Agency\u2019s investment.\n\n\n\n\n\nSoftware assurance may perform an independent software classification, or concur with\nengineering\u2019s software classification decision. Software engineering and software assurance\ntechnical authorities need to agree on the classification of each system and subsystem containing\nsoftware. If there is a disagreement between the technical authorities, then the dissenting opinion\nprocess for your center should be followed."
+      "Note: The expected applicability of requirements in this directive to specific systems and\nsubsystems containing software is determined through the use of the NASA-wide definitions\nfor software classes in Appendix D in conjunction with the Requirements Mapping Matrix\nin Appendix C. These definitions are based on (1) usage of the software with or within a\nNASA system, (2) criticality of the system to NASA\u2019s major programs and projects, (3)\nextent to which humans depend upon the system, (4) developmental and operational\ncomplexity, and (5) extent of the Agency\u2019s investment.\nSoftware assurance may perform an independent software classification, or concur with\nengineering\u2019s software classification decision. Software engineering and software assurance\ntechnical authorities need to agree on the classification of each system and subsystem containing\nsoftware. If there is a disagreement between the technical authorities, then the dissenting opinion\nprocess for your center should be followed."
     ],
     "sources": [
       "body",
@@ -615,7 +615,7 @@
     "clause_id": "3.6.4",
     "text": "If software IV&V is performed on a project, the project manager shall ensure that IV&V is\nprovided access to development artifacts, products, source code, and data required to perform the\nIV&V analysis efficiently and effectively. [SWE-178]",
     "notes": [
-      "Note: The artifacts and products should be provided electronically in original format (i.e.,\nnon-pdf) and, where possible, direct read-only electronic access to project document\n\n\n\n\n\nnon-pdf) and, where possible, direct read-only electronic access to project document\nrepositories and data stores should be provided. Appropriate security products should be\ncompleted and transferred as part of the overall package."
+      "Note: The artifacts and products should be provided electronically in original format (i.e.,\nnon-pdf) and, where possible, direct read-only electronic access to project document\nrepositories and data stores should be provided. Appropriate security products should be\ncompleted and transferred as part of the overall package."
     ],
     "sources": [
       "body",
@@ -726,7 +726,7 @@
     "swe_id": "SWE-219",
     "section": "3.7",
     "clause_id": "3.7.4",
-    "text": "If a project has safety-critical software, the project manager shall ensure that there is 100\n\n\n\n\n\npercent code test coverage using the Modified Condition/Decision Coverage (MC/DC) criterion for\nall identified safety-critical software components. [SWE-219]",
+    "text": "If a project has safety-critical software, the project manager shall ensure that there is 100\npercent code test coverage using the Modified Condition/Decision Coverage (MC/DC) criterion for\nall identified safety-critical software components. [SWE-219]",
     "notes": [
       "Note: In MC/DC coverage, every condition in a decision is tested independently to reach\nfull coverage. Each condition will be executed twice, once with the results true and once\nwith the results of false, but with no difference in the truth values of all other conditions in\nthe decision. In addition, it will be shown that each condition independently affects the\ndecision. Any deviations from 100 percent should be reviewed and waived with rationale\nby the TAs approval. It is recommended that someone independent of the developer of the\ncode under test design and perform this testing to ensure requirement interpretation or\nincorrect assumptions do not escape this testing."
     ],
@@ -797,7 +797,7 @@
     "swe_id": "SWE-206",
     "section": "3.8",
     "clause_id": "3.8.2",
-    "text": "The project manager shall require the software developers and custom software suppliers to\nprovide NASA with electronic access to the models, simulations, and associated data used as inputs\n\n\n\n\n\nfor auto-generation of software. [SWE-206]",
+    "text": "The project manager shall require the software developers and custom software suppliers to\nprovide NASA with electronic access to the models, simulations, and associated data used as inputs\nfor auto-generation of software. [SWE-206]",
     "notes": [
       "Note: The term electronic access includes access to the data from NASA facilities."
     ],
@@ -824,7 +824,7 @@
     "clause_id": "3.9.2",
     "text": "The project manager shall acquire, develop, and maintain software from an organization with a\nnon-expired CMMI\u00ae-DEV rating as measured by a CMMI\u00ae Institute Certified Lead Appraiser as\nfollows: [SWE-032]\na. For Class A software: CMMI\u00ae-DEV Maturity Level 3 Rating or higher for software.\nb. For Class B software (except Class B software on NASA Class D payloads, as defined in NPR\n8705.4): CMMI\u00ae-DEV Maturity Level 2 Rating or higher for software.",
     "notes": [
-      "Note: Organizations need to complete an official CMMI\u00ae Institute defined appraisal\nagainst either the CMMI\u00ae-DEV model V1.3 or V2.0. Organizations are to maintain their\nrating and have their results posted on the CMMI\u00ae Institute Website, or provide an\nAppraisal Disclosure Statement so that NASA can assess the current maturity/capability\nrating. Software development organizations need to maintain their appraisal rating during\nthe period they are responsible for the development and maintenance of the software.\nCMMI\u00ae ratings can cover a team, a group, a project, a division, or an entire organization.\nFor Class B software, an exception can be exercised for those cases in which NASA wishes to\npurchase a product from the \"best in class provider,\" but the best in class provider does not have the\nrequired CMMI\u00ae rating. For Class B software, instead of a CMMI\u00ae rating by a development\norganization, the project will conduct an evaluation, performed by a qualified evaluator selected by\nthe Center ETA, against the CMMI\u00ae-DEV Maturity Level 2 practices, and mitigate any risk, if\ndeficiencies are identified in the evaluation. If this approach is used, the development organization\n\n\n\n\n\nand project are responsible for correcting the deficiencies identified in the evaluation. When this\nexception is exercised, the OCE and Center ETA are notified of the proposition and provided the\nresults of the evaluation. The project manager should seek guidance from the Office of Procurement\n(OP) for help in exercising the exception."
+      "Note: Organizations need to complete an official CMMI\u00ae Institute defined appraisal\nagainst either the CMMI\u00ae-DEV model V1.3 or V2.0. Organizations are to maintain their\nrating and have their results posted on the CMMI\u00ae Institute Website, or provide an\nAppraisal Disclosure Statement so that NASA can assess the current maturity/capability\nrating. Software development organizations need to maintain their appraisal rating during\nthe period they are responsible for the development and maintenance of the software.\nCMMI\u00ae ratings can cover a team, a group, a project, a division, or an entire organization.\nFor Class B software, an exception can be exercised for those cases in which NASA wishes to\npurchase a product from the \"best in class provider,\" but the best in class provider does not have the\nrequired CMMI\u00ae rating. For Class B software, instead of a CMMI\u00ae rating by a development\norganization, the project will conduct an evaluation, performed by a qualified evaluator selected by\nthe Center ETA, against the CMMI\u00ae-DEV Maturity Level 2 practices, and mitigate any risk, if\ndeficiencies are identified in the evaluation. If this approach is used, the development organization\nand project are responsible for correcting the deficiencies identified in the evaluation. When this\nexception is exercised, the OCE and Center ETA are notified of the proposition and provided the\nresults of the evaluation. The project manager should seek guidance from the Office of Procurement\n(OP) for help in exercising the exception."
     ],
     "sources": [
       "body",
@@ -1057,7 +1057,7 @@
     "swe_id": "SWE-052",
     "section": "3.12",
     "clause_id": "3.12.1",
-    "text": "The project manager shall perform, record, and maintain bi-directional traceability between\nthe following software elements: [SWE-052]\nTable 1. Bi-directional traceability by software classification\nClass A, B,\nBi-directional Traceability Class D Class F\nand C\nHigher-level requirements to the software requirements X X\nSoftware requirements to the system hazards X X\nSoftware requirements to the software design components X\nSoftware design components to the software code X\nSoftware requirements to the software verification(s) X X X\nSoftware requirements to the software non-conformances X X X",
+    "text": "The project manager shall perform, record, and maintain bi-directional traceability between\nthe following software elements: [SWE-052]\nTable 1. Bi-directional traceability by software classification\n- Higher-level requirements to the software requirements: Class A, B, and C; Class F\n- Software requirements to the system hazards: Class A, B, and C; Class D\n- Software requirements to the software design components: Class A, B, and C\n- Software design components to the software code: Class A, B, and C\n- Software requirements to the software verification(s): Class A, B, and C; Class D; Class F\n- Software requirements to the software non-conformances: Class A, B, and C; Class D; Class F",
     "notes": [
       "Note: The project manager will maintain bi-directional traceability between the software\nrequirements and software-related system hazards, including hazardous controls,\nhazardous mitigations, hazardous conditions, and hazardous events."
     ],
@@ -1190,8 +1190,8 @@
     "action_verbs": [
       "track"
     ],
-    "srs_scope": "out",
-    "srs_evidence": null
+    "srs_scope": "partial",
+    "srs_evidence": "Open items, TBDs, and known inconsistencies are listed so they can be tracked to closure."
   },
   {
     "swe_id": "SWE-055",
@@ -1211,8 +1211,8 @@
     "matrix_f_mark": "X",
     "functional_category": "Software Requirements",
     "action_verbs": [],
-    "srs_scope": "out",
-    "srs_evidence": null
+    "srs_scope": "partial",
+    "srs_evidence": "Intended use, operating modes, and mission needs are stated so requirements can be validated against them."
   },
   {
     "swe_id": "SWE-057",
@@ -1621,7 +1621,7 @@
     "clause_id": "4.5.9",
     "text": "The project manager shall ensure that the code coverage measurements for the software are\nselected, implemented, tracked, recorded, and reported. [SWE-189]",
     "notes": [
-      "Note: This requirement can be met by running unit, integration, and validation tests;\nmeasuring the code coverage; and achieving the code coverage by additional (requirement\nbased) tests, inspection, or analysis.\nIf the project does not get 100 percent structural coverage, it means one of four things and each\nrequires action on the project manager\u2019s part:\n\u2022 Requirement missing - the code that hasn\u2019t been covered is performing an essential activity, but no\nrequirement indicates that this should be done;\n\u2022 Test missing - the code that hasn\u2019t been covered relates to an existing requirement, but no test was\nimplemented for it;\n\u2022 Extraneous/dead code \u2013 the code that hasn\u2019t been covered is not traceable to any requirement and\nisn\u2019t needed by the software;\n\u2022 Deactivated code - the code that hasn\u2019t been covered isn\u2019t traceable to any requirements for the\ncurrent system, but is intended to be executed in specific configurations.\n\n\n\n\n\ncurrent system, but is intended to be executed in specific configurations.\nThe code coverage data and any rationale for uncovered code should be presented and reviewed at\nmajor project milestones."
+      "Note: This requirement can be met by running unit, integration, and validation tests;\nmeasuring the code coverage; and achieving the code coverage by additional (requirement\nbased) tests, inspection, or analysis.\nIf the project does not get 100 percent structural coverage, it means one of four things and each\nrequires action on the project manager\u2019s part:\n\u2022 Requirement missing - the code that hasn\u2019t been covered is performing an essential activity, but no\nrequirement indicates that this should be done;\n\u2022 Test missing - the code that hasn\u2019t been covered relates to an existing requirement, but no test was\nimplemented for it;\n\u2022 Extraneous/dead code \u2013 the code that hasn\u2019t been covered is not traceable to any requirement and\nisn\u2019t needed by the software;\n\u2022 Deactivated code - the code that hasn\u2019t been covered isn\u2019t traceable to any requirements for the\ncurrent system, but is intended to be executed in specific configurations.\nThe code coverage data and any rationale for uncovered code should be presented and reviewed at\nmajor project milestones."
     ],
     "sources": [
       "body",
