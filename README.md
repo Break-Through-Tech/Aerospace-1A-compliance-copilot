@@ -26,7 +26,7 @@ Built by Team Aerospace 1A for the Break Through Tech AI Studio, Fall 2026.
 ## 🎯 **Project Highlights**
 
 - Extracted and cleaned **100 SWE requirement clauses** (Sections 3.1–5.5) from the NPR 7150.2D PDF,
-  joined them with Appendix C applicability data, and identified **14 clauses an SRS can address**.
+  joined them with Appendix C applicability data, and identified **16 clauses an SRS can address**.
 - Built a **non-LLM baseline** (keyword rules + TF-IDF retrieval + explicit evidence checks) as
   reusable, tested Python code in [`src/compliance_copilot/`](src/compliance_copilot/).
 - Built a **ChromaDB vector store** of 144 documents (100 clause bodies + 44 notes) embedded with
@@ -74,7 +74,7 @@ criteria and milestones.
 | NASA NPR 7150.2D (PDF) | [notebooks/N_PR_7150_002D_.pdf](notebooks/N_PR_7150_002D_.pdf) | The compliance standard (answer key) |
 | NASA-HDBK-2203 §5.09 (SRS guidance) | Downloaded in the notebook from [swehb.nasa.gov](https://swehb.nasa.gov/spaces/SWEHBVD/pages/102695669/5.09+-+SRS+-+Software+Requirements+Specification) | Reference guidance for requirement quality |
 | Starhawk Mission Computer SRS | [data/Starhawk Mission Computer SRS.md](data/Starhawk%20Mission%20Computer%20SRS.md) | Synthetic SRS to audit (54 numbered requirements, `SFMC-REQ-xxx`) |
-| SRS-addressable clauses | [data/processed/](data/processed/) | 14 clauses exported from the notebook, with a hash manifest |
+| SRS-addressable clauses | [data/processed/](data/processed/) | 16 clauses exported from the notebook (incl. SWE-054/055 for the Data Card's core scope), with a hash manifest |
 | Advisor Data Card | [Data Card/](Data%20Card/) | 37 benchmark cases (11 calibration with labels, 26 holdout), Output Contract v1 schema, sample report and validator |
 
 **Preparation steps** (in [Aerospace_1A.ipynb](notebooks/Aerospace_1A.ipynb)):
@@ -95,7 +95,7 @@ Team observations on the SRS are in [data/initial_srs_observations.md](data/init
 ### 1. Non-LLM baseline (September)
 
 - **18 keyword rules** flag ambiguous wording in requirements.
-- **TF-IDF retrieval** fitted on the 14 SRS-addressable clauses returns up to 3 candidate clauses per
+- **TF-IDF retrieval** fitted on the 16 SRS-addressable clauses returns up to 3 candidate clauses per
   requirement, ranked by cosine similarity.
 - **Evidence checks** for 7 provisions (SWE-034, 050, 052, 053, 157, 184, 210) return `Meets`,
   `Partial`, `Gap` or `REVIEW`.
@@ -126,9 +126,9 @@ Details, rules and limits: [docs/baseline.md](docs/baseline.md). Short notebook:
 
 **Baseline pipeline** (Starhawk SRS, `top_k=3`):
 
-- 54 requirements × 14 clauses → 63 candidate pairs; 17 requirements have no lexical match.
+- 54 requirements × 16 clauses → 64 candidate pairs; 17 requirements have no lexical match.
 - Keyword rules flag 17 requirements.
-- Document checks: 4 gaps, 3 partial-evidence results, 7 reviews.
+- Document checks: 4 gaps, 3 partial-evidence results, 9 reviews.
 
 These are pipeline counts, not accuracy. TF-IDF misses related words (for example,
 `authenticate` vs. `authentication`) and abstract NASA wording.
