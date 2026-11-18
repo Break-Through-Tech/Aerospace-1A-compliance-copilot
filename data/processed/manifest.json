@@ -5,7 +5,7 @@
     "data/Starhawk Mission Computer SRS.md": "ba3f036ad240ea4285af5142adf8cd69c7ce9982d1ffa817aceaf8a8b42f7960"
   },
   "artifact_hashes": {
-    "srs_addressable_clauses.csv": "f9bef7b871339bbe2f444e6c1f97b4a6c3a75be6f60e360d26b8601094bee702"
+    "srs_addressable_clauses.csv": "b7b4c4166d1381a25c5d3590fba036592d7a488eb94b1ace767023a54f05197a"
   },
   "counts": {
     "srs_addressable": 14,

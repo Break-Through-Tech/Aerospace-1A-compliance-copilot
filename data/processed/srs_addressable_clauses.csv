@@ -52,15 +52,12 @@ storage of data relating to the detection of adversarial actions. [SWE-210]",dir
 SWE-052,3.12.1,"The project manager shall perform, record, and maintain bi-directional traceability between
 the following software elements: [SWE-052]
 Table 1. Bi-directional traceability by software classification
-Class A, B,
-Bi-directional Traceability Class D Class F
-and C
-Higher-level requirements to the software requirements X X
-Software requirements to the system hazards X X
-Software requirements to the software design components X
-Software design components to the software code X
-Software requirements to the software verification(s) X X X
-Software requirements to the software non-conformances X X X",partial,Upward traceability to parent requirements and traceability to hazards. Design/code/test links live elsewhere.,https://nodis3.gsfc.nasa.gov/npg_img/N_PR_7150_002D_/N_PR_7150_002D_.pdf
+- Higher-level requirements to the software requirements: Class A, B, and C; Class F
+- Software requirements to the system hazards: Class A, B, and C; Class D
+- Software requirements to the software design components: Class A, B, and C
+- Software design components to the software code: Class A, B, and C
+- Software requirements to the software verification(s): Class A, B, and C; Class D; Class F
+- Software requirements to the software non-conformances: Class A, B, and C; Class D; Class F",partial,Upward traceability to parent requirements and traceability to hazards. Design/code/test links live elsewhere.,https://nodis3.gsfc.nasa.gov/npg_img/N_PR_7150_002D_/N_PR_7150_002D_.pdf
 SWE-050,4.1.2,"The project manager shall establish, capture, record, approve, and maintain software
 requirements, including requirements for COTS, GOTS, MOTS, OSS, or reused software
 components, as part of the technical specification. [SWE-050]",direct,"Requirements are uniquely identified and approved, including requirements for COTS/GOTS/MOTS/OSS or reused components.",https://nodis3.gsfc.nasa.gov/npg_img/N_PR_7150_002D_/N_PR_7150_002D_.pdf
