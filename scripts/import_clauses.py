@@ -11,6 +11,10 @@ sys.path.insert(0, str(ROOT / "src"))
 
 from compliance_copilot.data import file_hash, parse_requirements, validate_clauses, write_json
 
+# The saved NASA-HDBK-2203 topic 5.09 page and the date it was saved (issue #27); the notebook checks its hash
+HANDBOOK_SNAPSHOT = "data/NASA-HDBK-2203_5.09_SRS.html"
+HANDBOOK_SNAPSHOT_DATE = "2026-11-21"
+
 
 def import_clauses(csv_path, root=ROOT):
     root = Path(root)
@@ -21,6 +25,9 @@ def import_clauses(csv_path, root=ROOT):
     columns += [name for name in ("srs_evidence", "source_url") if name in frame]
     frame = frame[columns]
     source_files = ["notebooks/N_PR_7150_002D_.pdf", "data/Starhawk Mission Computer SRS.md"]
+    # Record the Handbook snapshot's hash too, when the file is present
+    if (root / HANDBOOK_SNAPSHOT).exists():
+        source_files.append(HANDBOOK_SNAPSHOT)
     requirements = parse_requirements((root / source_files[1]).read_text(encoding="utf-8-sig"))
     source_hashes = {name: file_hash(root / name) for name in source_files}
     output = root / "data/processed"
@@ -34,6 +41,9 @@ def import_clauses(csv_path, root=ROOT):
         "counts": {"srs_addressable": len(frame), "requirements": len(requirements)},
         "scope_status": "Team-curated applicability, not compliance labels.",
     }
+    if HANDBOOK_SNAPSHOT in source_hashes:
+        # When the Handbook page was saved, so its citations can be dated
+        manifest["handbook_snapshot_date"] = HANDBOOK_SNAPSHOT_DATE
     write_json(output / "manifest.json", manifest)
     return manifest
 
