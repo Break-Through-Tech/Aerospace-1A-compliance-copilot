@@ -106,19 +106,29 @@ Details, rules and limits: [docs/baseline.md](docs/baseline.md). Short notebook:
 ### 2. Vector store and RAG (October)
 
 - Each clause and note becomes a document tagged with SWE ID, clause ID, section and category.
-- Documents are embedded with **Qwen3-Embedding-0.6B** (GPU required) and stored in an in-memory
-  **ChromaDB** collection using cosine distance.
-- For each requirement, the top 3 clauses are retrieved and sent to the LLM, which returns a
-  `RAGResponseSchema`: verdict (`COMPLIANT`, `NON_COMPLIANT`, `PARTIAL`, `UNCLEAR`), rationale,
-  cited sources (SWE ID, clause ID, quote) and a confidence score.
-- Requests retry with backoff when Groq's token-per-minute limit is hit.
+- Documents are embedded with **Qwen3-Embedding-0.6B** (GPU when available, otherwise CPU, which is
+  slower) and stored in an in-memory **ChromaDB** collection using cosine distance.
+- `retrieve_unique_clauses()` returns the top-k different clauses, so a clause can't fill several
+  places through its notes.
+- The first LLM loop asked for `COMPLIANT` / `NON_COMPLIANT` verdicts. It was replaced by the
+  Output Contract review below and removed from the notebook (see git history before `3e50cae`).
 
-### 3. Output Contract v1 (in progress)
+### 3. Output Contract v1 review (current pipeline)
 
 - Pydantic models (`SRSEvidence`, `NASAReference`, `QualityIssue`, `SWELink`, `RequirementReview`)
-  match the advisor's contract and reject fields that aren't in it.
-- A single-requirement review (SFMC-REQ-015) combines the full SRS, Handbook guidance and retrieved
-  NPR passages, and validates the LLM's response against `RequirementReview`.
+  match the advisor's contract, reject fields that aren't in it, and enforce its cross-field rules.
+- Each requirement review sends the LLM the full SRS, the 5 most relevant NASA-HDBK-2203 §5.09
+  passages (sections 1 and 3), and the six core NPR §4.1 clauses (SWE-050, 051, 184, 053, 054,
+  055) ranked by relevance.
+- Every answer is validated against `RequirementReview` and checked for grounding: citations must
+  come from the passages sent (or the Handbook section one level above one), and SRS quotes must
+  appear word for word in the SRS.
+- A failed answer is retried up to 3 times; after that the requirement is marked "Not assessed"
+  (`UNDETERMINED`) and the run continues.
+- Fixed settings (`openai/gpt-oss-120b` on Groq, temperature 0, seed 42). Every LLM call is logged
+  with the model fingerprint, tokens used and outcome.
+- A full run saves all 54 reviews to `results/<run name>.jsonl` and can resume if interrupted. A
+  comparison cell reports how many decisions change between two runs.
 
 ---
 
