@@ -1,0 +1,14 @@
+{
+  "run_name": "rag_baseline_v1",
+  "calibration_requirement_cases": 7,
+  "not_assessed": 0,
+  "true_positives": 5,
+  "false_positives": 0,
+  "false_negatives": 1,
+  "precision": 1.0,
+  "recall": 0.8333333333333334,
+  "same_issue_code_when_both_flagged": "3 of 5",
+  "grounded_citation_rate": 0.8387096774193549,
+  "grounded_answers": "52 of 62",
+  "caveat": "Only the advisor's 7 calibration requirement cases have answers; one case moves precision or recall by roughly 15 points."
+}
