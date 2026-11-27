@@ -1,2 +1,5 @@
 pandas>=2,<3
 scikit-learn>=1.3,<2
+# Vector search (issue #24); sentence-transformers also installs PyTorch, a large download
+chromadb>=1.0,<2
+sentence-transformers>=3,<7

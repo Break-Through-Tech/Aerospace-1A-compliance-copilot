@@ -72,7 +72,7 @@ criteria and milestones.
 | Source | Location | Use |
 |--------|----------|-----|
 | NASA NPR 7150.2D (PDF) | [notebooks/N_PR_7150_002D_.pdf](notebooks/N_PR_7150_002D_.pdf) | The compliance standard (answer key) |
-| NASA-HDBK-2203 §5.09 (SRS guidance) | Downloaded in the notebook from [swehb.nasa.gov](https://swehb.nasa.gov/spaces/SWEHBVD/pages/102695669/5.09+-+SRS+-+Software+Requirements+Specification) | Reference guidance for requirement quality |
+| NASA-HDBK-2203 §5.09 (SRS guidance) | [data/NASA-HDBK-2203_5.09_SRS.html](data/NASA-HDBK-2203_5.09_SRS.html), a snapshot saved on 2026-11-21 from [swehb.nasa.gov](https://swehb.nasa.gov/spaces/SWEHBVD/pages/102695669/5.09+-+SRS+-+Software+Requirements+Specification) | Reference guidance for requirement quality |
 | Starhawk Mission Computer SRS | [data/Starhawk Mission Computer SRS.md](data/Starhawk%20Mission%20Computer%20SRS.md) | Synthetic SRS to audit (54 numbered requirements, `SFMC-REQ-xxx`) |
 | SRS-addressable clauses | [data/processed/](data/processed/) | 16 clauses exported from the notebook (incl. SWE-054/055 for the Data Card's core scope), with a hash manifest |
 | Advisor Data Card | [Data Card/](Data%20Card/) | 37 benchmark cases (11 calibration with labels, 26 holdout), Output Contract v1 schema, sample report and validator |
@@ -163,7 +163,7 @@ Requires Python 3.9+.
 ```sh
 git clone https://github.com/Break-Through-Tech/Aerospace-1A-compliance-copilot.git
 cd Aerospace-1A-compliance-copilot
-python -m pip install -r requirements-dev.txt
+python -m pip install -r requirements-dev.txt   # includes PyTorch for the vector search: a large download
 python scripts/run_baseline.py        # writes results to output/baseline/
 python -m pytest -q                   # runs the test suite
 ```
@@ -177,13 +177,15 @@ python scripts/run_baseline.py --benchmark data/benchmark.csv --split test
 ### Main notebook (Google Colab)
 
 1. Open [notebooks/Aerospace_1A.ipynb](notebooks/Aerospace_1A.ipynb) in Colab.
-2. Set **Runtime → Change runtime type → T4 GPU** (needed for the embedding model).
-3. Add your Groq API key as a Colab secret named `GROQ_API_KEY`
-   ([get a key](https://console.groq.com/keys)).
+2. Set **Runtime → Change runtime type → T4 GPU** (recommended: the embedding model also runs on a CPU,
+   but much more slowly).
+3. Add your OpenAI API key as a Colab secret named `OPENAI_API_KEY`. To use Groq instead, set
+   `LLM_PROVIDER = "groq"` in the API client cell and add a `GROQ_API_KEY` secret.
 4. Run all cells in order. The September cells extract clauses; the October cells build the vector
    store and run the RAG pipeline.
 
-The free Groq tier limits tokens per minute, so a full run over all requirements takes a while.
+A full run over all 54 requirements takes about 6 minutes with OpenAI. The free Groq tier's
+tokens-per-minute limit is too small for these prompts.
 
 ### Repository layout
 
@@ -203,7 +205,7 @@ The free Groq tier limits tokens per minute, so a full run over all requirements
 
 - Fix the grounding failures and define the issue codes in the prompt, then re-run and re-measure
   (see [docs/rag_baseline_results.md](docs/rag_baseline_results.md)).
-- Ask the advisor to score the 28 holdout cases, and generate `report.json` (#25).
+- Ask the advisor to score the 26 holdout cases, and generate `report.json` (#25).
 - Wrap the pipeline in a tool-calling agent (`retrieve_clause`, `check_requirement`, `log_gap`) with
   caching and batching for rate limits.
 - Generate full JSON and Markdown gap reports.

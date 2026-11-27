@@ -83,7 +83,7 @@ The same settings were run twice:
 ## Limitations
 
 - **Small answer key.** Only 7 requirement cases have answers, and just 1 is ACCEPTABLE. One case moves precision or recall by about 15 points.
-- **Holdout not scored.** The 28 HOLDOUT cases have no answers in the Data Card.
+- **Holdout not scored.** The 26 HOLDOUT cases have no answers in the Data Card.
 - **Only requirement quality was evaluated.** The relationship, document and SWE-coverage cases need the full report (#25).
 - **One SRS.** Results may not carry over to other documents.
 - **Not fully repeatable.** The model isn't fully deterministic, even at temperature 0 with a fixed seed.
@@ -99,7 +99,7 @@ The same settings were run twice:
 
    This should remove most "Not assessed" results.
 2. **Define the issue codes in the prompt.** Use one plain sentence for each, so the model can use ESCAPE_CLAUSE and SAFETY_INTERACTION. Re-measure afterwards, without ever using the calibration answers in the prompt.
-3. **Ask the advisor to score our answers on the 28 holdout cases,** for a more trustworthy result.
+3. **Ask the advisor to score our answers on the 26 holdout cases,** for a more trustworthy result.
 4. **Investigate why SWE links are rare.** Check whether the prompt is too strict, or whether the requirements really rarely support an NPR link.
 5. **Generate `report.json` (#25),** so the relationship, document and SWE-coverage cases can be evaluated too.
 6. **Consider a majority vote over 3 runs for each requirement.** It would make results more stable, at 3× the cost. Measure it before adopting it.
