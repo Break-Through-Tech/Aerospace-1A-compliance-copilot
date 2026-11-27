@@ -195,7 +195,7 @@ tokens-per-minute limit is too small for these prompts.
 ├── docs/baseline.md       Baseline design, rules and outputs
 ├── notebooks/             Main notebook, TF-IDF baseline notebook, NPR 7150.2D PDF
 ├── scripts/               run_baseline.py, import_clauses.py
-├── src/compliance_copilot/  Baseline package (data, retrieval, pipeline, evaluation)
+├── src/compliance_copilot/  Baseline package (data, retrieval, pipeline, evaluation) and vector_store (Chroma search)
 └── tests/                 pytest suite
 ```
 
