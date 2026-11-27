@@ -1,0 +1,106 @@
+# Non-agentic RAG baseline: results
+
+Results of the Output Contract v1 requirement review (issues #13–#15) on the Starhawk SRS, from two full runs on 2026-11-26. This is the baseline the tool-calling agent (#17–#21) will be compared against.
+
+## Setup
+
+- **Input:** the Starhawk Mission Computer SRS, 54 numbered requirements (`SFMC-REQ-001` to `SFMC-REQ-054`).
+- **What the LLM receives for each requirement:**
+  - the full SRS;
+  - the 5 most relevant NASA-HDBK-2203 §5.09 passages (sections 1 and 3);
+  - the six core NPR 7150.2D §4.1 clauses (SWE-050, 051, 184, 053, 054, 055), ranked by relevance.
+- **Search:** Qwen3-Embedding-0.6B embeddings in ChromaDB (cosine similarity).
+- **Model:** `gpt-4.1-mini-2025-04-14` (OpenAI), temperature 0, seed 42. Model fingerprint `fp_000a92d97a` in both runs.
+- **Checks on every answer:**
+  - it must validate against `RequirementReview` (Pydantic);
+  - it must pass the grounding check: citations must come from the passages sent, and SRS quotes must appear word for word.
+
+  A failed answer is retried up to 3 times. After that, the requirement is recorded as `UNDETERMINED` ("Not assessed").
+- **Runs:** `rag_baseline_v1` and `rag_baseline_v1_rerun`, saved in `notebooks/results/`. Each took about 6 minutes and about 400,000 prompt tokens.
+
+## Results
+
+### Precision and recall
+
+Scored against the advisor's 7 calibration requirement cases in the Data Card. A requirement counts as **flagged** when our review marks it `NEEDS_REVIEW`.
+
+| Metric | Result |
+|---|---|
+| Precision | **100%**: 5 of 5 requirements we flagged were also flagged by the advisor |
+| Recall | **83%**: 5 of the 6 advisor-flagged requirements were caught |
+| Same issue code as the advisor, when both flagged | 3 of 5 |
+| Not assessed | 0 of 7 |
+
+| Requirement | Advisor | Ours (run v1) |
+|---|---|---|
+| SFMC-REQ-002 | ACCEPTABLE | ACCEPTABLE ✅ |
+| SFMC-REQ-006 | NEEDS_REVIEW (VAGUE_CRITERION) | NEEDS_REVIEW (VAGUE_CRITERION) ✅ |
+| SFMC-REQ-010 | NEEDS_REVIEW (UNSPECIFIED_RESPONSE) | NEEDS_REVIEW (VAGUE_CRITERION): right verdict, different issue |
+| SFMC-REQ-021 | NEEDS_REVIEW (VAGUE_CRITERION) | NEEDS_REVIEW (VAGUE_CRITERION + 2 more) ✅ |
+| SFMC-REQ-035 | NEEDS_REVIEW (SAFETY_INTERACTION) | NEEDS_REVIEW (VAGUE_CRITERION + 2 more): right verdict, different issue |
+| SFMC-REQ-037 | NEEDS_REVIEW (VAGUE_CRITERION) | NEEDS_REVIEW (VAGUE_CRITERION + 1 more) ✅ |
+| SFMC-REQ-043 | NEEDS_REVIEW (ESCAPE_CLAUSE) | ACCEPTABLE ❌ missed |
+
+### Citation groundedness
+
+This is the share of schema-valid answers whose citations were all grounded:
+- **84%** in run v1 (52 of 62);
+- **88%** in the rerun (52 of 59).
+
+Ungrounded answers are never saved as results: they are retried, and recorded as "Not assessed" if every attempt fails.
+
+### Run-to-run consistency
+
+The same settings were run twice:
+- **Search results:** identical in both runs, 0 differences.
+- **Decisions changed:** 12 of 54.
+  - The verdict (ACCEPTABLE ↔ NEEDS_REVIEW) flipped for **1** requirement (REQ-044).
+  - **8** kept the same verdict but named different issue codes.
+  - **3** linked a different SWE.
+- **Word for word:** no answer was identical, because the explanations are always reworded.
+
+**The verdict was the same for 51 of the 52 requirements assessed in both runs (98%).** The variation comes from the model itself: the fingerprint shows the provider's setup didn't change.
+
+### What the reviews found (run v1)
+
+- **Software requirements:** 52. The other 2 are "Not assessed".
+- **Quality:** 38 ACCEPTABLE, 14 NEEDS_REVIEW, 2 not assessed.
+- **Most common issue codes:** VAGUE_CRITERION (8), ALLOCATION_UNCLEAR (8), UNDEFINED_TERM (6), UNSPECIFIED_RESPONSE (3).
+- **SWE links:** only **4 requirements** are linked to an NPR provision (SWE-051 twice, SWE-184 twice).
+
+## Failure cases
+
+1. **A missed escape clause.** REQ-043 ("whenever possible") was marked ACCEPTABLE. The model never used the issue codes `ESCAPE_CLAUSE` or `SAFETY_INTERACTION` in either run, even though the advisor expects them. The prompt lists the issue codes by name only, with no definitions.
+2. **The right verdict with a different problem named.** For REQ-010 and REQ-035 we flagged the requirement but called it VAGUE_CRITERION, where the advisor named a more specific problem.
+3. **Requirements not assessed.** REQ-025 and REQ-030 failed in both runs, because of SRS quotes that didn't match word for word:
+   - **REQ-025:** bold text was quoted with quote marks: `"important communication"` instead of `**important communication**`.
+   - **REQ-030:** a word was added: "Definition of **a** critical fault".
+   - **REQ-006:** a Handbook section was cited with its name, as `§3 (Guidance)`. Its retry succeeded.
+   - **Why retries didn't help:** the AI isn't told what was wrong, so it repeats the same mistake.
+4. **Few SWE links.** Only 4–5 of the 54 requirements get a link. REQ-015 isn't linked to SWE-184, although the advisor's sample report links it.
+5. **Unstable details.** Between runs, the issue codes changed for 8 requirements and the SWE links for 3.
+
+## Limitations
+
+- **Small answer key.** Only 7 requirement cases have answers, and just 1 is ACCEPTABLE. One case moves precision or recall by about 15 points.
+- **Holdout not scored.** The 28 HOLDOUT cases have no answers in the Data Card.
+- **Only requirement quality was evaluated.** The relationship, document and SWE-coverage cases need the full report (#25).
+- **One SRS.** Results may not carry over to other documents.
+- **Not fully repeatable.** The model isn't fully deterministic, even at temperature 0 with a fixed seed.
+- **Grounding isn't support.** The grounding check confirms that a citation exists in the sources sent, not that it supports the finding.
+- **Hardware.** Search results differ slightly between Colab's GPU (fp16) and a CPU (fp32): the NPR clause order matched for 52 of 54 requirements, and the Handbook top 5 matched for 51 of 54. Every difference was a near-tie, with scores at most 0.0009 apart. Within one machine, results were identical (#24).
+
+## Recommendations for the next milestone
+
+1. **Fix the grounding failures:**
+   - ignore quote marks around bold SRS text;
+   - accept a Handbook label followed by its section name;
+   - on retry, tell the model what was wrong.
+
+   This should remove most "Not assessed" results.
+2. **Define the issue codes in the prompt.** Use one plain sentence for each, so the model can use ESCAPE_CLAUSE and SAFETY_INTERACTION. Re-measure afterwards, without ever using the calibration answers in the prompt.
+3. **Ask the advisor to score our answers on the 28 holdout cases,** for a more trustworthy result.
+4. **Investigate why SWE links are rare.** Check whether the prompt is too strict, or whether the requirements really rarely support an NPR link.
+5. **Generate `report.json` (#25),** so the relationship, document and SWE-coverage cases can be evaluated too.
+6. **Consider a majority vote over 3 runs for each requirement.** It would make results more stable, at 3× the cost. Measure it before adopting it.
+7. **Compare the agent (#17–#21) against these numbers,** using the same calibration cases and the same metrics.

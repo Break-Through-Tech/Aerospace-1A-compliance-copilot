@@ -146,10 +146,11 @@ These are pipeline counts, not accuracy. TF-IDF misses related words (for exampl
 **Vector store:** all 144 documents, metadata and embeddings verified; similarity scores match an
 independent cosine calculation, and repeated queries return identical results.
 
-**Benchmark evaluation:** not run yet. The Data Card uses Output Contract v1 labels (e.g.
-`ACCEPTABLE` / `NEEDS_REVIEW`), which don't map directly to the baseline's `Meets` / `Partial` /
-`Gap`. The mapping is tracked in issue #16. Precision, recall and citation groundedness will be
-reported once it's done.
+**Output Contract review (non-agentic RAG baseline, 2026-11-26):** on the advisor's 7 calibration
+requirement cases, precision 100% (5 of 5) and recall 83% (5 of 6); 84–88% of answers had all
+citations grounded; across two runs the verdict was the same for 51 of 52 requirements. Only 7
+cases have answers, so these are a first indication. Details, failure cases and recommendations:
+[docs/rag_baseline_results.md](docs/rag_baseline_results.md).
 
 ---
 
@@ -200,9 +201,9 @@ The free Groq tier limits tokens per minute, so a full run over all requirements
 
 ## 🚀 **Next Steps**
 
-- Map Output Contract v1 labels to baseline verdicts (#16) and report precision, recall and
-  citation groundedness on the benchmark.
-- Run `RequirementReview` over every requirement, not just one.
+- Fix the grounding failures and define the issue codes in the prompt, then re-run and re-measure
+  (see [docs/rag_baseline_results.md](docs/rag_baseline_results.md)).
+- Ask the advisor to score the 28 holdout cases, and generate `report.json` (#25).
 - Wrap the pipeline in a tool-calling agent (`retrieve_clause`, `check_requirement`, `log_gap`) with
   caching and batching for rate limits.
 - Generate full JSON and Markdown gap reports.
