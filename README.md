@@ -146,9 +146,10 @@ These are pipeline counts, not accuracy. TF-IDF misses related words (for exampl
 **Vector store:** all 144 documents, metadata and embeddings verified; similarity scores match an
 independent cosine calculation, and repeated queries return identical results.
 
-**Output Contract review (non-agentic RAG baseline, 2026-11-26):** on the advisor's 7 calibration
-requirement cases, precision 100% (5 of 5) and recall 83% (5 of 6); 84–88% of answers had all
-citations grounded; across two runs the verdict was the same for 51 of 52 requirements. Only 7
+**Output Contract review (non-agentic RAG baseline, 2026-11-28):** on the advisor's 7 calibration
+requirement cases, precision 100% (5 of 5) and recall 83% (5 of 6); 87–91% of answers had all
+citations grounded; across two runs the verdict was the same for all 52 requirements assessed in
+both. Only 7
 cases have answers, so these are a first indication. Details, failure cases and recommendations:
 [docs/rag_baseline_results.md](docs/rag_baseline_results.md).
 
